@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+/////////////////  <h1> Archive </h1>
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
