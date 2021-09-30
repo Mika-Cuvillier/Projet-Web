@@ -941,7 +941,7 @@ textarea {
   background-color: aquamarine;
 }
 
-/* mikaLocal/menu
+/* local/menu
 --------------------------------------------- */
 #primary-menu {
   display: flex;
@@ -961,5 +961,15 @@ textarea {
 .sub-menu {
   display: flex;
   flex-direction: column;
+}
+
+/* local/menu
+--------------------------------------------- */
+#colophon.site-footer .site-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  height: 70px;
 }
 /*# sourceMappingURL=style.css.map */
