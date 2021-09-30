@@ -940,30 +940,6 @@ textarea {
 #masthead {
   background-color: aquamarine;
 }
-
-/* local/menu
---------------------------------------------- */
-#primary-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: crimson;
-  height: 40px;
-  align-items: center;
-}
-
-#primary-menu a:link, #primary-menu a:visited {
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.sub-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-/* local/menu
 --------------------------------------------- */
 #colophon.site-footer .site-info {
   display: flex;
