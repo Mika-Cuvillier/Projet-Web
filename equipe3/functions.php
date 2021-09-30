@@ -152,7 +152,7 @@ function equipe3_scripts() {
 add_action( 'wp_enqueue_scripts', 'equipe3_scripts' );
 
 /**
- * Implement the Custom Header feature.
+ * Implement the Custom Header feature.4
  */
 require get_template_directory() . '/inc/custom-header.php';
 
