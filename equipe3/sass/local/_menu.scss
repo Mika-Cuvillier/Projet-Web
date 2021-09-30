@@ -1,0 +1,18 @@
+#primary-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: crimson;
+    height: 40px;
+    align-items: center;
+    a:link, a:visited
+    {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+}
