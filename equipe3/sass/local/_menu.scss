@@ -2,17 +2,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: crimson;
-    height: 40px;
+    background-color: #1b206e;
+    height: 120px;
     align-items: center;
+   
     a:link, a:visited
     {
-        color: black;
+        color: #ffe5b6;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 .sub-menu {
     display: flex;
     flex-direction: column;
+}
+#site-navigation{
+    position: sticky; 
 }

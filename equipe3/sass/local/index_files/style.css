@@ -959,6 +959,7 @@ textarea {
   background-color: #1b206e;
   height: 120px;
   align-items: center;
+  position: sticky;
 }
 
 #primary-menu a:link, #primary-menu a:visited {
@@ -972,10 +973,6 @@ textarea {
   flex-direction: column;
 }
 
-#site-navigation {
-  position: sticky;
-}
-
 /* Local menage
 --------------------------------------------- */
 .site-title a {
@@ -983,14 +980,6 @@ textarea {
 }
 
 .site-description {
-  display: none;
-}
-
-.page-title {
-  display: none;
-}
-
-.page-content {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */

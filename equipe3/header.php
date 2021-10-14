@@ -12,6 +12,9 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+<?php if (!is_admin()){ /* Réglage du margin top qui sort de nul part */
+	echo "<style>html {margin-top:-21px !important;}</style>";
+} ?>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
