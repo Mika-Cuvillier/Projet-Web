@@ -941,36 +941,13 @@ textarea {
   background-color: aquamarine;
 }
 
-.site-title a {
-  color: black;
-  font-size: 2em;
-  text-decoration: none;
-}
-
-.site-title {
-  text-align: center;
-}
-
 /*--------------------------------------------- */
 #colophon.site-footer .site-info {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1B206E;
+  background-color: aquamarine;
   height: 70px;
-}
-
-.reseaux-sociaux {
-  display: flex;
-}
-
-.reseaux-sociaux img {
-  width: 50px;
-  height: 50px;
-}
-
-.sep {
-  color: white;
 }
 
 /* Local menu
@@ -982,6 +959,7 @@ textarea {
   background-color: #1b206e;
   height: 120px;
   align-items: center;
+  position: sticky;
 }
 
 #primary-menu a:link, #primary-menu a:visited {
@@ -995,10 +973,6 @@ textarea {
   flex-direction: column;
 }
 
-#site-navigation {
-  position: sticky;
-}
-
 /* Local menage
 --------------------------------------------- */
 .site-title a {
@@ -1006,14 +980,6 @@ textarea {
 }
 
 .site-description {
-  display: none;
-}
-
-.page-title {
-  display: none;
-}
-
-.page-content {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
