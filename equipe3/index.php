@@ -16,6 +16,9 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="titreEntete">
+			<h2 class="titrePrincipal"> L'harmonie de la <br><span class="boldTitre">LOGIQUE </span> et du <span class="boldTitre">CRÉATIF</span></h2>
+		</div>
 
 		<?php
 		if ( have_posts() ) :
