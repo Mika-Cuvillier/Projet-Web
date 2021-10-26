@@ -1,9 +1,7 @@
 @keyframes texteAnim{
     0%{
-        //transform: rotateX(95deg);
         transform: translateX(-500px);
-       opacity: 0;
-        //visibility: hidden;
+        opacity: 0;
         color: blueviolet;
     }
 
@@ -15,16 +13,11 @@
 }
 .titrePrincipal.animation{
     animation:texteAnim 5s ;
-   // animation-fill-mode: forwards;
-   // animation: ease-in-out;
 }
 
 .titrePrincipal{
-   
-   // width: 100%;
     opacity: 1;
     color: #1B206E;
-    //border: 2px solid red;
     padding-left: 10%;
     font-size: 2.5em;
 }
@@ -35,6 +28,6 @@
 
 .titrePrincipal > .boldTitre{
     font-family: 'Antonio';
+    text-transform: uppercase;
     color: #28e093;
-    //font-size: 3em;
 }

@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<div class="titreEntete">
-			<h2 class="titrePrincipal"> L'harmonie de la <br><span class="boldTitre">LOGIQUE </span> et du <span class="boldTitre">CRÉATIF</span></h2>
+			<h2 class="titrePrincipal"> L'harmonie entre la <br><span class="boldTitre">logique </span> et le <span class="boldTitre">créatif</span></h2>
 		</div>
 
 		<?php

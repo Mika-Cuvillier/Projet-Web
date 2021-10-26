@@ -32,9 +32,9 @@
 			<!--<span class="sep"> | </span>--> 
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-			//	printf( esc_html__( 'Theme: %1$s by %2$s.', 'equipe3' ), 'equipe3', '<a href="http://underscores.me/">Underscores.me</a>' );?>
-			<div class="nomFooter"><?php echo('Techniques Intégration Multimédia' );?> </div>
-			<?php /*printf( esc_html__( 'Techniques intégration Multimédia: %1$s by %2$s.', 'TIM' ), 'TIM 2021', '<a href="http://underscores.me/">  Boink </a>' );?> </div>*/?>
+			?>
+			<div class="nomFooter"><?php echo("Techniques d'intégration Multimédia" );?> </div>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

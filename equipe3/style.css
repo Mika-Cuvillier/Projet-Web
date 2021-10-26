@@ -972,7 +972,7 @@ textarea {
   align-content: center;
   gap: 30px;
   width: 250px;
-  border: 2px solid greenyellow;
+  padding-left: 15%;
 }
 
 .reseaux-sociaux img {
@@ -992,15 +992,15 @@ textarea {
 
 .site-footer .nomFooter {
   flex: 1 0 auto;
-  color: white;
-  border: 3px solid red;
+  color: #ffe5b6;
 }
 
 .nomFooter {
+  font-family: "Antonio";
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 30px;
+  padding-right: 15%;
 }
 
 /* Local menu
@@ -1078,6 +1078,7 @@ textarea {
 
 .titrePrincipal > .boldTitre {
   font-family: 'Antonio';
+  text-transform: uppercase;
   color: #28e093;
 }
 /*# sourceMappingURL=style.css.map */
