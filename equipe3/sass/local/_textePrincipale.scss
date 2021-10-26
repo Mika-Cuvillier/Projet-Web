@@ -1,0 +1,33 @@
+@keyframes texteAnim{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+        color: blueviolet;
+    }
+
+    100%{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+    
+}
+.titrePrincipal.animation{
+    animation:texteAnim 5s ;
+}
+
+.titrePrincipal{
+    opacity: 1;
+    color: #1B206E;
+    padding-left: 10%;
+    font-size: 2.5em;
+}
+
+#primary.site-main{
+    font-family: 'IBM Plex Sans';  
+}
+
+.titrePrincipal > .boldTitre{
+    font-family: 'Antonio';
+    text-transform: uppercase;
+    color: #28e093;
+}
