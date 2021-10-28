@@ -3,7 +3,7 @@
 
     window.addEventListener("load", function () {
 
-    let titrePrincipal = document.querySelector(" .titrePrincipal");
+    let titrePrincipal = document.querySelector(" .titreEntete");
     titrePrincipal.className += " animation";
 });
 
