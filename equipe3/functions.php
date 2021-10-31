@@ -202,6 +202,10 @@ function extraire_article_accueil($query) {
         //$query->set('meta_key', 'ordre');
        // $query->set('orderby', array('meta_value' => "ASC"));
         $query->set('post_per_page', -1);
+		//$query->set('meta_key', 'session');
+		//$query->set('orderby', array( 'meta_value' => 'ASC', 'title' => 'DESC' ));
+		
     }  
 }
 add_action( "pre_get_posts", "extraire_article_accueil" );
+

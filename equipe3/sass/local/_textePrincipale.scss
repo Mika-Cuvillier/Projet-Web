@@ -68,3 +68,24 @@ display: flex;
     font-family: 'IBM Plex Sans';  
     font-size: 2.5em;
 }
+
+
+
+
+.titrePrincipal{
+    opacity: 1;
+    color: #1B206E;
+    padding-left: 10%;
+    font-size: 2.5em;
+}
+
+
+.titrePrincipal > .boldTitre{
+    font-family: 'Antonio';
+    text-transform: uppercase;
+    color: #28e093;
+}
+
+.titrePrincipal.animation{
+    animation:texteAnim 5s ;
+}

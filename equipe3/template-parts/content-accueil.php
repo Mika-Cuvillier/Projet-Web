@@ -1,46 +1,31 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part l'affichage des bloc de cours dans front-page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package equipe3
+ * @package theme4w4
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			//the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+<!-- permet de mettre le numero de la session, il c'est jamais placer il comme il faut :( -->
+<!-- <divNoSession> 
+    <h4><?php //echo $tPropriété['session'] ?> <h4>
+</divNoSession> -->
+
+  <!-- //content-->
+<section class="sectionAccueil">
+	<div class="titreEntete"> <div class="titrePrincipal">L'harmonie entre la <br><span class="boldTitre">logique </span>et le <span class="boldTitre">créatif </span></div></div>
+ 
+	<div class="carouselAccueil"> carrousel
+	<div class="boutonsCarouAccueil"> 
+		<div class="boutonCarre"></div>
+		<div class="boutonCarre"></div>
+		<div class="boutonCarre"></div>
 		
-		 ?>
-	</header><!-- .entry-header -->
+</div>
+</div>
 
-	<?php equipe3_post_thumbnail(); ?>
+</section>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'equipe3' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-	
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php equipe3_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->

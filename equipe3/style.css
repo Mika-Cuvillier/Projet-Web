@@ -1117,4 +1117,97 @@ textarea {
   font-family: 'IBM Plex Sans';
   font-size: 2.5em;
 }
+
+.titrePrincipal {
+  opacity: 1;
+  color: #1B206E;
+  padding-left: 10%;
+  font-size: 2.5em;
+}
+
+.titrePrincipal > .boldTitre {
+  font-family: 'Antonio';
+  text-transform: uppercase;
+  color: #28e093;
+}
+
+.titrePrincipal.animation {
+  animation: texteAnim 5s;
+}
+
+/* Local gabarit page Cours
+--------------------------------------------- */
+.titreCours {
+  font-size: 50px;
+  font-family: 'Antonio';
+  display: flex;
+  justify-content: center;
+}
+
+section.gabaritCours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.gabaritCours article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid #8bddec;
+  width: 20%;
+  margin: 2%;
+  padding: 1rem;
+  text-align: center;
+}
+
+section.gabaritCours a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Local section page accueil global
+--------------------------------------------- */
+.sectionAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+}
+
+.titreEntete {
+  flex-direction: row;
+}
+
+.carouselAccueil {
+  border: 3px solid salmon;
+  flex-direction: row;
+  background-color: sandybrown;
+  width: 800px;
+  height: 400px;
+}
+
+.boutonsCarouAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  margin-left: 80%;
+}
+
+.boutonsCarouAccueil .boutonCarre {
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #1b206e;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  border-radius: 10px;
+}
 /*# sourceMappingURL=style.css.map */
