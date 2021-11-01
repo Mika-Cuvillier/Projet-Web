@@ -146,6 +146,7 @@ function equipe3_scripts() {
 
 	wp_enqueue_script( 'equipe3-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-accueilAnimation', get_template_directory_uri() . '/js/accueilAnimation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'equipe3-burger', get_template_directory_uri() . '/js/burger.js', array(), _S_VERSION, true );
 	wp_enqueue_style( 'equipe3-google-fonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=IBM+Plex+Sans:ital,wght@1,200&display=swap', true ); 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
