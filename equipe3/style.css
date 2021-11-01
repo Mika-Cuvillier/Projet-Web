@@ -676,6 +676,46 @@ textarea {
   text-decoration: none;
 }
 
+/*-----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
+.menu-toggle {
+  padding: 0;
+  border: 0;
+  z-index: 4;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: #1b206e;
+}
+
+.menu-toggle:focus {
+  outline: 1px solid #1b206e;
+  outline-offset: -4px;
+}
+
+.menu-toggle:active {
+  transform: scale(0.99);
+}
+
+@media (max-width: 600px) {
+  .menu-toggle #primary-menu,
+  .main-navigation.toggled #primary-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    top: -15px;
+  }
+  .menu-toggle #primary-menu a:link, .menu-toggle #primary-menu a:visited,
+  .main-navigation.toggled #primary-menu a:link,
+  .main-navigation.toggled #primary-menu a:visited {
+    display: flex;
+  }
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -938,7 +978,7 @@ textarea {
 /* Local
 --------------------------------------------- */
 #masthead {
-  background-color: aquamarine;
+  background-color: #1b206e;
 }
 
 .site-title a {
@@ -1011,6 +1051,21 @@ textarea {
   justify-content: space-around;
   background-color: #1b206e;
   height: 120px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  #primary-menu {
+    height: 1px;
+  }
+}
+
+#primary-menu li ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #5700a3;
   align-items: center;
 }
 
@@ -1018,6 +1073,18 @@ textarea {
   color: #ffe5b6;
   font-weight: bold;
   font-size: 20px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  #primary-menu a:link, #primary-menu a:visited {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  #primary-menu a:link, #primary-menu a:visited {
+    display: none;
+  }
 }
 
 .sub-menu {
@@ -1061,11 +1128,27 @@ textarea {
   }
 }
 
-.titrePrincipal.animation {
+/*
+.titrePrincipal.animation{
+    animation:texteAnim 5s ;
+}*/
+.titreEntete.animation {
   animation: texteAnim 5s;
 }
 
-.titrePrincipal {
+/*
+.titrePrincipal{
+    opacity: 1;
+    color: #1B206E;
+    padding-left: 10%;
+    font-size: 2.5em;
+}*/
+.titreEntete {
+  display: flex;
+  flex-direction: column;
+}
+
+.titreEntete h2 {
   opacity: 1;
   color: #1B206E;
   padding-left: 10%;
@@ -1076,9 +1159,249 @@ textarea {
   font-family: 'IBM Plex Sans';
 }
 
+/*
+.titrePrincipal > .boldTitre{
+    font-family: 'Antonio';
+    text-transform: uppercase;
+    color: #28e093;
+}*/
+.titreEntete div div {
+  display: flex;
+}
+
+.titreEntete div > p {
+  margin: 0px 15px;
+}
+
+.titreEntete div > p:nth-of-type(1), .titreEntete div > p:nth-of-type(3) {
+  font-family: 'Antonio';
+  text-transform: uppercase;
+  color: #28e093;
+  font-size: 2.5em;
+}
+
+.titreEntete div > p:nth-of-type(2) {
+  font-family: 'IBM Plex Sans';
+  font-size: 2.5em;
+}
+
+.titrePrincipal {
+  opacity: 1;
+  color: #1B206E;
+  padding-left: 10%;
+  font-size: 2.5em;
+}
+
 .titrePrincipal > .boldTitre {
   font-family: 'Antonio';
   text-transform: uppercase;
   color: #28e093;
+}
+
+.titrePrincipal.animation {
+  animation: texteAnim 5s;
+}
+
+/* Local gabarit page Cours
+--------------------------------------------- */
+.titreCours {
+  font-size: 50px;
+  font-family: 'Antonio';
+  display: flex;
+  justify-content: center;
+}
+
+section.gabaritCours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.gabaritCours article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid #8bddec;
+  width: 20%;
+  margin: 2%;
+  padding: 1rem;
+  text-align: center;
+}
+
+section.gabaritCours a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Local section page accueil global
+--------------------------------------------- */
+.sectionAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+}
+
+.titreEntete {
+  flex-direction: row;
+}
+
+.carouselAccueil {
+  border: 3px solid salmon;
+  flex-direction: row;
+  background-color: sandybrown;
+  width: 800px;
+  height: 400px;
+}
+
+.boutonsCarouAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  margin-left: 80%;
+}
+
+.boutonsCarouAccueil .boutonCarre {
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #1b206e;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+/* burger
+--------------------------------------------- */
+/* --------------------------------------------------------------------------------------
+ Les variables 
+---------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------
+Le bouton buger
+----------------------------------------------------------------------------------------- */
+#burger {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#burger div {
+  top: 0px;
+  left: 8px;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+#burger div:nth-of-type(1) {
+  background-color: black;
+  clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+}
+
+#burger div:nth-of-type(2) {
+  background-color: black;
+  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+}
+
+#burger div:nth-of-type(3) {
+  background-color: black;
+  clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du haut
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX1 {
+  0% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+  100% {
+    clip-path: polygon(0 20%, 15% 20%, 15% 80%, 0 80%);
+  }
+}
+
+@keyframes fermeX1 {
+  0% {
+    clip-path: polygon(0 20%, 15% 20%, 15% 80%, 0 80%);
+  }
+  100% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+}
+
+.ouvreX1 {
+  animation: ouvreX1 0.5s both;
+}
+
+.fermeX1 {
+  animation: fermeX1 0.5s both;
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du bas
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX3 {
+  0% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+  100% {
+    clip-path: polygon(85% 20%, 100% 20%, 100% 80%, 85% 80%);
+  }
+}
+
+@keyframes fermeX3 {
+  0% {
+    clip-path: polygon(85% 20%, 100% 20%, 100% 80%, 85% 80%);
+  }
+  100% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+}
+
+.ouvreX3 {
+  animation: ouvreX3 0.5s both;
+}
+
+.fermeX3 {
+  animation: fermeX3 0.5s both;
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du millieu
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX2 {
+  0% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  100% {
+    clip-path: polygon(42% 20%, 58% 20%, 58% 80%, 42% 80%);
+  }
+}
+
+@keyframes fermeX2 {
+  0% {
+    clip-path: polygon(42% 20%, 58% 20%, 58% 80%, 42% 80%);
+  }
+  100% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+}
+
+.ouvreX2 {
+  animation: ouvreX2 0.5s both;
+}
+
+.fermeX2 {
+  animation: fermeX2 0.5s both;
 }
 /*# sourceMappingURL=style.css.map */
