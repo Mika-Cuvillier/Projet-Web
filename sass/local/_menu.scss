@@ -1,0 +1,39 @@
+#primary-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1b206e;
+    height: 120px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    @include petit-ecran{
+        height: 1px; 
+    }
+    li ul{
+        display: flex;
+        flex-direction: column;
+        background-color: #5700a3;
+        align-items: center;
+    }
+   
+    a:link, a:visited
+    {
+        color: #ffe5b6;
+        font-weight: bold;
+        font-size: 20px;
+        @include tablet{
+            font-size: 15px;
+        }
+        @include petit-ecran{
+            display: none; 
+        }
+    }
+}
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+#site-navigation{
+    position: sticky; 
+}
