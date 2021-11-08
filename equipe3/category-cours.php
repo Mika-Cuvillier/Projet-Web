@@ -23,10 +23,23 @@ get_header();
 		<section class="gabaritCours">
 		<?php
 			/* Start the Loop */
+			$precedent = 0;
+			//echo '<section>';
 			while ( have_posts() ) :
 				the_post();
 				convertirTableau($tPropriété);
+				if ($precedent != $tPropriété['session']){ //commence une nouvelle session
+					echo '</section>';
+					echo '<div class="enteteSession">' . $tPropriété['session'] . '</div>';
+					echo '<section class="session">';
+					//echo $tPropriété['session'];
+				}
+				$precedent = $tPropriété['session'];
 				get_template_part( 'template-parts/content', 'cours');
+
+				//if ($precedent != $tPropriété['session']){ }	//si est différent
+					//echo '</section>';
+				
 
 			endwhile;?>
 

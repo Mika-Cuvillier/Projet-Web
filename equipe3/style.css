@@ -1404,4 +1404,17 @@ La barre du millieu
 .fermeX2 {
   animation: fermeX2 0.5s both;
 }
+
+/* page cours
+--------------------------------------------- */
+.enteteSession {
+  border: 2px solid red;
+  display: flex;
+}
+
+.session {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid blue;
+}
 /*# sourceMappingURL=style.css.map */

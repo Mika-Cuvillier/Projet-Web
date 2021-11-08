@@ -210,3 +210,15 @@ function extraire_article_accueil($query) {
 }
 add_action( "pre_get_posts", "extraire_article_accueil" );
 
+function extraire_article_cours($query) {
+    if(  !is_admin() && $query->is_category(4) && $query->is_main_query() ) {
+        //$query->set('category_name','accueil');
+        //$query->set('meta_key', 'ordre');
+       $query->set('orderby', array('title' => "ASC"));
+        $query->set('post_per_page', -1);
+		//$query->set('meta_key', 'session');
+		//$query->set('orderby', array( 'meta_value' => 'ASC', 'title' => 'DESC' ));
+		
+    }  
+}
+add_action( "pre_get_posts", "extraire_article_cours" );
