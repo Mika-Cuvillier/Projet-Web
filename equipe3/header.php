@@ -55,6 +55,8 @@
                 array(
                     'theme_location' => 'menu-1',
                     'menu_id'        => 'primary-menu',
+                    'before' => '<i class="icon"></i>',
+                    'link_before' => '<i class="icon"></i>'
                 )
             );
             
