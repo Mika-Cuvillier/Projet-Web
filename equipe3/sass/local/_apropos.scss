@@ -1,31 +1,47 @@
+body{
+    height: 200vh;
+}
 .titreApropos{
     font-size: 50px;
     font-family: 'Antonio';
     display: flex;
     justify-content: center;
 }
+
 section.gabaritApropos{
-    display: grid;
+display: grid;
+grid-template-columns: auto;
+grid-template-areas:
+    "etudiant"
+    "responsables"
+     "admission"
+      "portes"
+    "coordonnees";
+
+
+article:nth-child(1){
+    grid-area: etudiant;
+}
+article:nth-child(2){
+    grid-area: responsables;
+}
+article:nth-child(3){
+    grid-area: admission;
+}
+article:nth-child(4){
+    grid-area: portes;
+}
+article:nth-child(5){
+    grid-area: coordonnees;
+}
+
+    @media only screen and (min-width: 600px)
+    {
     grid-template-columns: auto;
 	grid-template-areas:
 		"etudiant etudiant etudiant"
 		"responsables admission portes"
 		"coordonnees coordonnees coordonnees";
-
-    article:nth-child(1){
-        grid-area: etudiant;
-    }
-    article:nth-child(2){
-        grid-area: responsables;
-    }
-    article:nth-child(3){
-        grid-area: admission;
-    }
-    article:nth-child(4){
-        grid-area: portes;
-    }
-    article:nth-child(5){
-        grid-area: coordonnees;
     }
 
     article{
@@ -33,8 +49,6 @@ section.gabaritApropos{
         margin: 10px;
         border-radius: 8px;
         transition: 0.5s;
-
-
 
         h2{
             font-family: 'Antonio';

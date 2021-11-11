@@ -1408,6 +1408,10 @@ La barre du millieu
 
 /* À propos
 --------------------------------------------- */
+body {
+  height: 200vh;
+}
+
 .titreApropos {
   font-size: 50px;
   font-family: 'Antonio';
@@ -1418,7 +1422,7 @@ La barre du millieu
 section.gabaritApropos {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "etudiant etudiant etudiant" "responsables admission portes" "coordonnees coordonnees coordonnees";
+  grid-template-areas: "etudiant" "responsables" "admission" "portes" "coordonnees";
 }
 
 section.gabaritApropos article:nth-child(1) {
@@ -1439,6 +1443,13 @@ section.gabaritApropos article:nth-child(4) {
 
 section.gabaritApropos article:nth-child(5) {
   grid-area: coordonnees;
+}
+
+@media only screen and (min-width: 600px) {
+  section.gabaritApropos {
+    grid-template-columns: auto;
+    grid-template-areas: "etudiant etudiant etudiant" "responsables admission portes" "coordonnees coordonnees coordonnees";
+  }
 }
 
 section.gabaritApropos article {
