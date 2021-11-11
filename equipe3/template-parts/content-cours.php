@@ -16,7 +16,8 @@ global $tPropriété;
 
    
 <article>
-	<p><?php echo $tPropriété['sigle'] .  " - " . $tPropriété['nbHeure'] ; ?></p>
+
+	<p><?php echo $tPropriété['sigle'] .  ' <i class="fas fa-shield-virus"></i> '. $tPropriété['nbHeure'] ; ?></p>
 	<a href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>
 	<p>Session : <?php echo $tPropriété['session']; ?></p>
 </article>
