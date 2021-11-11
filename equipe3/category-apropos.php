@@ -15,16 +15,15 @@
 
 get_header();
 ?>
-/////////////////  <h1> À propos</h1>
+    <h1 class= "titreApropos"> À propos</h1>
 	<main id="primary" class="site-main">
 
 	
 
-		<?php
-		if ( have_posts() ) :
+		<?php if ( have_posts() ) : ?>
 
-
-
+			<section class="gabaritApropos">
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -36,16 +35,12 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', 'aPropos');
 
-			endwhile;
+			endwhile; ?>
+			
+			<section>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+		
+		<?php endif; ?>
 
 	</main><!-- #main -->
 

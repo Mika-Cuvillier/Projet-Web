@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: equipe3
 Theme URI: http://underscores.me/
@@ -1403,5 +1404,71 @@ La barre du millieu
 
 .fermeX2 {
   animation: fermeX2 0.5s both;
+}
+
+/* À propos
+--------------------------------------------- */
+.titreApropos {
+  font-size: 50px;
+  font-family: 'Antonio';
+  display: flex;
+  justify-content: center;
+}
+
+section.gabaritApropos {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "etudiant etudiant etudiant" "responsables admission portes" "coordonnees coordonnees coordonnees";
+}
+
+section.gabaritApropos article:nth-child(1) {
+  grid-area: etudiant;
+}
+
+section.gabaritApropos article:nth-child(2) {
+  grid-area: responsables;
+}
+
+section.gabaritApropos article:nth-child(3) {
+  grid-area: admission;
+}
+
+section.gabaritApropos article:nth-child(4) {
+  grid-area: portes;
+}
+
+section.gabaritApropos article:nth-child(5) {
+  grid-area: coordonnees;
+}
+
+section.gabaritApropos article {
+  background-color: #1b206e;
+  margin: 10px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+section.gabaritApropos article h2 {
+  font-family: 'Antonio';
+  color: #ffe5b6;
+  padding-left: 1em;
+}
+
+section.gabaritApropos article h2 a {
+  color: #ffe5b6;
+  font-size: 1.5em;
+}
+
+section.gabaritApropos article p {
+  color: white;
+  padding-left: 1.5em;
+}
+
+section.gabaritApropos article ul li {
+  color: white;
+}
+
+section.gabaritApropos article:hover {
+  background-color: #3a8a8a;
 }
 /*# sourceMappingURL=style.css.map */
