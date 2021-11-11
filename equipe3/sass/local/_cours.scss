@@ -1,9 +1,40 @@
 .enteteSession{
-    border: 2px solid red;
+    //border: 2px solid red;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B206E;
+    color: white;
 }
 .session{
     display: flex;
     flex-direction: row;
-    border: 3px solid blue ;
+    flex-wrap: nowrap;
+    gap: 5%;
+    border: 3px solid greenyellow ;
+    article{
+        justify-content: center;
+        align-items: center;
+        border: 3px solid blue;
+        width: 25vw;
+        height: 25vh;
+        align-self: center;
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+}
+
+.nomSession{
+    padding-left: 20px;
 }

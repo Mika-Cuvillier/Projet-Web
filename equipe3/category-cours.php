@@ -30,7 +30,7 @@ get_header();
 				convertirTableau($tPropriété);
 				if ($precedent != $tPropriété['session']){ //commence une nouvelle session
 					echo '</section>';
-					echo '<div class="enteteSession">' . $tPropriété['session'] . '</div>';
+					echo '<div class="enteteSession">' . $tPropriété['session'] . '<p class="nomSession"> session </p>'. '</div>';
 					echo '<section class="session">';
 					//echo $tPropriété['session'];
 				}
@@ -43,7 +43,7 @@ get_header();
 
 			endwhile;?>
 
-			<section>
+			<section> <!-- ferme classe session-->
 
 		
 		<?php endif; ?>
