@@ -10,22 +10,52 @@
 ?>
 // professeurs
 
-        <div class="site-info">
+        <div class="site-prof">
 
             <div class="Professeurs">
-            <img class="Denis" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Denis.png" ?>"></img>
-            <img class="Greg" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Greg.png" ?>"></img>
-            <img class="Camille" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Camille.png" ?>"></img>
-            <img class="Vincent" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent.png" ?>"></img>
-            <img class="Dominic" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Dominic.png" ?>"></img>
-            <img class="Eddy" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Eddy.png" ?>"></img>
-            <img class="Martin" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Martin.png" ?>"></img>
-            <img class="Vhaik" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vhaik.png" ?>"></img>
-            <img class="Manon" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Manon.png" ?>"></img>
-            <img class="Ahmed" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Ahmed.png" ?>"></img>
-            <img class="Mathieu" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Mathieu.png" ?>"></img>
-            <img class="Caroline" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Caroline.png" ?>"></img>
-            <img class="David" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent.png" ?>"></img>
-            
+
+                <div class="Denis">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Denis-300x300.png" ?>"></img>
+                </div>
+                <div class="Greg">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Greg-300x300.png" ?>"></img>
+                </div>
+                <div class="Camille">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Camille-300x300.png" ?>"></img>
+                </div>
+                <div class="Vincent">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent-280x300.png" ?>"></img>
+                </div>
+                <div class="Dominic">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Dominic-300x300.png" ?>"></img>
+                </div>
+                <div class="Eddy">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Eddy-300x300.png" ?>"></img>
+                </div>
+                <div class="Martin">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Martin-300x300.png" ?>"></img>
+                </div>
+                <div class="Vhaik">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vhaik-300x300.png" ?>"></img>
+                </div>
+                <div class="Manon">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Manon-300x291.png" ?>"></img>
+                </div>
+                <div class="Ahmed">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Ahmed-300x300.png" ?>"></img>
+                </div>
+                <div class="Mathieu">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Mathieu-300x300.png" ?>"></img>
+                </div>
+                <div class="Caroline">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Caroline-300x300.png" ?>"></img>
+                </div>
+                <div class="David">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent-280x300.png" ?>"></img>
+                </div>
+                <div class="Stephanie">
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent-280x300.png" ?>"></img>
+                </div>
+            </div>
 
         </div>
