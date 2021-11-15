@@ -1439,8 +1439,10 @@ La barre du millieu
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1B206E;
-  color: white;
+  background-color: #b6b8d6;
+  color: #1b206e;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .session {
@@ -1449,6 +1451,8 @@ La barre du millieu
   flex-wrap: nowrap;
   gap: 5%;
   border: 3px solid greenyellow;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .session article {
@@ -1475,5 +1479,27 @@ La barre du millieu
 
 .nomSession {
   padding-left: 20px;
+}
+
+/*************************** boutons triage **********************************/
+.btnTrieCours {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  border: 2px solid salmon;
+  width: 150px;
+  height: 150px;
+}
+
+.btnProgrammation {
+  border: 2px solid pink;
+  width: 120px;
+  height: 50px;
+}
+
+.btnCreation {
+  border: 2px solid #ffd000;
+  width: 120px;
+  height: 50px;
 }
 /*# sourceMappingURL=style.css.map */

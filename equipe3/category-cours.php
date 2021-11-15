@@ -19,7 +19,10 @@ get_header();
 	<main id="primary" class="site-main">
 
 	<?php if ( have_posts() ) : ?>
-
+		<div class="btnTrieCours">
+	   <div class="btnProgrammation"> </div>
+		<div class="btnCreation"> </div>
+	</div>
 		<section class="gabaritCours">
 		<?php
 			/* Start the Loop */

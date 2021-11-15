@@ -14,10 +14,10 @@ global $tPropriété;
     <h4><?php //echo $tPropriété['session'] ?> <h4>
 </divNoSession> -->
 
-   
+  
 <article>
 
-	<p><?php echo $tPropriété['sigle'] .  ' <i class="fas fa-shield-virus"></i> '. $tPropriété['nbHeure'] ; ?></p>
+	<p><?php echo $tPropriété['sigle'] .  ' <i class="far fa-edit"></i>'. $tPropriété['nbHeure'] ; ?></p>
 	<a href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>
 	<p>Session : <?php echo $tPropriété['session']; ?></p>
 </article>
