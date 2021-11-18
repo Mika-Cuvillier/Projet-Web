@@ -20,11 +20,22 @@ h1{
         margin-bottom: 10em;
         width: 70vw;
 
-        //ANIMATION COULEUR DE FOND POUR DENIS
+        //ANIMATION COULEUR DE FOND POUR LES COULEURS
+        @keyframes couleur {
+            0%{
+                filter: blur(50px) hue-rotate(0deg);
+            }
+            100%{
+                filter: blur(50px) hue-rotate(360deg);
+            }
+        }
 
+        //ANIMATION COULEUR DE FOND POUR DENIS
         .Denis{
             padding-bottom: 5em;
+            display: flex;
         }
+
         .Denis::before{
             content: '';
             position: absolute;
@@ -37,15 +48,6 @@ h1{
             border-radius: 50%;
             z-index: -1;
             animation: couleur 5s linear infinite;
-        }
-
-        @keyframes couleur {
-            0%{
-                //filter: blur(50px) hue-rotate(0deg);
-            }
-            100%{
-                //filter: blur(50px) hue-rotate(360deg);
-            }
         }
 
         .Denis::after{
@@ -63,6 +65,9 @@ h1{
         }
 
         //ANIMATION COULEUR DE FOND POUR GREGORY
+        /*.Greg{
+            display: flex;
+        }*/
 
         .Greg::before{
             content: '';
@@ -71,7 +76,7 @@ h1{
             left: 43%;
             width: 15vw;
             height: 30vh;
-            background-color: #8D14D9;
+            background-color: #27f593;
             box-shadow: -40px -45px 0 #B0FFB2;
             border-radius: 50%;
             z-index: -1;
@@ -86,13 +91,16 @@ h1{
             width: 15vw;
             height: 30vh;
             background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
+            box-shadow: -40px -42px 0 #329e7a;
             border-radius: 50%;
             z-index: -1;
             animation: couleur 5s linear infinite;
         }
 
         //ANIMATION COULEUR DE FOND POUR CAMILLE
+        /*.Camille{
+            display: flex;
+        }*/
 
         .Camille::before{
             content: '';
@@ -101,7 +109,7 @@ h1{
             left: 69%;
             width: 15vw;
             height: 30vh;
-            background-color: #8D14D9;
+            background-color: #d095f9;
             box-shadow: -40px -45px 0 #B0FFB2;
             border-radius: 50%;
             z-index: -1;
@@ -116,7 +124,7 @@ h1{
             width: 15vw;
             height: 30vh;
             background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
+            box-shadow: -40px -42px 0 #fff78d;
             border-radius: 50%;
             z-index: -1;
             animation: couleur 5s linear infinite;
@@ -125,6 +133,7 @@ h1{
         //ANIMATION COULEUR DE FOND POUR VINCENT
         .Vincent{
             padding-bottom: 5em;
+            //display: flex;
         }
 
         .Vincent::before{
@@ -134,7 +143,7 @@ h1{
             left: 16.4%;
             width: 15vw;
             height: 30vh;
-            background-color: #8D14D9;
+            background-color: #fff78d;
             box-shadow: -30px -45px 0 #B0FFB2;
             border-radius: 50%;
             z-index: -1;
@@ -144,8 +153,140 @@ h1{
         .Vincent::after{
             content: '';
             position: absolute;
-            bottom: 50em;
-            left: 30%;
+            bottom: -11.5em;
+            left: 18%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -20px -42px 0 #2f8389;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        //ANIMATION COULEUR DE FOND POUR DOMINIC
+        /*.Dominic{
+            display: flex;
+        }*/
+
+        .Dominic::before{
+            content: '';
+            position: absolute;
+            top: 48em;
+            left: 42.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #92b4f7;
+            box-shadow: -40px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Dominic::after{
+            content: '';
+            position: absolute;
+            bottom: -11.5em;
+            left: 44.8%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #fff78d;
+            box-shadow: -40px -42px 0 #1b206e;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        //ANIMATION COULEUR DE FOND POUR EDDY
+        /*.Eddy{
+            display: flex;
+        }*/
+
+        .Eddy::before{
+            content: '';
+            position: absolute;
+            top: 48em;
+            left: 69%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #329e7a;
+            box-shadow: -40px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Eddy::after{
+            content: '';
+            position: absolute;
+            bottom: -11.5em;
+            left: 71.3%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #92b4f7;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        //ANIMATION COULEUR DE FOND POUR MARTIN
+        .Martin{
+            padding-bottom: 5em;
+            //display: flex;
+        }
+
+        .Martin::before{
+            content: '';
+            position: absolute;
+            top: 72.2em;
+            left: 16.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #1b206e;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Martin::after{
+            content: '';
+            position: absolute;
+            bottom: -35.5em;
+            left: 19.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #ffe7ba;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        //ANIMATION COULEUR DE FOND POUR VHAIK
+        /*.Vhaik{
+            display: flex;
+        }*/
+        .Vhaik::before{
+            content: '';
+            position: absolute;
+            top: 72.2em;
+            left: 42.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #2f8389;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Vhaik::after{
+            content: '';
+            position: absolute;
+            bottom: -35.5em;
+            left: 45.5%;
             width: 15vw;
             height: 30vh;
             background-color: #b0ffd5;
@@ -155,60 +296,222 @@ h1{
             animation: couleur 5s linear infinite;
         }
 
-        //ANIMATION COULEUR DE FOND POUR DOMINIC
+        //ANIMATION COULEUR DE FOND POUR MANON
+        /*.Manon{
+            display: flex;
+        }*/
 
-
-
-
-        //ANIMATION COULEUR DE FOND POUR EDDY
-
-
-
-
-        //ANIMATION COULEUR DE FOND POUR MARTIN
-
-        .Martin{
-            padding-bottom: 5em;
+        .Manon::before{
+            content: '';
+            position: absolute;
+            top: 71.8em;
+            left: 68.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #8D14D9;
+            box-shadow: -30px -45px 0 #fff78d;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
         }
 
-
-        //ANIMATION COULEUR DE FOND POUR VHAIK
-
-
-
-
-
-        //ANIMATION COULEUR DE FOND POUR MANON
-
-
+        .Manon::after{
+            content: '';
+            position: absolute;
+            bottom: -35.5em;
+            left: 71.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #92b4f7;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
         //ANIMATION COULEUR DE FOND POUR AHMED
-
         .Ahmed{
             padding-bottom: 5em;
+            //display: flex;
         }
 
+        .Ahmed::before{
+            content: '';
+            position: absolute;
+            top: 96.4em;
+            left: 16.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #fff78d;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Ahmed::after{
+            content: '';
+            position: absolute;
+            bottom: -59.5em;
+            left: 19.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #fffccd;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
         //ANIMATION COULEUR DE FOND POUR MATHIEU
+        /*.Mathieu{
+            display: flex;
+        }*/
 
+        .Mathieu::before{
+            content: '';
+            position: absolute;
+            top: 96.4em;
+            left: 42.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #92b4f7;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
+        .Mathieu::after{
+            content: '';
+            position: absolute;
+            bottom: -59.5em;
+            left: 45.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #fdbaff;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
         //ANIMATION COULEUR DE FOND POUR CAROLINE
+        /*.Caroline{
+            display: flex;
+        }*/
 
+        .Caroline::before{
+            content: '';
+            position: absolute;
+            top: 96.4em;
+            left: 68.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #27f593;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
+        .Caroline::after{
+            content: '';
+            position: absolute;
+            bottom: -59.5em;
+            left: 71.5%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #27f593;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
 
         //ANIMATION COULEUR DE FOND POUR DAVID
-
         .David{
             padding-left: 12em;
+            //display: flex;
+        }
+
+        .David::before{
+            content: '';
+            position: absolute;
+            top: 120.4em;
+            left: 28.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #329e7a;
+            box-shadow: -30px -45px 0 #B0FFB2;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .David::after{
+            content: '';
+            position: absolute;
+            bottom: -83.7em;
+            left: 31%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #b0ffd5;
+            box-shadow: -40px -42px 0 #fdbaff;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
         }
 
         //ANIMATION COULEUR DE FOND POUR STÉPHANIE
-
         .Stephanie{
             padding-right: 12em;
+            //display: flex;
         }
 
+        .Stephanie::before{
+            content: '';
+            position: absolute;
+            top: 120.4em;
+            left: 57.3%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #2f8389;
+            box-shadow: -30px -45px 0 #fff78d;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        .Stephanie::after{
+            content: '';
+            position: absolute;
+            bottom: -83.7em;
+            left: 59.6%;
+            width: 15vw;
+            height: 30vh;
+            background-color: #1b206e;
+            box-shadow: -40px -42px 0 #fdbaff;
+            border-radius: 50%;
+            z-index: -1;
+            animation: couleur 5s linear infinite;
+        }
+
+        #text-circulaire{
+            color: black;
+            font-family: 'IBM Plex Sans';
+            //display: flex;
+            position: relative;
+            //border-radius: 100%;
+            //padding: 30px;
+        }
+
+        #text-circulaire span{
+            position: absolute;
+            //display: flex;
+            top: 80px;
+            left: -10em;
+        }
     }
 
     
