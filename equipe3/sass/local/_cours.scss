@@ -7,21 +7,27 @@
     color: #1b206e;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 5%;
 }
 .session{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 5%;
-    border: 3px solid greenyellow ;
+    //border: 3px solid greenyellow ;
     margin-left: 5%;
     margin-right: 5%;
     article{
         justify-content: center;
         align-items: center;
-        border: 3px solid blue;
-        width: 25vw;
-        height: auto;
+        padding: 10px;
+        //border: 3px solid blue;
+        //box-shadow: 20px 20px 20px #ffe5b6;;
+       // box-shadow:  15px 0px 15px #ffe5b6;
+        //border: 5px solid #ffe5b6c5;
+        box-shadow: 5px 5px 5px #ffe5b6c5 ;
+        width: 35vw;
+        height: 25vh;
         align-self: center;
         p{
             display: flex;
@@ -31,6 +37,7 @@
         }
 
         a {
+            font-size: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -47,21 +54,37 @@
 
 .btnTrieCours{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    border: 2px solid salmon;
-    width: 150px;
-    height: 150px;
+    flex-wrap: nowrap;
+    gap: 20px;
+   // border: 2px solid salmon;
+    width: 250px;
+    height: 250px;
+    background-color:#1b206e;
+    margin-left: 70%;
+    border-radius: 10px;
 }
 
 .btnProgrammation{
-    border: 2px solid pink;
+    //border: 2px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    border-radius: 10px;
     width: 120px;
     height: 50px;
 }
 
 .btnCreation{
-    border: 2px solid rgb(255, 208, 0);
+    //border: 2px solid rgb(255, 208, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 208, 0);
+    border-radius: 10px;
     width: 120px;
     height: 50px;
 }

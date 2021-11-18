@@ -1443,6 +1443,7 @@ La barre du millieu
   color: #1b206e;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 5%;
 }
 
 .session {
@@ -1450,7 +1451,6 @@ La barre du millieu
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 5%;
-  border: 3px solid greenyellow;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -1458,9 +1458,10 @@ La barre du millieu
 .session article {
   justify-content: center;
   align-items: center;
-  border: 3px solid blue;
-  width: 25vw;
-  height: auto;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #ffe5b6c5;
+  width: 35vw;
+  height: 25vh;
   align-self: center;
 }
 
@@ -1471,6 +1472,7 @@ La barre du millieu
 }
 
 .session article a {
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1484,22 +1486,116 @@ La barre du millieu
 /*************************** boutons triage **********************************/
 .btnTrieCours {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  border: 2px solid salmon;
-  width: 150px;
-  height: 150px;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: #1b206e;
+  margin-left: 70%;
+  border-radius: 10px;
 }
 
 .btnProgrammation {
-  border: 2px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  border-radius: 10px;
   width: 120px;
   height: 50px;
 }
 
 .btnCreation {
-  border: 2px solid #ffd000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd000;
+  border-radius: 10px;
   width: 120px;
   height: 50px;
+}
+
+/* page projets
+--------------------------------------------- */
+.archive-description p {
+  display: flex;
+  justify-content: center;
+}
+
+.titleProjets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  background-color: #0e7a75;
+  color: white;
+}
+
+.galerieProjets {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin: 150px;
+}
+
+.galerieProjets a {
+  text-decoration: none;
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 0.6rem);
+  margin: 5px;
+}
+
+.galerieProjets .flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 10000px;
+}
+
+.galerieProjets .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.galerieProjets .flip-card:hover .flip-card-inner {
+  /*   transform: rotateY(180deg); */
+  /* transform: rotateY(180deg)translateY(50px); */
+  transform: rotateY(180deg) scale(1.5);
+}
+
+.galerieProjets .flip-card-front, .galerieProjets .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.galerieProjets .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.galerieProjets .flip-card-back {
+  background-color: aquamarine;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.galerieProjets .flip-card-back h1 {
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

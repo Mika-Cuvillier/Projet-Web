@@ -20,8 +20,8 @@ get_header();
 
 	<?php if ( have_posts() ) : ?>
 		<div class="btnTrieCours">
-	   <div class="btnProgrammation"> </div>
-		<div class="btnCreation"> </div>
+	   <div class="btnProgrammation"> Programmation </div>
+		<div class="btnCreation">Création  </div>
 	</div>
 		<section class="gabaritCours">
 		<?php
