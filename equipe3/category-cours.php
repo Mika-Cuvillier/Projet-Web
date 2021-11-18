@@ -20,10 +20,12 @@ get_header();
 
 	<?php if ( have_posts() ) : ?>
 		<div class="btnTrieCours">
-	   <div class="btnProgrammation"> Programmation </div>
-		<div class="btnCreation">Création  </div>
+	   <div id="btnProgrammation"> Programmation </div>
+		<div id="btnCreation">Création  </div>
+		<div id="btnTout"> Tout </div>
 	</div>
 		<section class="gabaritCours">
+	
 		<?php
 			/* Start the Loop */
 			$precedent = 0;
@@ -66,5 +68,6 @@ function convertirTableau(&$tPropriété)
 	$tPropriété['nbHeure'] = substr($tPropriété['titre'],-6,6);
 	$tPropriété['titrePartiel'] = substr($tPropriété['titre'],4,-6);
 	$tPropriété['session'] = substr($tPropriété['titre'], 0,1);
-	//$tPropriété['typeCours'] = get_field('type_de_cours');
+	$tPropriété['typeCours'] = get_field('type_de_cours');
+	//print_r($tPropriété);
 }
