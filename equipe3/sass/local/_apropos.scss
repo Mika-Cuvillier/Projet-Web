@@ -1,5 +1,5 @@
 body{
-    height: 211vh;
+    height: 193vh;
 }
 .titreApropos{
     font-size: 50px;
@@ -45,6 +45,8 @@ grid-template-areas:
     article:nth-child(1) {
         grid-area: carte;
         height: 30em;
+        padding-left: 1em;
+        padding-right: 1em;
         .contenu{
             margin-top: 1em;
             display: flex;
@@ -61,6 +63,8 @@ grid-template-areas:
     }
     article:nth-child(2) {
         grid-area: ecole;
+        position: relative;
+        z-index: 50;
     
         .contenu{
             height: 250px;
