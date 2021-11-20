@@ -69,7 +69,7 @@ h1{
     }
     ul li:nth-child(1):before, li:nth-child(3):before,
     li:nth-child(6):before, li:nth-child(7):before,
-    li:nth-child(10):before{
+    li:nth-child(9):before, li:nth-child(4):before{
         content: "\2022";  
         color: purple; 
         font-weight: bold; 
@@ -77,9 +77,9 @@ h1{
         width: 1em; 
         margin-left: -1em; 
     }
-    ul li:nth-child(2):before, li:nth-child(4):before,
+    ul li:nth-child(2):before,
     li:nth-child(5):before, li:nth-child(8):before,
-    li:nth-child(9):before{
+    li:nth-child(10):before{
         content: "\2022";  
         color: pink; 
         font-weight: bold; 
