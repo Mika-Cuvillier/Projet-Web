@@ -1,0 +1,28 @@
+.vieEtudiante h1{
+    color: #1b206e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vieEtudiante h2{
+    display: none;
+}
+.contenu-vieEtudiante{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: auto;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.vieEtudiante img{
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.vieEtudiante figure{
+    border-radius: 10%;
+}

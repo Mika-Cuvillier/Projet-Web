@@ -46,14 +46,17 @@ h1{
 }
 .avenir:nth-child(5){
     background-color: #2b8a94;
-    width: 450px;
+    width: 580px;
     height: 300px;
     border-radius: 10%;
     order: -1;
+    li{
+        margin-left: 2.5em;
+    }
 }
 .avenir:nth-child(6){
     background-color: #265987;
-    width: 450px;
+    width: 580px;
     height: 300px;
     border-radius: 10%;
     overflow-y: scroll;
@@ -95,18 +98,19 @@ h1{
 }
 
 .avenir:nth-child(1){
-    width: 250px;
+    width: 350px;
     height: 200px;
     order: 3;
 }
 .avenir:nth-child(2){
-    width: 330px;
+    width: 480px;
     height: 130px;
     order: 2;
+    
 }
 .avenir:nth-child(3){
-    width: 200px;
-    height:100px;
+    width: 250px;
+    height:150px;
     order: 0;
     background-color: #1b206e;
     border-radius: 10%;
@@ -115,12 +119,26 @@ h1{
     }
     ul{
         position: relative;
-        right: 20px;
-        top: 15px;
+        /* right: -15px; */
+        top: 35px;
         list-style-type: none;
+        right: 30px;
     }
-    li{
+    li:nth-child(1){
         padding: 5px;
+        background-color: #265987;
+        margin-right: 20px;
+        position: relative;
+        top: -10px;
+        border-radius: 10%;
+    }
+    li:nth-child(2){
+        padding: 5px;
+        background-color: #265987;
+        margin-right: 20px;
+        position: relative;
+        top: 30px;
+        border-radius: 10%;
     }
     ul li:nth-child(1):before{
         content: "\2022";  
