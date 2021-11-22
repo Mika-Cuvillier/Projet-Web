@@ -1,46 +1,143 @@
+.enteteProjet{
+    padding-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+ /*   flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+   //border: 2px solid red;
+}
 
+.titreProjets{
+    font-size: 50px;
+    font-family: 'Antonio';
+
+}
+.btnEntete{
+    display: flex;
+   // border: 2px solid blue;
+   padding-right: 60px;  
+}
 
 .galerieProjets{
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    //gap: 5px;
     align-items: center;
     margin:150px;
+    margin-top: 0px;
+    border: 2px solid red;
+   
 
-    width: 60%;
-    height: 90vh;
-    padding: 4% 2%;
-    box-sizing: border-box ;
+
+
+}
+
+article.projets{
+    flex: 1;
+    transition: .5s;
     a{
+        display: none;/* mettre en flex si je veux voir titre */
         text-decoration: none;
         font-size: clamp(.5rem, #{"-0.875rem + 8.333vw"},0.6rem);
         margin: 5px;
+        color: green;
+        //background-color: green;
+        border: 2px solid red;
     }
 }
 
+.projets:hover{
+    flex: 1 1 10%;
+}
+
 .containerPrincipal{
-    flex: 1;
-    margin: 0 2%;
-    //overflow: hidden;
-    transition: .5s;
-    width: 100%;
-    height: 90%;
+display: flex;
+transition: .5s;
+overflow: hidden;
+border: 2px solid green;
+object-fit: cover;
+height: 120px;
+
+
 }
 
 .containerProjet{
     width: 200%;
     transition: .5s;
     height: calc(100% - 10vh);
-    //object-fit: cover;
 }
 
-.containerProjet:hover{
-    flex: 1 1 50%;
+/****** boutons triage projets *********/
+
+.btnTrieProjets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /*  flex-direction:column; */
+    flex-direction: row;
+   flex-wrap: nowrap;
+    gap: 20px;
+   // border: 2px solid salmon;
+    width: 350px;
+    //height: 450px;
+    height: 100px;
+   // background-color:#1b206e;
+    //margin-left: 70%;
+    border-radius: 10px;
+
+    div {
+            //border: 2px solid pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    padding: 20px;
+    }
 }
 
-/* .containerPrincipal:hover > .containerProjet {
-    width: 100%;
-    height: 90%;
-} */
+#btnWeb{
+
+    background-color: #2C7594;
+    color: white;
+
+}
+
+#btnVideo{
+
+    background-color:#234083;
+    color: white;
+
+}
+
+#btnImagerie{
+    background-color: rgb(12, 207, 87);
+    color: white;
+
+}
+
+#btnDesign{
+    background-color: rgb(207, 12, 119);
+    color: white;
+
+}
+
+#btnJeu{
+    background-color: rgb(12, 136, 207);
+    color: white;
+
+}
+
+#btnToutProjet{
+    background-color: rgb(207, 12, 45);
+    color: white;
+
+}
+

@@ -22,25 +22,38 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
+	<header class="page-header">
 		<div class="enteteProjet">
-
-		<?php 	the_archive_title( '<h1 class="titleProjets">', '</h1>' );
-		?>
+			<div class="btnEntete">
+		<h1 class="titreProjets"> Projets</h1>
+		
 		</div>
-		</header>
+		<div class="btnTrieProjets">
+	   <div id="btnWeb"> Web </div>
+		<div id="btnDesign">Design  </div>
+		<div id="btnImagerie"> 3D </div>
+		<div id="btnVideo"> Video </div>
+		<div id="btnJeu"> Jeu </div>
+		<div id="btnToutProjet"> Tout </div>
+		</div>
+		
+		</div> <!-- fin de div entete projet -->
+	</header>
 
 		<section class="galerieProjets">
+			
 		<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post();?>
-
+				the_post();
+				convertirTableau($tPropriété);
+				?>
+				
 				
 			<?php	get_template_part( 'template-parts/content', 'projets-essai'); ?>
 
 		<?php endwhile;?>
-		<section>
+			</section>
 
 		<?php endif; ?>
 
@@ -51,3 +64,12 @@ get_header();
 
 <?php
 get_footer();
+
+
+function convertirTableau(&$tPropriété)
+{
+
+	$tPropriété['titre'] = get_the_title(); 
+	$tPropriété['typeProjets'] = get_field('type_de_projets');
+	//print_r($tPropriété);
+}

@@ -1,3 +1,10 @@
+.enteteCours{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 50px;
+}
+
 .enteteSession{
     //border: 2px solid red;
     display: inline-flex;
@@ -61,14 +68,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    //flex-direction:colum;
+    flex-direction: row;
+   flex-wrap: nowrap;
     gap: 20px;
    // border: 2px solid salmon;
-    width: 250px;
-    height: 450px;
-    background-color:#1b206e;
-    margin-left: 70%;
+    width: 350px;
+    //height: 450px;
+    height: 100px;
+   // background-color:#1b206e;
+    //margin-left: 70%;
     border-radius: 10px;
 
     div {
@@ -85,14 +94,14 @@
 
 #btnProgrammation{
 
-    background-color: pink;
+    background-color: #2C7594;
     color: white;
 
 }
 
 #btnCreation{
 
-    background-color: rgb(255, 208, 0);
+    background-color:#234083;
     color: white;
 
 }

@@ -765,9 +765,9 @@ Bouton burger
   background-position: center;
   margin-right: 50px;
   margin-bottom: 80px;
+  display: flex;
   width: 100px;
   height: 100px;
-  padding: 20px;
   z-index: 99;
 }
 
@@ -776,6 +776,7 @@ Bouton burger
   display: flex;
   flex-direction: row;
   padding-top: 80px;
+  padding-bottom: 0px;
 }
 
 .main-navigation li:nth-of-type(4) a {
@@ -1174,6 +1175,9 @@ Bouton burger
 .titreEntete {
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+  flex-wrap: nowrap;
+  gap: 50px;
 }
 
 .titreEntete h2 {
@@ -1230,6 +1234,11 @@ Bouton burger
   animation: texteAnim 5s;
 }
 
+.sous-titre {
+  padding-left: 10%;
+  width: 500px;
+}
+
 /* Local gabarit page Cours
 --------------------------------------------- */
 .titreCours {
@@ -1275,7 +1284,7 @@ section.gabaritCours a {
 }
 
 .titreEntete {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .carouselAccueil {
@@ -1435,113 +1444,66 @@ La barre du millieu
 
 /* page projets
 --------------------------------------------- */
-.archive-description p {
-  display: flex;
-  justify-content: center;
-}
-
-.titleProjets {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  margin: 0;
-  background-color: #0e7a75;
-  color: white;
-}
-
-.galerieProjets {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  margin: 150px;
-}
-
-.galerieProjets a {
-  text-decoration: none;
-  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 0.6rem);
-  margin: 5px;
-}
-
-.galerieProjets .flip-card {
-  background-color: transparent;
-  width: 150px;
-  height: 150px;
-  perspective: 10000px;
-}
-
-.galerieProjets .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.galerieProjets .flip-card:hover .flip-card-inner {
-  /*   transform: rotateY(180deg); */
-  /* transform: rotateY(180deg)translateY(50px); */
-  transform: rotateY(180deg) scale(1.5);
-}
-
-.galerieProjets .flip-card-front, .galerieProjets .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.galerieProjets .flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.galerieProjets .flip-card-back {
-  background-color: aquamarine;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.galerieProjets .flip-card-back h1 {
-  font-size: 0.75rem;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-}
-
 /* page projets
 --------------------------------------------- */
+.enteteProjet {
+  padding-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*   flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.titreProjets {
+  font-size: 50px;
+  font-family: 'Antonio';
+}
+
+.btnEntete {
+  display: flex;
+  padding-right: 60px;
+}
+
 .galerieProjets {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 40px;
   align-items: center;
   margin: 150px;
-  width: 60%;
-  height: 90vh;
-  padding: 4% 2%;
-  box-sizing: border-box;
+  margin-top: 0px;
+  border: 2px solid red;
 }
 
-.galerieProjets a {
+article.projets {
+  flex: 1;
+  transition: .5s;
+}
+
+article.projets a {
+  display: none;
+  /* mettre en flex si je veux voir titre */
   text-decoration: none;
   font-size: clamp(0.5rem, -0.875rem + 8.333vw, 0.6rem);
   margin: 5px;
+  color: green;
+  border: 2px solid red;
+}
+
+.projets:hover {
+  flex: 1 1 10%;
 }
 
 .containerPrincipal {
-  flex: 1;
-  margin: 0 2%;
+  display: flex;
   transition: .5s;
-  width: 100%;
-  height: 90%;
+  overflow: hidden;
+  border: 2px solid green;
+  object-fit: cover;
+  height: 120px;
 }
 
 .containerProjet {
@@ -1550,14 +1512,60 @@ La barre du millieu
   height: calc(100% - 10vh);
 }
 
-.containerProjet:hover {
-  flex: 1 1 50%;
+/****** boutons triage projets *********/
+.btnTrieProjets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  flex-direction:column; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 350px;
+  height: 100px;
+  border-radius: 10px;
 }
 
-/* .containerPrincipal:hover > .containerProjet {
-    width: 100%;
-    height: 90%;
-} */
+.btnTrieProjets div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+  padding: 20px;
+}
+
+#btnWeb {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnVideo {
+  background-color: #234083;
+  color: white;
+}
+
+#btnImagerie {
+  background-color: #0ccf57;
+  color: white;
+}
+
+#btnDesign {
+  background-color: #cf0c77;
+  color: white;
+}
+
+#btnJeu {
+  background-color: #0c88cf;
+  color: white;
+}
+
+#btnToutProjet {
+  background-color: #cf0c2d;
+  color: white;
+}
+
 /* page projets
 --------------------------------------------- */
 .enleveCours {
@@ -1582,6 +1590,13 @@ La barre du millieu
 
 /* page cours
 --------------------------------------------- */
+.enteteCours {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 50px;
+}
+
 .enteteSession {
   display: inline-flex;
   align-items: center;
@@ -1634,13 +1649,11 @@ La barre du millieu
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   gap: 20px;
-  width: 250px;
-  height: 450px;
-  background-color: #1b206e;
-  margin-left: 70%;
+  width: 350px;
+  height: 100px;
   border-radius: 10px;
 }
 
@@ -1654,12 +1667,12 @@ La barre du millieu
 }
 
 #btnProgrammation {
-  background-color: pink;
+  background-color: #2C7594;
   color: white;
 }
 
 #btnCreation {
-  background-color: #ffd000;
+  background-color: #234083;
   color: white;
 }
 

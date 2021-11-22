@@ -15,16 +15,24 @@
 
 get_header();
 ?>
- <h1 class="titreCours"> cours</h1>
+<!--  <h1 class="titreCours"> cours</h1> -->
 	<main id="primary" class="site-main">
 
 	<?php if ( have_posts() ) : ?>
+<!-- 		<div class="btnTrieCours">
+	   <div id="btnProgrammation"> Programmation </div>
+		<div id="btnCreation">Création  </div>
+		<div id="btnTout"> Tout </div>
+	</div> -->
+		<section class="gabaritCours">
+			<div class="enteteCours">
+		<h1 class="titreCours"> cours</h1>
 		<div class="btnTrieCours">
 	   <div id="btnProgrammation"> Programmation </div>
 		<div id="btnCreation">Création  </div>
 		<div id="btnTout"> Tout </div>
 	</div>
-		<section class="gabaritCours">
+	</div>
 	
 		<?php
 			/* Start the Loop */
@@ -33,10 +41,15 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 				convertirTableau($tPropriété);
+				
 				if ($precedent != $tPropriété['session']){ //commence une nouvelle session
+					
 					echo '</section>';
-					echo '<div class="enteteSession">' . $tPropriété['session'] . '<p class="nomSession"> session </p>'. '</div>';
+					//div entete est par-dessus de chaque session
+					//echo '<div class="enteteSession">' . $tPropriété['session'] . '<p class="nomSession"> session </p>'. '</div>';
+					//div entete est dans chaque session
 					echo '<section class="session">';
+					echo '<div class="enteteSession">' . $tPropriété['session'] . '<p class="nomSession"> session </p>'. '</div>';
 					//echo $tPropriété['session'];
 				}
 				$precedent = $tPropriété['session'];
@@ -44,7 +57,8 @@ get_header();
 
 				//if ($precedent != $tPropriété['session']){ }	//si est différent
 					//echo '</section>';
-				
+			
+					
 
 			endwhile;?>
 

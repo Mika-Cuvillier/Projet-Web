@@ -132,11 +132,12 @@ position: relative;
  background-position: center;
  margin-right: 50px;
  margin-bottom: 80px;
+ display: flex;
  width: 100px;
  height: 100px;
  //border: 2px solid red;
  //background-color: red;
- padding: 20px;
+ //padding: 20px;
  z-index: 99;
 }
 
@@ -147,10 +148,14 @@ position: relative;
     flex-direction: row;
     //border: 2px solid green;
     padding-top: 80px;
+    padding-bottom: 0px;
   
 }
 
 .main-navigation li:nth-of-type(4) a{
-   // border: 3px solid hotpink;
-    margin-top: 14%;
+   //border: 3px solid hotpink;
+   margin-top: 14%; 
+   // overflow: hidden;
 }
+
+
