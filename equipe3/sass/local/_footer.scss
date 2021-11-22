@@ -1,5 +1,6 @@
 #colophon.site-footer{ // permet au footer de rester en bas de la page
-    position: fixed;
+    
+    position: fixed;//mettre en sticky
     width: 100%;
     bottom: 0;
 }
