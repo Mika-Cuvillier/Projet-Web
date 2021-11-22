@@ -57,18 +57,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
+
+
 /* Normalize
 --------------------------------------------- */
 @import "generic/normalize";
+
+
 
 /* Box sizing
 --------------------------------------------- */
 @import "generic/box-sizing";
 
+
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 @import "base/base";
+
+
 
 /*--------------------------------------------------------------
 # Layouts
@@ -76,57 +84,85 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
 // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
 
+
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 @import "components/components";
 
+
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+
+
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
 @import "plugins/jetpack/infinite-scroll";
 
+
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+
+
 
 /* Accessibility
 --------------------------------------------- */
 @import "utilities/accessibility";
 
+
+
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+
 
 /* Local
 --------------------------------------------- */
 @import "local/entete";
 
+
+
 /*--------------------------------------------- */
 @import "local/footer";
+
+
 
 /* Local menu
 --------------------------------------------- */
 @import "local/menu";
 
+
+
 /* Local menage
 --------------------------------------------- */
 @import "local/menage";
+
+
 
 /* Local texte Accueil
 --------------------------------------------- */
 @import "local/textePrincipale";
 
+
+
 /* Local gabarit page Cours
 --------------------------------------------- */
 @import "local/gabaritCours";
 
+
+
 /* Local section page accueil global
 --------------------------------------------- */
 @import "local/sectionAccueil";
+
+
 
 /* burger
 --------------------------------------------- */
@@ -134,17 +170,50 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
+/* à propos
+--------------------------------------------- */
+@import "local/apropos";
+
+
+
+/* Local page professeurs
+--------------------------------------------- */
+@import "local/professeurs";
+
+
+
+/* avenir
+--------------------------------------------- */
+
+
+
+@import "local/avenir";
+
+
+
+/* vie etudiante
+--------------------------------------------- */
+@import "local/vieEtudiante";
+
+
+
 /* page projets
 --------------------------------------------- */
 @import "local/projets";
 
-/* page projets
+
+
+/* page projets-essaie
 --------------------------------------------- */
 @import "local/projet-essai";
 
-/* page projets
+
+
+/* page trier cours
 --------------------------------------------- */
 @import "local/trierCours";
+
+
 
 /* page cours
 --------------------------------------------- */
