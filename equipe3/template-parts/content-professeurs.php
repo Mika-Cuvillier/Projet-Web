@@ -23,7 +23,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Denis-1" ?>"></img>
                         <!--<p id="text-circulaire">Pellerin, Denis</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                         
                     </div>
@@ -32,14 +32,14 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Greg-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Bony, Grégory</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
                     <div class="Camille">
                     <img id="camille" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Camille-1.png" ?>">
                     <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </img>
                         <!--<p id="text-circulaire">Semaan, Camille</p>-->
@@ -50,7 +50,7 @@
                     <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vincent-1.png" ?>"></img>
                        <!-- <p id="text-circulaire">Leblanc, Vincent</p>-->
                        <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
@@ -58,7 +58,7 @@
                     <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Dominic-1.png" ?>"></img>
                        <!-- <p id="text-circulaire">Girard, Dominc</p>-->
                        <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
                 
@@ -66,7 +66,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Eddy-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Martin, Eddy</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
                 
@@ -74,7 +74,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Martin-1.png" ?>"></img>
                         <!--<p id="text-circulaire">St-Pierre, Martin</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
@@ -82,7 +82,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Vhaik-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Toroussian, Vagharshak</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
@@ -90,7 +90,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Manon-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Bertrand, Manon</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
                 
@@ -98,7 +98,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Ahmed-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Boudjani, Ahmed</p> -->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Mathieu-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Dionne, Mathieu</p>--> 
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
                 
@@ -114,7 +114,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Caroline-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Martin, Caroline</p> -->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
 
@@ -122,7 +122,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/David-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Ross, David</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
                 
@@ -130,7 +130,7 @@
                         <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/Stephanie-1.png" ?>"></img>
                         <!--<p id="text-circulaire">Pouiliot, Stéphanie</p>-->
                         <div class="Informations">
-                            <h3 class="infos">Informations supplémentaire : </h3>
+                            <h3 class="infos">Informations supplémentaires : </h3>
                         </div>
                     </div>
             </article>
