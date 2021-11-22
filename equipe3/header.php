@@ -30,6 +30,7 @@
             the_custom_logo();
             if ( is_front_page() && is_home() ) :
                 ?>
+                
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php
             else :
@@ -54,8 +55,11 @@
                 array(
                     'theme_location' => 'menu-1',
                     'menu_id'        => 'primary-menu',
+                    'before' => '<i class="icon"></i>',
+                    'link_before' => '<i class="icon"></i>'
                 )
             );
+            
             ?>
         </nav><!-- #site-navigation -->
     </header><!-- #masthead -->

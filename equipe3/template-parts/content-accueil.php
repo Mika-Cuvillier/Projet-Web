@@ -16,7 +16,14 @@
 
   <!-- //content-->
 <section class="sectionAccueil">
-	<div class="titreEntete"> <div class="titrePrincipal">L'harmonie entre la <br><span class="boldTitre">logique </span>et le <span class="boldTitre">créatif </span></div></div>
+	<div class="titreEntete"> 
+		<div class="titrePrincipal">L'harmonie entre la <br><span class="boldTitre">logique </span>et le <span class="boldTitre">créatif </span></div>
+		<div class="sous-titre">
+		Le Tim est un programme dans lequel on étudie diverses techniques en lien avec la conception et la programmation. 
+		On réalise du montage vidéo, du design,des jeux vidéos,  de la programmation des sites web, de la 3D et bien plus.
+	
+		</div>
+	</div>
  
 	<div class="carouselAccueil"> carrousel
 	<div class="boutonsCarouAccueil"> 

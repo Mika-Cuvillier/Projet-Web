@@ -29,6 +29,9 @@
 .titreEntete{
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
+    flex-wrap: nowrap;
+    gap: 50px;
   //  justify-content: space-around;
 }
 .titreEntete h2{
@@ -88,4 +91,10 @@ display: flex;
 
 .titrePrincipal.animation{
     animation:texteAnim 5s ;
+}
+
+.sous-titre{
+    padding-left: 10%;
+    width: 500px;
+
 }

@@ -781,7 +781,38 @@ Bouton burger
           flex: 1 0 50%;
 }
 
+
+.main-navigation li:nth-of-type(4) > .icon:nth-of-type(1) {
+  position: relative;
+  background-image: url(../../../wp-content/uploads/2021/11/LOGO.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  margin-right: 50px;
+  margin-bottom: 80px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  z-index: 99;
+}
+
+.main-navigation li:nth-of-type(4) {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+  padding-bottom: 0px;
+}
+
+.main-navigation li:nth-of-type(4) a {
+  margin-top: 14%;
+}
+
 /* Posts and pages
+
+/* Posts and pages
+
 --------------------------------------------- */
 .sticky {
   display: block;
@@ -1116,6 +1147,8 @@ Bouton burger
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #1b206e;
+  text-transform: uppercase;
+  font-family: 'Antonio', sans-serif;
   height: 120px;
   width: 100%;
   -webkit-box-align: center;
@@ -1244,10 +1277,17 @@ Bouton burger
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
+  flex-direction: column;
+  padding-top: 30px;
+  flex-wrap: nowrap;
+  gap: 50px;
+=======
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+
 }
 
 .titreEntete h2 {
@@ -1307,7 +1347,16 @@ Bouton burger
           animation: texteAnim 5s;
 }
 
+
+.sous-titre {
+  padding-left: 10%;
+  width: 500px;
+}
+
 /* Local gabarit page Cours
+
+/* Local gabarit page Cours
+
 --------------------------------------------- */
 .titreCours {
   font-size: 50px;
@@ -1379,10 +1428,14 @@ section.gabaritCours a {
 }
 
 .titreEntete {
+
+  flex-direction: column;
+
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+
 }
 
 .carouselAccueil {
@@ -1905,5 +1958,244 @@ h1 {
 
 .vieEtudiante figure {
   border-radius: 10%;
+}
+
+/* page projets
+--------------------------------------------- */
+/* page projets
+--------------------------------------------- */
+.enteteProjet {
+  padding-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*   flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.titreProjets {
+  font-size: 50px;
+  font-family: 'Antonio';
+}
+
+.btnEntete {
+  display: flex;
+  padding-right: 60px;
+}
+
+.galerieProjets {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 150px;
+  margin-top: 0px;
+  border: 2px solid red;
+}
+
+article.projets {
+  flex: 1;
+  transition: .5s;
+}
+
+article.projets a {
+  display: none;
+  /* mettre en flex si je veux voir titre */
+  text-decoration: none;
+  font-size: clamp(0.5rem, -0.875rem + 8.333vw, 0.6rem);
+  margin: 5px;
+  color: green;
+  border: 2px solid red;
+}
+
+.projets:hover {
+  flex: 1 1 10%;
+}
+
+.containerPrincipal {
+  display: flex;
+  transition: .5s;
+  overflow: hidden;
+  border: 2px solid green;
+  object-fit: cover;
+  height: 120px;
+}
+
+.containerProjet {
+  width: 200%;
+  transition: .5s;
+  height: calc(100% - 10vh);
+}
+
+/****** boutons triage projets *********/
+.btnTrieProjets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  flex-direction:column; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 350px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.btnTrieProjets div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+  padding: 20px;
+}
+
+#btnWeb {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnVideo {
+  background-color: #234083;
+  color: white;
+}
+
+#btnImagerie {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnDesign {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnJeu {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnToutProjet {
+  background-color: #2C7594;
+  color: white;
+}
+
+/* page projets
+--------------------------------------------- */
+.enleveCours {
+  display: none;
+  visibility: hidden;
+}
+
+.AfficheCours {
+  display: flex;
+  visibility: visible;
+}
+
+.AfficheToutCours {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #ffe5b6c5;
+  width: 35vw;
+  height: 25vh;
+  align-self: center;
+}
+
+/* page cours
+--------------------------------------------- */
+.enteteCours {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.enteteSession {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #b6b8d6;
+  color: #1b206e;
+}
+
+.session {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.session article {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #ffe5b6c5;
+  width: 35vw;
+  height: 25vh;
+  align-self: center;
+}
+
+.session article p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session article a {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nomSession {
+  padding: 5px;
+}
+
+/*************************** boutons triage **********************************/
+.btnTrieCours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 350px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.btnTrieCours div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+}
+
+#btnProgrammation {
+  background-color: #2C7594;
+  color: white;
+}
+
+#btnCreation {
+  background-color: #234083;
+  color: white;
+}
+
+#btnTout {
+  background-color: #2C7594;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

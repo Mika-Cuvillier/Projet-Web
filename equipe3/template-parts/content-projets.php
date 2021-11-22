@@ -9,38 +9,22 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			//the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		
-		 ?>
-	</header><!-- .entry-header -->
 
-	<?php equipe3_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'equipe3' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+<article class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <?php the_post_thumbnail('thumbnail'); ?>
+        
+    </div>
 
-	
-		?>
-	</div><!-- .entry-content -->
+ 
+    <div class="flip-card-back">
+    <h1> <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?>
+    </a></h1>
+   
+    </div>
 
-	<footer class="entry-footer">
-		<?php equipe3_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+
+</div>
+</article>

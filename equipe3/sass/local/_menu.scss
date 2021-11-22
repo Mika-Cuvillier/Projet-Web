@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: #1b206e;
+    text-transform: uppercase;
+    font-family: 'Antonio', sans-serif;
     height: 120px;
     width: 100%;
     align-items: center;
@@ -37,3 +39,5 @@
 #site-navigation{
     position: sticky; 
 }
+
+

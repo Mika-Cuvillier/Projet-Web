@@ -13,6 +13,16 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+   set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+ 
+    // additional image sizes
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'category-thumb', 300, 300, true ); // 300 pixels wide (and unlimited height)
+	//add_image_size( 'category-thumbprojet', 500, 500, true );
+ }
+
 if ( ! function_exists( 'equipe3_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -46,7 +56,8 @@ if ( ! function_exists( 'equipe3_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		//add_theme_support( 'post-thumbnails' );
+		the_post_thumbnail( 'medium_large' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -142,12 +153,20 @@ add_action( 'widgets_init', 'equipe3_widgets_init' );
  */
 function equipe3_scripts() {
 	wp_enqueue_style( 'equipe3-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	wp_style_add_data( 'equipe3-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'equipe3-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-accueilAnimation', get_template_directory_uri() . '/js/accueilAnimation.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( 'equipe3-filtrerCours', get_template_directory_uri() . '/js/filtrerCours.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'equipe3-filtrerProjets', get_template_directory_uri() . '/js/filtrerProjets.js', array(), _S_VERSION, true );
+
 	wp_enqueue_script( 'equipe3-nomProfesseurs', get_template_directory_uri() . '/js/nomProfesseurs.js', array(), _S_VERSION, true );
+
 	wp_enqueue_script( 'equipe3-burger', get_template_directory_uri() . '/js/burger.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'equipe3-fontawesome', 'https://kit.fontawesome.com/91319fa15f.js', array(), _S_VERSION, true );
+	//<script src="https://kit.fontawesome.com/91319fa15f.js" crossorigin="anonymous"></script>
 	wp_enqueue_style( 'equipe3-google-fonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=IBM+Plex+Sans:ital,wght@1,200&display=swap', true ); 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -210,4 +229,21 @@ function extraire_article_accueil($query) {
     }  
 }
 add_action( "pre_get_posts", "extraire_article_accueil" );
+
+function extraire_article_cours($query) {
+    if(  !is_admin() && $query->is_category(4) && $query->is_main_query() ) {
+        //$query->set('category_name','accueil');
+        //$query->set('meta_key', 'ordre');
+       $query->set('orderby', array('title' => "ASC"));
+        $query->set('post_per_page', -1);
+		//$query->set('meta_key', 'session');
+		//$query->set('orderby', array( 'meta_value' => 'ASC', 'title' => 'DESC' ));
+		
+    }  
+}
+add_action( "pre_get_posts", "extraire_article_cours" );
+
+
+
+
 

@@ -16,10 +16,17 @@
 		<div class="site-info">
 
 		<div class="reseaux-sociaux">
-		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/facebook.png" ?>"></img>
-		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/instagram.png" ?>"></img>
-		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/youtube.png" ?>"></img>
-		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/maisonneuve.png" ?>"></img>
+		<a href="https://www.facebook.com/maisonneuvetim"> 
+		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/facebook.png"  ?>"></img> </a>
+
+		<a href="https://www.instagram.com/maisonneuvetim/?hl=fr"> 
+		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/instagram.png" ?>"></img> </a>
+
+		<a href="https://www.youtube.com/user/TIMaisonneuve"> 
+		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/youtube.png" ?>"></img> </a>
+
+		<a href="https://www.cmaisonneuve.qc.ca/"> 
+		<img src="<?php echo get_site_url() . "/wp-content/uploads/2021/10/maisonneuve.png" ?>"></img> </a>
 
 		</div>
 
