@@ -1,8 +1,8 @@
 const angletoradian = (angle)=>{
-    return angle * (Math.PI / 200);
+    return angle * (Math.PI / 250);
 };
 
-const radius = 100;
+const radius = 180;
 const diameter = radius*2;
 
 const circle =  document.querySelector('#text-circulaire');
@@ -14,7 +14,7 @@ const character = text.split('');
 circle.innerHTML = null;
 
 let angle = -80;
-const deltaangle = 100/character.length;
+const deltaangle = 140/character.length;
 
 character.forEach((char, index) =>{
     const charlement = document.createElement('span');
