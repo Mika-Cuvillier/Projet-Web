@@ -132,31 +132,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "local/burger";
 
-/* burger
+/* à propos
 --------------------------------------------- */
 @import "local/apropos";
-=======
 
 /* Local page professeurs
 --------------------------------------------- */
 @import "local/professeurs";
 
 /* avenir
-
---------------------------------------------- */
-
-=======
-
-/* burger
---------------------------------------------- */
-@import "local/apropos";
-
-/* avenir
 --------------------------------------------- */
 
 @import "local/avenir";
 
-/* avenir
+/* vie etudiante
 --------------------------------------------- */
 @import "local/vieEtudiante";
 
@@ -164,11 +153,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "local/projets";
 
-/* page projets
+/* page projets-essaie
 --------------------------------------------- */
 @import "local/projet-essai";
 
-/* page projets
+/* page trier cours
 --------------------------------------------- */
 @import "local/trierCours";
 
