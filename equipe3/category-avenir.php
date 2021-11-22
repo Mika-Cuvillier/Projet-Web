@@ -15,16 +15,16 @@
 
 get_header();
 ?>
-/////////////////  <h1> avenir</h1>
+	<h1>AVENIR</h1>
 	<main id="primary" class="site-main">
 
 	
 
 		<?php
-		if ( have_posts() ) :
+		if ( have_posts() ) : ?>
 
-
-
+			<section class="contenu-avenir">
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -36,16 +36,13 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', 'avenir');
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+			<section>
 
-		else :
+			
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+	<?php endif; ?>
 
 	</main><!-- #main -->
 
