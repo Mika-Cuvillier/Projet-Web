@@ -6,7 +6,7 @@ const radius = 180;
 const diameter = radius*2;
 
 const circle =  document.querySelector('#text-circulaire');
-circle.style.whidth = `${diameter}px`;
+circle.style.width = `${diameter}px`;
 circle.style.height = `${diameter}px`;
 
 const text = circle.innerHTML;

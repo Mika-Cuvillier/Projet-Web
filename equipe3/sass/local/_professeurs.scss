@@ -1,4 +1,4 @@
-h1{
+.professeurs h1{
     display: flex;
     justify-content: center;
     color: #1B206E;
@@ -7,7 +7,7 @@ h1{
     font-size: 50px;
 }
 
-article{
+.professeurs article{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -16,12 +16,12 @@ article{
     margin-bottom: 10em;
     width: 70vw;
 
-    img{
+    .professeurs img{
         width: 300px;
         height: 300px;
     }
 
-    img:hover{
+    .professeurs img:hover{
         cursor: pointer;
         overflow: hidden;
         //scale: 1;
@@ -569,7 +569,7 @@ article{
     //}
 
     @include tablet{
-        article{
+        .professeurs article{
             display: flex;
             width: 47%;
             margin-left: 1%;
@@ -578,21 +578,21 @@ article{
     }
 
     @include petit_ecran{
-        h1{
+        .professeurs h1{
             font-size: 30px;
         }
 
-        article{
+        .professeurs article{
             width: 10%;
             margin-left: 1%;
             height: 10%;
 
-            img{
+            .professeurs img{
                 width: 100px;
                 height: 100px;
             }
         
-            img:hover{
+            .professeurs img:hover{
                 cursor: pointer;
                 overflow: hidden;
                 //scale: 1;
