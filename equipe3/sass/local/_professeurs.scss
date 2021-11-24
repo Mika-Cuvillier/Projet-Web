@@ -7,7 +7,7 @@
     font-size: 50px;
 }
 
-.professeurs article{
+.professeurs{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -16,12 +16,12 @@
     margin-bottom: 10em;
     width: 70vw;
 
-    .professeurs img{
+    img{
         width: 300px;
         height: 300px;
     }
 
-    .professeurs img:hover{
+    img:hover{
         cursor: pointer;
         overflow: hidden;
         //scale: 1;
@@ -108,7 +108,7 @@
             content: '';
             position: absolute;
             //display: flex;
-            bottom: 24em;
+            bottom: 22em;
             left: 24.5%;
             width: 10vw;
             height: 20vh;
@@ -127,7 +127,7 @@
         .Greg::before{
             content: '';
             position: absolute;
-            top: 30em;
+            top: 27em;
             left: 45%;
             width: 10vw;
             height: 20vh;
@@ -170,8 +170,8 @@
         .Camille::after{
             content: '';
             position: absolute;
-            bottom: 30em;
-            left: 98.5%;
+            bottom: 26em;
+            left: 77.5%;
             width: 5vw;
             height: 10vh;
             background-color: #b0ffd5;
@@ -204,7 +204,7 @@
         .Vincent::after{
             content: '';
             position: absolute;
-            bottom: -20.5em;
+            bottom: -7.5em;
             left: 25.5%;
             width: 5vw;
             height: 10vh;
@@ -237,7 +237,7 @@
         .Dominic::after{
             content: '';
             position: absolute;
-            bottom: -20.5em;
+            bottom: -10.5em;
             left: 51%;
             width: 10vw;
             height: 20vh;
@@ -270,7 +270,7 @@
         .Eddy::after{
             content: '';
             position: absolute;
-            bottom: -20em;
+            bottom: -12em;
             left: 73%;
             width: 10vw;
             height: 20vh;
@@ -403,7 +403,7 @@
         .Ahmed::after{
             content: '';
             position: absolute;
-            bottom: -88.5em;
+            bottom: -80.5em;
             left: 19.5%;
             width: 10vw;
             height: 20vh;
@@ -436,7 +436,7 @@
         .Mathieu::after{
             content: '';
             position: absolute;
-            bottom: -100.5em;
+            bottom: -74.5em;
             left: 51%;
             width: 5vw;
             height: 10vh;
@@ -469,7 +469,7 @@
         .Caroline::after{
             content: '';
             position: absolute;
-            bottom: -88.5em;
+            bottom: -80.5em;
             left: 75%;
             width: 10vw;
             height: 20vh;
@@ -503,7 +503,7 @@
         .David::after{
             content: '';
             position: absolute;
-            bottom: -122.7em;
+            bottom: -111.7em;
             left: 37%;
             width: 10vw;
             height: 20vh;
@@ -537,7 +537,7 @@
         .Stephanie::after{
             content: '';
             position: absolute;
-            bottom: -122em;
+            bottom: -111em;
             left: 61%;
             width: 10vw;
             height: 20vh;
@@ -569,7 +569,7 @@
     //}
 
     @include tablet{
-        .professeurs article{
+        .professeurs{
             display: flex;
             width: 47%;
             margin-left: 1%;
@@ -579,20 +579,20 @@
 
     @include petit_ecran{
         .professeurs h1{
-            font-size: 30px;
+            font-size: 20px;
         }
 
-        .professeurs article{
+        .professeurs{
             width: 10%;
             margin-left: 1%;
             height: 10%;
 
-            .professeurs img{
+            img{
                 width: 100px;
                 height: 100px;
             }
         
-            .professeurs img:hover{
+            img:hover{
                 cursor: pointer;
                 overflow: hidden;
                 //scale: 1;
