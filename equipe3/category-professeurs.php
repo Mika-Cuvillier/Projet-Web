@@ -15,7 +15,7 @@
 
 get_header();
 ?>
-/////////////////  <h1> professeurs</h1>
+ <h1> professeurs</h1>
 	<main id="primary" class="site-main">
 
 	
