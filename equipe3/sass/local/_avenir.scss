@@ -5,10 +5,10 @@ h1{
     justify-content: center;
 }
 .avenir{
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 80px;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 6%;
     .avenir:nth-child(2), .avenir:nth-child(3){
         h2 a{
             display: none;
@@ -43,6 +43,17 @@ h1{
     width: 640px;
     height: 330px;
     border-radius: 10%;
+    @include grand_ecran{
+        width: 540px;
+    }
+    @include tablet{
+        width: 360px;
+        height: 450px;
+    }
+    @include petit_ecran{
+        width: 400px;
+        height: 400px;
+    }
 }
 .avenir:nth-child(5){
     background-color: #2b8a94;
@@ -53,14 +64,38 @@ h1{
     li{
         margin-left: 2.5em;
     }
+    @include grand_ecran{
+        width: 360px;
+        height: 250px;
+    }
+    @include tablet{
+        width: 290px; 
+    }
+    @include petit_ecran{
+        width: 400px;
+    }
 }
 .avenir:nth-child(6){
     background-color: #265987;
     width: 580px;
-    height: 300px;
+    height: 400px;
     border-radius: 10%;
-    overflow-y: scroll;
+    padding: 10px;
     order: -2;
+    .scrollbar{
+        height: 230px;
+        overflow-y: scroll;
+    }
+    @include grand_ecran{
+           width: 470px;
+           height: 250px;
+    }
+    @include tablet{
+        width: 340px;
+    }
+    @include petit_ecran{
+        width: 400px;
+    }
     li{
         margin-right: 1.5em;
     }
@@ -101,11 +136,34 @@ h1{
     width: 350px;
     height: 200px;
     order: 3;
+    @include grand_ecran{
+        width: 250px;
+        height: 130px;
+    }
+    @include tablet{
+        width: 300px;
+    }
+    @include petit_ecran{
+        width: 300px;
+        height: 100px;
+        margin-top: 8%;
+    }
 }
 .avenir:nth-child(2){
     width: 480px;
     height: 130px;
     order: 2;
+    @include grand_ecran{
+        width: 250px;
+        height: 130px;
+    }
+    @include tablet{
+        width: 270px;
+    }
+    @include petit_ecran{
+        width: 350px;
+        margin-bottom: 5%;
+    }
     
 }
 .avenir:nth-child(3){
@@ -114,6 +172,12 @@ h1{
     order: 0;
     background-color: #1b206e;
     border-radius: 10%;
+    @include petit_ecran{
+            width: 150px;
+            height: 60px;
+            top: 140px;
+            left: 250px;
+    }
     p, h2, h1, a:any-link{
         display: none;
     }
@@ -122,7 +186,7 @@ h1{
         /* right: -15px; */
         top: 35px;
         list-style-type: none;
-        right: 30px;
+        right: 40px;
     }
     li:nth-child(1){
         padding: 5px;
@@ -131,6 +195,12 @@ h1{
         position: relative;
         top: -10px;
         border-radius: 10%;
+        @include petit_ecran{
+            padding: 0;
+            top: -30px;
+            width: 100px;
+            left: -25px;
+        }
     }
     li:nth-child(2){
         padding: 5px;
@@ -139,6 +209,12 @@ h1{
         position: relative;
         top: 30px;
         border-radius: 10%;
+        @include petit_ecran{
+            padding: 0;
+            top: -20px;
+            left: -25px;
+            margin-right: 0;
+        }
     }
     ul li:nth-child(1):before{
         content: "\2022";  
@@ -167,4 +243,11 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 8px;
+    @include petit_ecran{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
+

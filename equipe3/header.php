@@ -55,7 +55,7 @@
                 array(
                     'theme_location' => 'menu-1',
                     'menu_id'        => 'primary-menu',
-                    'before' => '<i class="icon"></i>',
+                    'before' => '<a href ="http://localhost:81/boink2/"><i class="icon"></i></a>',
                     'link_before' => '<i class="icon"></i>'
                 )
             );
