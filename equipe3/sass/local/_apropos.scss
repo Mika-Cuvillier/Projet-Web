@@ -1,5 +1,5 @@
 .titreApropos{
-    font-size: 50px;
+    font-size: 35px;
     font-family: 'Antonio';
     display: flex;
     justify-content: center;
@@ -11,10 +11,10 @@ width: 12px;
 }
 ::-webkit-scrollbar-track{
     border-radius: 50px;
-    background-color: #3f7ca0;
+    background-color: #2e5e7a;
 }
 ::-webkit-scrollbar-thumb{
-    border: 3px solid #3f7ca0;
+    border: 3px solid #2e5e7a;
     border-radius: 50px;
     background-color: #fff;
 }
@@ -48,15 +48,17 @@ grid-template-areas:
             p{
                 margin: 0;
                 padding: 0;
+                iframe{
+                    border-radius: 10px;
+                }
             }
         }
     }
     .apropos:nth-child(2) {
         grid-area: ecole;
-        position: relative;
-        z-index: 50;
+        max-height: 410px;
         .contenu{
-            height: 250px;
+            padding: 1em;
             h2{
                 display: none;
             }
@@ -65,6 +67,14 @@ grid-template-areas:
             }
             figure{
                 margin:0;
+
+                img{
+                    max-height: 400px;
+                    transition: 0.5s;
+                }
+                img:hover{
+                    border-radius: 40px;
+                }
             }
         }
     }
@@ -79,7 +89,7 @@ grid-template-areas:
 .apropos:nth-child(4){
     grid-area: responsables;
     .contenu{
-        height: 250px;
+        height: 200px;
     }
 }
 .apropos:nth-child(5){
@@ -92,8 +102,9 @@ grid-template-areas:
 }
 .apropos:nth-child(6){
     grid-area: portes;
+    padding: 10px;
     .contenu{
-        height: 250px;
+        height: 130px;
     }
 }
 .apropos:nth-child(7){
@@ -113,13 +124,14 @@ grid-template-areas:
             padding-left: 1em;
             a{
                 color: #ffe5b6;
-                font-size: 1.5em;
+                font-size: 25px;
             }
         }
         p{
             font-family: 'IBM Plex Sans';  
             color: white;
             padding-left: 1.5em;
+            font-size: 12px;
             a{
                 color: white;
             }
@@ -127,11 +139,12 @@ grid-template-areas:
         ul{
             li{
                 color: white;
+                font-size: 12px;
             }
         }
     }
     .apropos:hover{
-        background-color: #307e71;
+        background-color: #2e7694;
     }
 //Version ordinateur
 @media only screen and (min-width: 600px)
@@ -145,6 +158,58 @@ grid-template-areas:
         gap: 30px;
         margin-left: 5em;
         margin-right: 5em;
+        .titreApropos{
+            font-size: 50px;
+        }
+
+        .apropos{
+            h2{
+                a{
+                    font-size: 35px;
+                }
+            }
+            p{
+                font-size: 17px;
+            }
+            ul{
+                li{
+                    font-size: 17px;
+                }
+            }
+        }
+        .apropos:nth-child(2) {
+            grid-area: ecole;
+            max-height: 410px;
+            background-color: #fff;
+            .contenu{
+                padding: 1em;
+                h2{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+                figure{
+                    margin:0;
+                    margin-left: -346px;
+    
+                    img{
+                        max-height: 400px;
+                    }
+                }
+            }
+        }
+        .apropos:nth-child(3) {
+            grid-area: etudiant;
+            padding: 10px;
+            margin-top: 45px;
+            margin-bottom: 55px;
+            margin-right: 140px;
+            .contenu{
+                overflow-y: scroll;
+                height: 303px;
+            }
+        }
         .apropos:nth-child(7){
             grid-area: coordonnees;
             margin-top: 6em;
@@ -152,4 +217,71 @@ grid-template-areas:
             margin-left: -3em;
         }
     }
+    /*Version tablette*/
+    @media only screen and (min-width : 600px) and (max-width:1024px){
+        grid-template-areas:
+        "etudiant etudiant"
+        "ecole responsables"
+        "admission portes"
+        "carte coordonnees";
+
+        .titreApropos{
+            font-size: 40px;
+        }
+        .apropos{
+            
+            h2{
+                a{
+                    font-size: 30px;
+                }
+            }
+            p{
+                font-size: 15px;
+            }
+            ul{
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+        .apropos:nth-child(3) {
+            grid-area: etudiant;
+            margin-right: 0;
+        }
+        .apropos:nth-child(2) {
+            grid-area: ecole;
+            background-color: #1b206e;
+            .contenu{
+                max-height: 210px;
+                padding: 1em;
+                h2{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+                figure{
+                    margin:0;
+    
+                    img{
+                        max-height: 400px;
+                    }
+                }
+            }
+        }
+
+        .apropos:nth-child(4){
+            grid-area: responsables;
+            padding: 10px;
+            .contenu{
+                height: 250px;
+                overflow-y: scroll;
+            }
+        }
+
+
+    }
+
+
+
 }
