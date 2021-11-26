@@ -3,6 +3,7 @@
     let bar1 = document.querySelector('#burger div:nth-of-type(1)')
     let bar2 = document.querySelector('#burger div:nth-of-type(2)')
     let bar3 = document.querySelector('#burger div:nth-of-type(3)')
+    let avenir3 = document.querySelector('.avenir:nth-child(3)')
     burger.addEventListener('mousedown', function(){
         if ( bar1.classList.contains('ouvreX1') == false){
             bar1.classList.add('ouvreX1')
@@ -11,6 +12,7 @@
             bar2.classList.remove('fermeX2')
             bar3.classList.add('ouvreX3')
             bar3.classList.remove('fermeX3')
+            avenir3.style.display = "none";
         }
         else{
             bar1.classList.remove('ouvreX1')
@@ -19,6 +21,7 @@
             bar2.classList.add('fermeX2')
             bar3.classList.remove('ouvreX3')
             bar3.classList.add('fermeX3')
+            avenir3.style.display = "flex";
         }
     })
 })()
