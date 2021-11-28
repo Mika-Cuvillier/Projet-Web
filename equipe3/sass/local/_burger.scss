@@ -15,6 +15,9 @@ Le bouton buger
     border-radius : 50%;
     overflow: hidden;
     background-color : #fff;
+    @include tablet{
+        display: none;
+    }
     div{
         top: 0px;
         left : 8px;

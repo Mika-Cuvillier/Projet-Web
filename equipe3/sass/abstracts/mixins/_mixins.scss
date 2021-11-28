@@ -9,18 +9,30 @@
     width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 @mixin tablet {
-    @media (min-width : 743px) and (max-width:1024px){
+    @media (min-width : 600px) and (max-width:1024px){
         @content;
     }
 }
 @mixin petit_ecran{
-    @media (max-width : 743px){
+    @media (max-width : 600px){
         @content;
     }
 }
 
 @mixin grand_ecran{
     @media (min-width : 1024px) and (max-width:1600px){
+        @content;
+    }
+}
+
+@mixin petit_avenir{
+    @media (max-width : 743px){
+        @content;
+    }
+}
+
+@mixin tablet_avenir{
+    @media (min-width : 743px) and (max-width:1024px){
         @content;
     }
 }

@@ -685,6 +685,7 @@ textarea {
 .main-navigation {
   display: block;
   width: 100%;
+  z-index: 99;
 }
 
 .main-navigation ul {
@@ -757,7 +758,7 @@ Bouton burger
           transform: scale(0.99);
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   .menu-toggle #primary-menu,
   .main-navigation.toggled #primary-menu {
     display: -webkit-box;
@@ -771,8 +772,8 @@ Bouton burger
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    height: 150px;
-    top: -15px;
+    height: 307px;
+    top: -40px;
   }
   .menu-toggle #primary-menu a:link, .menu-toggle #primary-menu a:visited,
   .main-navigation.toggled #primary-menu a:link,
@@ -831,6 +832,20 @@ Bouton burger
           flex: 1 0 50%;
 }
 
+.main-navigation li:nth-of-type(4) a:nth-child(2) {
+  position: relative;
+  left: -7px;
+  top: -61px;
+  height: 28px;
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2) {
+    top: 69px;
+    left: -50px;
+  }
+}
+
 .main-navigation li:nth-of-type(4) a:nth-child(1) > .icon:nth-of-type(1) {
   position: relative;
   background-image: url(../../../wp-content/uploads/2021/11/LOGO.png);
@@ -848,9 +863,12 @@ Bouton burger
   z-index: 99;
 }
 
-@media (max-width: 743px) {
-  .main-navigation li:nth-of-type(4) a:nth-child(1) > .icon:nth-of-type(1) {
-    display: none;
+@media (max-width: 600px) {
+  #primary-menu .icon {
+    position: relative;
+    left: 91px;
+    top: -19px;
+    margin: 0;
   }
 }
 
@@ -867,9 +885,26 @@ Bouton burger
   padding-bottom: 0px;
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   .main-navigation li:nth-of-type(4) {
     padding-top: 0px;
+  }
+}
+
+.main-navigation li:nth-child(4) a:nth-child(1) {
+  position: relative;
+  height: 10px;
+  top: -98px;
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-child(4) a:nth-child(1) {
+    height: 101px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
 }
 
@@ -877,9 +912,54 @@ Bouton burger
   margin-top: 14%;
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   .main-navigation li:nth-of-type(4) a {
-    margin-top: 0;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2) {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-of-type(5) a:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-child(1) a:active, .main-navigation li:nth-child(2) a:active,
+  .main-navigation li:nth-child(3) a:active, .main-navigation li:nth-child(5) a:active,
+  .main-navigation li:nth-child(6) a:active {
+    width: 100vw;
+    background-color: #287894;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-child(4) a:nth-child(2):active {
+    background-color: #287894;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1237,7 +1317,7 @@ Bouton burger
   position: relative;
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   #primary-menu {
     height: 1px;
   }
@@ -1263,13 +1343,13 @@ Bouton burger
   font-size: 20px;
 }
 
-@media (min-width: 743px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   #primary-menu a:link, #primary-menu a:visited {
     font-size: 15px;
   }
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   #primary-menu a:link, #primary-menu a:visited {
     display: none;
   }
@@ -1286,8 +1366,14 @@ Bouton burger
 }
 
 #site-navigation {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.espace {
+  height: 100px;
+  background-color: white;
 }
 
 /* Local menage
@@ -1568,6 +1654,12 @@ Le bouton buger
   border-radius: 50%;
   overflow: hidden;
   background-color: #fff;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  #burger {
+    display: none;
+  }
 }
 
 #burger div {
@@ -2970,7 +3062,7 @@ article.projets a {
           animation: couleur 5s linear infinite;
 }
 
-@media (min-width: 743px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .professeurs .professeurs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2980,7 +3072,7 @@ article.projets a {
   }
 }
 
-@media (max-width: 743px) {
+@media (max-width: 600px) {
   .professeurs .professeurs h1 {
     font-size: 20px;
   }
@@ -3467,10 +3559,61 @@ h1 {
   margin-left: 100px;
 }
 
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .contenu-vieEtudiante {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contenu-vieEtudiante {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenu-vieEtudiante {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+  }
+}
+
 .vieEtudiante img {
   width: 500px;
-  height: 300px;
+  height: 400px;
   margin-top: 10px;
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .vieEtudiante img {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .vieEtudiante img {
+    width: 350px;
+    height: 250px;
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vieEtudiante img {
+    min-width: 400px;
+  }
 }
 
 .vieEtudiante figure {

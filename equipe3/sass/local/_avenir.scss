@@ -42,7 +42,7 @@ h1{
             margin-left: 0;
         }
     }
-    @include tablet{
+    @include tablet_avenir{
         width: 360px;
         height: 460px;
         li{
@@ -50,7 +50,7 @@ h1{
             margin-left: 0;
         }
     }
-    @include petit_ecran{
+    @include petit_avenir{
         width: 400px;
         height: 400px;
     }
@@ -72,7 +72,7 @@ h1{
             margin-left: 0;
         }
     }
-    @include tablet{
+    @include tablet_avenir{
         width: 290px; 
         height: 300px;
         li{
@@ -80,7 +80,7 @@ h1{
             margin-left: 0;
         }
     }
-    @include petit_ecran{
+    @include petit_avenir{
         width: 400px;
         li{
             margin-right: 1.8em;
@@ -108,7 +108,7 @@ h1{
             margin-left: 0;
         }
     }
-    @include tablet{
+    @include tablet_avenir{
         width: 340px;
         height: 300px;
         .scrollbar{
@@ -121,7 +121,7 @@ h1{
         }
         
     }
-    @include petit_ecran{
+    @include petit_avenir{
         width: 400px;
         height: 250px;
         li{
@@ -163,10 +163,10 @@ h1{
         width: 280px;
         height: 130px;
     }
-    @include tablet{
+    @include tablet_avenir{
         width: 300px;
     }
-    @include petit_ecran{
+    @include petit_avenir{
         width: 300px;
         height: 100px;
         margin-top: 8%;
@@ -180,10 +180,10 @@ h1{
         width: 320px;
         height: 130px;
     }
-    @include tablet{
+    @include tablet_avenir{
         width: 270px;
     }
-    @include petit_ecran{
+    @include petit_avenir{
         width: 350px;
         margin-bottom: 5%;
     }
@@ -195,7 +195,7 @@ h1{
     order: 0;
     background-color: #1b206e;
     border-radius: 10%;
-    @include petit_ecran{
+    @include petit_avenir{
             width: 160px;
             height: 100px;
             top: 110px;
@@ -226,7 +226,7 @@ h1{
         /* top: -10px; */
         top: -30px;
         border-radius: 10%;
-        @include petit_ecran{
+        @include petit_avenir{
             font-size: 0.8rem;
             padding: 0;
             top: -30px;
@@ -245,7 +245,7 @@ h1{
         /* top: 30px; */
         top: 10px;
         border-radius: 10%;
-        @include petit_ecran{
+        @include petit_avenir{
             font-size: 0.8rem;
             padding: 0;
             width: 100px;
@@ -265,7 +265,7 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 8px;
-    @include petit_ecran{
+    @include petit_avenir{
         flex-direction: column;
         justify-content: center;
         align-items: center;

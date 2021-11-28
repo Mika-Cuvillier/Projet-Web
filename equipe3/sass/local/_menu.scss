@@ -37,7 +37,11 @@
     flex-direction: column;
 }
 #site-navigation{
-    position: sticky; 
+    position: fixed; 
+    transition: 1s;
 }
-
+.espace{
+    height: 100px;
+    background-color: white;
+}
 
