@@ -136,11 +136,11 @@ h1{
     ul li:nth-child(1), li:nth-child(3),
     li:nth-child(6), li:nth-child(7),
     li:nth-child(9), li:nth-child(4){
-        list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleMauve.png");
+        list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleMauve.png");
     }
     ul li:nth-child(2), li:nth-child(5),
     li:nth-child(8), li:nth-child(10){
-        list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleRose.png");
+        list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleRose.png");
     }
     p{
         margin-left: 1.5em;
@@ -210,10 +210,10 @@ h1{
         text-align: center;
         right: 35px;
         li:nth-child(1){
-            list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/bouleRose.png");
+            list-style: circle url("../../../wp-content/uploads/2021/11/bouleRose.png");
         }
         li:nth-child(2){
-            list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/bouleMauve.png");
+            list-style: circle url("../../../wp-content/uploads/2021/11/bouleMauve.png");
         }
     }
     li:nth-child(1){
@@ -232,7 +232,7 @@ h1{
             top: -30px;
             width: 100px;
             left: -10px;
-            list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleMauve.png");
+            list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleMauve.png");
         }
     }
     li:nth-child(2){

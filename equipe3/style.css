@@ -3315,12 +3315,12 @@ h1 {
 .avenir:nth-child(6) ul li:nth-child(1), .avenir:nth-child(6) li:nth-child(3),
 .avenir:nth-child(6) li:nth-child(6), .avenir:nth-child(6) li:nth-child(7),
 .avenir:nth-child(6) li:nth-child(9), .avenir:nth-child(6) li:nth-child(4) {
-  list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleMauve.png");
+  list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleMauve.png");
 }
 
 .avenir:nth-child(6) ul li:nth-child(2), .avenir:nth-child(6) li:nth-child(5),
 .avenir:nth-child(6) li:nth-child(8), .avenir:nth-child(6) li:nth-child(10) {
-  list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleRose.png");
+  list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleRose.png");
 }
 
 .avenir:nth-child(6) p {
@@ -3436,11 +3436,11 @@ h1 {
 }
 
 .avenir:nth-child(3) ul li:nth-child(1) {
-  list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/bouleRose.png");
+  list-style: circle url("../../../wp-content/uploads/2021/11/bouleRose.png");
 }
 
 .avenir:nth-child(3) ul li:nth-child(2) {
-  list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/bouleMauve.png");
+  list-style: circle url("../../../wp-content/uploads/2021/11/bouleMauve.png");
 }
 
 .avenir:nth-child(3) li:nth-child(1) {
@@ -3462,7 +3462,7 @@ h1 {
     top: -30px;
     width: 100px;
     left: -10px;
-    list-style: circle url("http://localhost/equipe3/wp-content/uploads/2021/11/petiteBouleMauve.png");
+    list-style: circle url("../../../wp-content/uploads/2021/11/petiteBouleMauve.png");
   }
 }
 
