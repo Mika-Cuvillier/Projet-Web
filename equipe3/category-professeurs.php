@@ -21,10 +21,10 @@ get_header();
 	
 
 		<?php
-		if ( have_posts() ) :
+		if ( have_posts() ) : ?>
+<section class="gabaritProfesseurs">
 
-
-
+<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -36,17 +36,11 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', 'professeurs');
 
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+			endwhile; ?>
+<section>
+<?php endif; ?>
+			
+		
 	</main><!-- #main -->
 
 <?php

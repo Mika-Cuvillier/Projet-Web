@@ -10,7 +10,6 @@
 
 ?>
         <!-- <div class="site-prof">-->
-
             <article class="professeurs">
                 <div class="profs">
                     <?php the_post_thumbnail('thumbnail'); ?>
