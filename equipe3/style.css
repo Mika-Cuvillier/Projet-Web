@@ -1586,10 +1586,12 @@ section.gabaritApropos .apropos:nth-child(2) .contenu p {
 
 section.gabaritApropos .apropos:nth-child(2) .contenu figure {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 section.gabaritApropos .apropos:nth-child(2) .contenu figure img {
-  max-height: 400px;
+  max-height: 330px;
   transition: 0.5s;
 }
 
@@ -1600,11 +1602,6 @@ section.gabaritApropos .apropos:nth-child(2) .contenu figure img:hover {
 section.gabaritApropos .apropos:nth-child(3) {
   grid-area: etudiant;
   padding: 10px;
-}
-
-section.gabaritApropos .apropos:nth-child(3) .contenu {
-  overflow-y: scroll;
-  height: 250px;
 }
 
 section.gabaritApropos .apropos:nth-child(4) {
@@ -1618,11 +1615,6 @@ section.gabaritApropos .apropos:nth-child(4) .contenu {
 section.gabaritApropos .apropos:nth-child(5) {
   grid-area: admission;
   padding: 10px;
-}
-
-section.gabaritApropos .apropos:nth-child(5) .contenu {
-  height: 250px;
-  overflow-y: scroll;
 }
 
 section.gabaritApropos .apropos:nth-child(6) {
@@ -1683,7 +1675,7 @@ section.gabaritApropos .apropos:hover {
   section.gabaritApropos {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "etudiant etudiant ecole" "responsables admission portes" "carte carte coordonnees";
+    grid-template-areas: "etudiant etudiant etudiant" "responsables admission admission" "ecole admission admission" "portes portes portes" "carte carte coordonnees";
     gap: 30px;
     margin-left: 5em;
     margin-right: 5em;
@@ -1702,8 +1694,6 @@ section.gabaritApropos .apropos:hover {
   }
   section.gabaritApropos .apropos:nth-child(2) {
     grid-area: ecole;
-    max-height: 410px;
-    background-color: #fff;
   }
   section.gabaritApropos .apropos:nth-child(2) .contenu {
     padding: 1em;
@@ -1716,21 +1706,16 @@ section.gabaritApropos .apropos:hover {
   }
   section.gabaritApropos .apropos:nth-child(2) .contenu figure {
     margin: 0;
-    margin-left: -346px;
-  }
-  section.gabaritApropos .apropos:nth-child(2) .contenu figure img {
-    max-height: 400px;
+    display: flex;
+    justify-content: center;
   }
   section.gabaritApropos .apropos:nth-child(3) {
     grid-area: etudiant;
     padding: 10px;
-    margin-top: 45px;
-    margin-bottom: 55px;
-    margin-right: 140px;
   }
-  section.gabaritApropos .apropos:nth-child(3) .contenu {
-    overflow-y: scroll;
-    height: 303px;
+  section.gabaritApropos .apropos:nth-child(4) {
+    grid-area: responsables;
+    padding: 10px;
   }
   section.gabaritApropos .apropos:nth-child(7) {
     grid-area: coordonnees;
@@ -1742,7 +1727,7 @@ section.gabaritApropos .apropos:hover {
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   section.gabaritApropos {
-    grid-template-areas: "etudiant etudiant" "ecole responsables" "admission portes" "carte coordonnees";
+    grid-template-areas: "etudiant etudiant" "admission responsables" "admission portes" "ecole ecole" "carte coordonnees";
   }
   section.gabaritApropos .titreApropos {
     font-size: 40px;
@@ -1765,7 +1750,6 @@ section.gabaritApropos .apropos:hover {
     background-color: #1b206e;
   }
   section.gabaritApropos .apropos:nth-child(2) .contenu {
-    max-height: 210px;
     padding: 1em;
   }
   section.gabaritApropos .apropos:nth-child(2) .contenu h2 {
@@ -1778,15 +1762,11 @@ section.gabaritApropos .apropos:hover {
     margin: 0;
   }
   section.gabaritApropos .apropos:nth-child(2) .contenu figure img {
-    max-height: 400px;
+    max-height: 370px;
   }
   section.gabaritApropos .apropos:nth-child(4) {
     grid-area: responsables;
     padding: 10px;
-  }
-  section.gabaritApropos .apropos:nth-child(4) .contenu {
-    height: 250px;
-    overflow-y: scroll;
   }
 }
 
