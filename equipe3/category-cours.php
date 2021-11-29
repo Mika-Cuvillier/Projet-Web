@@ -26,7 +26,7 @@ get_header();
 	</div> -->
 		<section class="gabaritCours">
 			<div class="enteteCours">
-		<h1 class="titreCours"> cours</h1>
+				<h1 class="titreCours"> cours</h1>
 		<div class="btnTrieCours">
 	   <div id="btnProgrammation"> Programmation </div>
 		<div id="btnCreation">Création  </div>
@@ -51,17 +51,29 @@ get_header();
 					echo '<section class="session">';
 					echo '<div class="enteteSession">' . $tPropriété['session'] . '<p class="nomSession"> session </p>'. '</div>';
 					//echo $tPropriété['session'];
-				}
-				$precedent = $tPropriété['session'];
-				get_template_part( 'template-parts/content', 'cours');
-
-				//if ($precedent != $tPropriété['session']){ }	//si est différent
-					//echo '</section>';
-			
 					
 
-			endwhile;?>
+			/* 		if ($tPropriété['typeCours']== 'programmation'):
+					echo '<p>' .' <i class="fas fa-anchor"></i>' . '</p>';
+					endif;
+					if ($tPropriété['typeCours']== 'creation'):
+					echo '<p>' .' <i class="fas fa-palette"></i>' . '</p>';
+					endif;
+					 */
 
+					
+				}
+//if ($precedent != $tPropriété['session']){ }	//si est différent
+					//echo '</section>';
+				$precedent = $tPropriété['session'];
+				get_template_part( 'template-parts/content', 'cours');
+	
+
+				
+				
+	
+		
+			endwhile;?>
 			<section> <!-- ferme classe session-->
 
 		

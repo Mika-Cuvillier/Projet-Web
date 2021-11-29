@@ -1,4 +1,4 @@
-
+/* 
 .enleveCours{
 
     display: none;
@@ -21,6 +21,136 @@
     width: 35vw;
     height: 25vh;
     align-self: center;
+} */
+
+/************* ANIMATION COURS TRIAGES *****************************/
+
+.triageCours{
+    animation: animationCours ease-in 2s;
+    transition: all 1.3s ;
+}
+@keyframes animationCours{
+0%{
+    /* opacity: 0;
+    scale: 0.5; */
+    opacity: 0;
+    //perspective-origin: center;
+    //transform-style: preserve-3d;
+    transform: rotate(0deg)scale(0)perspective(1000px);
+}
+100%{
+    /* opacity: 1;
+    scale: 2; */
+    border-radius: 50px 50px;
+    transform: rotate(15deg)scale(1.1)perspective(-800px);
+    border-radius: 40px;
+  
+}
+
+}
+
+/************* ANIMATION COURS BOUTONS *****************************/
+
+.animationBoutonsCours{
+    animation: animationBoutonsCours ease-in-out 2s;
+    //color: greenyellow;
+    //background-color: rgb(84, 108, 128) !important;
+    background: #28e093 !important;
+  
+}
+
+@keyframes animationBoutonsCours{
+    0%{
+        box-shadow: 0 0 10px #fff; 
+        background: #28e093;
+       
+    }
+
+   
+    100%{
+        //background-color: #234083;
+        opacity: 1;
+        //background-color:linear-gradient(to right, #28e093,#234083);
+        //transform: rotate(-20deg)translate(140px,70px);
+       // background-color: #234083;
+       background-color:linear-gradient( #28e093,#234083);
+    }
+}
+
+/******************* ANIMATION BOUTONS PROJETS **********************************/
+
+.animationBoutonsProjets{
+
+    animation: animationBoutonsProjets ease-in-out 2s;
+    //background: #dd9a1d !important;
+}
+@keyframes animationBoutonsProjets{
+    0%{
+        transform: translateY(5px)scale(0.5);
+    }
+
+    100%{
+        transform: translateY(0)scale(1);
+        background: #dd9a1d;
+    }
+}
+/****************** ANIMATION BACKGROUND *****************************************************/
+
+.backgroundAnimation{
+    display: flex;
+   // position: absolute;
+   flex-wrap: wrap;
+   flex-direction:row;
+    border: 2px solid greenyellow;
+    z-index: 35;
+}
+
+.elementBackground{
+   position: absolute; 
+   width: 60px;
+   height: 60px;
+   background: transparent;
+   //border: 3px solid #28e093;;
+
+}
+.elementBackground:nth-of-type(1){
+top: 11%;
+left: 41%;
+/* border: 3px solid rgba(255, 0, 0, 0.459); */
+animation: animate 10s linear infinite;
+}
+
+.elementBackground:nth-of-type(2){
+    top: 90%;
+    left: 41%;
+   /*  border: 3px solid rgba(255, 0, 0, 0.459); */
+    animation: animate 7s linear infinite;
+    }
+
+.elementBackground:nth-of-type(3){
+top: 62%;
+left: 5%;
+       /*  border: 3px solid rgba(255, 0, 0, 0.459); */
+ animation: animate 9s linear infinite;
+ }
+
+@keyframes animate{
+
+    0%{
+        transform: scale(0)translateY(-90px)rotate(360deg);
+        background-image: linear-gradient(-45deg, rgba(0, 245, 255, 0.56), rgba(81, 19, 219, 0.45), rgba(0, 245, 255, 0.56));
+        border-radius: 50%;
+        background-position: 60% 50%;
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.3)translateY(-90px)rotate(360deg);
+        background-image: linear-gradient(-45deg, rgba(0, 245, 255, 0.56), rgba(81, 19, 219, 0.45), rgba(0, 245, 255, 0.56));
+        background-position: 100% 50%;
+       // overflow: hidden;
+        border-radius: 50%;
+        opacity: 1;
+    }
 }
 
 

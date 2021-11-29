@@ -15,7 +15,11 @@
 </divNoSession> -->
 
   <!-- //content-->
+  
 <section class="sectionAccueil">
+<div class="backgroundAnimation"><!-- ANIMATION -->
+
+	
 	<div class="titreEntete"> 
 		<div class="titrePrincipal">L'harmonie entre la <br><span class="boldTitre">logique </span>et le <span class="boldTitre">créatif </span></div>
 		<div class="sous-titre">
@@ -24,6 +28,7 @@
 	
 		</div>
 	</div>
+
  
 	<div class="carouselAccueil"> carrousel
 	<div class="boutonsCarouAccueil"> 
@@ -32,7 +37,12 @@
 		<div class="boutonCarre"></div>
 		
 </div>
-</div>
+
+
+<div class="elementBackground"> <div>
+		<div class="elementBackground"> <div>
+		<div class="elementBackground"> <div>
+<!-- </div> -->
 
 </section>
-
+</div><!-- ANIMATION -->

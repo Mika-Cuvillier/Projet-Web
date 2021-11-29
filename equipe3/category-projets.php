@@ -25,9 +25,8 @@ get_header();
 	<header class="page-header">
 		<div class="enteteProjet">
 			<div class="btnEntete">
-		<h1 class="titreProjets"> Projets</h1>
-		
-		</div>
+				<h1 class="titreProjets"> Projets</h1>
+			</div>
 		<div class="btnTrieProjets">
 	   <div id="btnWeb"> Web </div>
 		<div id="btnDesign">Design  </div>
