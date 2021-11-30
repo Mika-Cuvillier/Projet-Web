@@ -9,8 +9,7 @@
 
 ?>
 
-<div class="avenir">
-    <h2><a <?php echo get_permalink() ?>><?php the_title(); ?></a></h2>
-    <p><?php echo get_the_content() ?></p>
-  
-</div>
+<article class="avenir">
+        <h2><a <?php echo get_permalink() ?>><?php the_title(); ?></a></h2>
+        <p><?php echo get_the_content() ?></p>
+</article>

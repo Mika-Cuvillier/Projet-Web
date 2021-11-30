@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-    <h1>AVENIR</h1>
+    <h1 class= "titreAvenir">AVENIR</h1>
     <main id="primary" class="site-main">
 
     

@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-    <h1>VIE ÉTUDIANTE</h1>
+    <h1 class= "titreVieEtudiante">VIE ÉTUDIANTE</h1>
     <main id="primary" class="site-main">
 
     

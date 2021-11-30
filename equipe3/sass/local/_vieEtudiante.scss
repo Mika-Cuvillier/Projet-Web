@@ -1,55 +1,30 @@
-.vieEtudiante h1{
-    color: #1b206e;
+.titreVieEtudiante{
+    font-size: 50px;
+    font-family: 'Antonio';
     display: flex;
-    align-items: center;
     justify-content: center;
+    text-transform: uppercase;
 }
 .vieEtudiante h2{
     display: none;
 }
-
 .contenu-vieEtudiante{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    margin: 5%;
+    align-items: center; 
     flex-basis: auto;
-    margin-right: 100px;
-    margin-left: 100px;
-    @include grand_ecran{
-        margin-right: 5%;
-        margin-left: 5%;
-    }
-    @include tablet{
-        margin-right: 3%;
-        margin-left: 3%;
-    }
+    gap: 10px;
     @include petit_ecran{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
     }
 }
-.vieEtudiante img{
-    width: 500px;
-    height: 400px;
-    margin-top: 10px;
-    @include grand_ecran{
-        width: 400px;
-        height: 350px;
-    }
-    @include tablet{
-        width: 350px;
-        height: 250px;
-        min-width: 350px;
-    }
-    @include petit_ecran{
-        min-width: 400px;
-    }
-}
-
-.vieEtudiante figure{
-    border-radius: 10%;
+.vieEtudiante{
+   width: 400px;
+   height: auto;
+   figure{
+    border-radius: 8px;
+   }
 }
