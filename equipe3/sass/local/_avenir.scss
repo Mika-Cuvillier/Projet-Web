@@ -10,13 +10,14 @@
 .contenu-avenir article:nth-child(6):hover,
 .contenu-avenir article:nth-child(7):hover{
     transition: 0.5s;
-    background-color: #307e71;
+    background-color: #2e7694;
 } 
 .avenir{
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 1%;
     margin-bottom: 4%; 
+    animation: animArticle 1s;
     h2{  
         font-size: 1.5em;
         a{
@@ -117,6 +118,7 @@
     ul{
         width: 60%;
         margin: 50px;
+        margin-top: 60px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -174,5 +176,18 @@
     "uqam"
     "udem"
     "uqat";
+    }
+}
+
+@keyframes animArticle{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        transform:translateY(0px);
+        opacity: 1;
+        transform: scale(1);
     }
 }

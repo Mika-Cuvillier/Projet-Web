@@ -13,10 +13,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
     align-items: center; 
     flex-basis: auto;
-    gap: 10px;
+    gap: 10px; 
     @include petit_ecran{
         flex-direction: column;
     }
@@ -26,5 +28,19 @@
    height: auto;
    figure{
     border-radius: 8px;
+    animation: animArticle 1s;
    }
+}
+
+@keyframes animArticle{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        transform:translateY(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
 }
