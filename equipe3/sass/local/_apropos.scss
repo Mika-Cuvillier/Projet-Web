@@ -1,3 +1,4 @@
+/*Titre de la page*/
 .titreApropos{
     font-size: 35px;
     font-family: 'Antonio';
@@ -5,6 +6,7 @@
     justify-content: center;
     text-transform: uppercase;
 }
+
 //Scroll bar
 ::-webkit-scrollbar{
 width: 12px;
@@ -25,23 +27,47 @@ grid-template-columns: auto;
 grid-template-areas:
     "etudiant"
     "ecole"
-    "responsables"
+    "coordonnateurs"
      "admission"
-      "portes"
     "coordonnees"
         "carte";
         margin-left: 1em;
         margin-right: 1em;
+        margin-bottom: 50px;
     //Les articles
+    .apropos{
+        animation:animArticle 1s ;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 10px;
+    }
+    /*Animation*/
+@keyframes animArticle{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform:translateY(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+/*Fin animation*/
     .apropos:nth-child(1) {
         grid-area: carte;
         height: 30em;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
         .contenu{
             margin-top: 1em;
             display: flex;
             justify-content: center;
+            align-items: center;
             h2{
                 display: none;
             }
@@ -56,9 +82,9 @@ grid-template-areas:
     }
     .apropos:nth-child(2) {
         grid-area: ecole;
-        max-height: 410px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         .contenu{
-            padding: 1em;
             h2{
                 display: none;
             }
@@ -69,10 +95,12 @@ grid-template-areas:
                 margin:0;
                 display: flex;
                 justify-content: center;
+                align-items: center;
 
                 img{
-                    max-height: 330px;
                     transition: 0.5s;
+                    border-radius: 8px;
+                    height: 150px;
                 }
                 img:hover{
                     border-radius: 40px;
@@ -82,32 +110,23 @@ grid-template-areas:
     }
     .apropos:nth-child(3) {
     grid-area: etudiant;
-    padding: 10px;
-    .contenu{
-        
-    }
 }
 .apropos:nth-child(4){
-    grid-area: responsables;
+    grid-area: coordonnateurs;
     .contenu{
         height: 200px;
     }
 }
 .apropos:nth-child(5){
     grid-area: admission;
-    padding: 10px;
-    .contenu{
-
+    h1{
+        font-family: 'Antonio';
+        color: #ffe5b6;
+        padding-left: 1em;
+        display: block;
     }
 }
 .apropos:nth-child(6){
-    grid-area: portes;
-    padding: 10px;
-    .contenu{
-        height: 130px;
-    }
-}
-.apropos:nth-child(7){
     grid-area: coordonnees;
     margin-top: 0;
     margin-bottom: 1em;
@@ -122,6 +141,7 @@ grid-template-areas:
             font-family: 'Antonio';
             color: #ffe5b6;
             padding-left: 1em;
+            margin: 0;
             a{
                 color: #ffe5b6;
                 font-size: 25px;
@@ -153,9 +173,8 @@ grid-template-areas:
     grid-template-rows: auto;
     grid-template-areas:
         "etudiant etudiant etudiant"
-        "responsables admission admission"
+        "coordonnateurs admission admission"
         "ecole admission admission"
-        "portes portes portes"
         "carte carte coordonnees";
         gap: 30px;
         margin-left: 5em;
@@ -165,6 +184,7 @@ grid-template-areas:
         }
 
         .apropos{
+            
             h2{
                 a{
                     font-size: 35px;
@@ -181,8 +201,8 @@ grid-template-areas:
         }
         .apropos:nth-child(2) {
             grid-area: ecole;
+            padding-top: 20px;
             .contenu{
-                padding: 1em;
                 h2{
                     display: none;
                 }
@@ -193,9 +213,9 @@ grid-template-areas:
                     margin:0;
                     display: flex;
                     justify-content: center;
-    
+                    align-items: center;
                     img{
-
+                        height: 290px;
                     }
                 }
             }
@@ -203,16 +223,12 @@ grid-template-areas:
         
         .apropos:nth-child(3) {
             grid-area: etudiant;
-            padding: 10px;
-            .contenu{
-
-            }
         }
         .apropos:nth-child(4){
-            grid-area: responsables;
-            padding: 10px;
+            grid-area: coordonnateurs;
+            padding-bottom: 20px;
         }
-        .apropos:nth-child(7){
+        .apropos:nth-child(6){
             grid-area: coordonnees;
             margin-top: 6em;
             margin-bottom: 6em;
@@ -223,10 +239,12 @@ grid-template-areas:
     @media only screen and (min-width : 600px) and (max-width:1024px){
         grid-template-areas:
         "etudiant etudiant"
-        "admission responsables"
-        "admission portes"
-        "ecole ecole"
+        "coordonnateurs admission "
+        "ecole admission "
         "carte coordonnees";
+
+        margin-left: 1em;
+        margin-right: 1em;
 
         .titreApropos{
             font-size: 40px;
@@ -255,7 +273,6 @@ grid-template-areas:
             grid-area: ecole;
             background-color: #1b206e;
             .contenu{
-                padding: 1em;
                 h2{
                     display: none;
                 }
@@ -266,18 +283,14 @@ grid-template-areas:
                     margin:0;
     
                     img{
-                        max-height: 370px;
+                        height: 180px;
                     }
                 }
             }
         }
 
         .apropos:nth-child(4){
-            grid-area: responsables;
-            padding: 10px;
-            .contenu{
-
-            }
+            grid-area: coordonnateurs;
         }
 
 
