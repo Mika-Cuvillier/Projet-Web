@@ -586,11 +586,11 @@ a:hover, a:active {
 
 /**** AJOUT VARIABLE COULEUR DANS MAIN *****/
 .site-main a {
-  color: #050b42;
+  color: white;
 }
 
 .site-main a:visited {
-  color: black;
+  color: white;
 }
 
 .site-main a:focus {
@@ -1968,6 +1968,17 @@ article.projets a {
   flex-wrap: nowrap;
   align-items: center;
   gap: 50px;
+  border: 3px solid red;
+}
+
+@media (max-width: 600px) {
+  .enteteCours {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+  }
 }
 
 .enteteSession {
@@ -1985,9 +1996,19 @@ article.projets a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 5%;
+  gap: 2%;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+@media (max-width: 600px) {
+  .session {
+    margin-left: 0%;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
 }
 
 .session article {
@@ -1996,8 +2017,9 @@ article.projets a {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  box-shadow: 5px 5px 5px #080ce4c5;
-  background: linear-gradient(-45deg, rgba(129, 229, 233, 0.56), rgba(19, 89, 219, 0.45), rgba(0, 245, 255, 0.56));
+  border-radius: 8px;
+  background-color: #1b206e;
+  margin: 2%;
   width: 35vw;
   height: 25vh;
   align-self: center;
@@ -2008,6 +2030,7 @@ article.projets a {
   justify-content: center;
   align-items: center;
   opacity: 2;
+  color: white;
 }
 
 .session article a {
@@ -2017,6 +2040,10 @@ article.projets a {
   align-items: center;
   text-decoration: none;
   opacity: 2;
+}
+
+.session article:hover {
+  background-color: #2C7594;
 }
 
 .nomSession {
@@ -2045,19 +2072,32 @@ article.projets a {
   height: 50px;
 }
 
-#btnProgrammation {
+.btnTrieCours div {
   background-color: #2C7594;
   color: white;
 }
 
-#btnCreation {
-  background-color: #2C7594;
-  color: white;
+.btnTrieCours div:hover {
+  animation: couleuranimBoutons 5s ease-in-out;
+  transition: linear;
 }
 
-#btnTout {
-  background-color: #2C7594;
-  color: white;
+@keyframes couleuranimBoutons {
+  0% {
+    filter: drop-shadow(0 0 0.85rem #8d14d9);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    opacity: 1;
+  }
+  80% {
+    filter: drop-shadow(0 0 0.95rem #28e093);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 0.75rem #8d14d9);
+    opacity: 5;
+  }
 }
 
 /* page professeurs
