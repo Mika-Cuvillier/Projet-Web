@@ -163,6 +163,7 @@ function equipe3_scripts() {
 	wp_enqueue_script( 'equipe3-filtrerProjets', get_template_directory_uri() . '/js/filtrerProjets.js', array(), _S_VERSION, true );
 
 	/*wp_enqueue_script( 'equipe3-nomProfesseurs', get_template_directory_uri() . '/js/nomProfesseurs.js', array(), _S_VERSION, true );*/
+	wp_enqueue_script( 'equipe3-informationSupplementaires', get_template_directory_uri() . '/js/informationSupplementaires.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'equipe3-burger', get_template_directory_uri() . '/js/burger.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-fontawesome', 'https://kit.fontawesome.com/91319fa15f.js', array(), _S_VERSION, true );
