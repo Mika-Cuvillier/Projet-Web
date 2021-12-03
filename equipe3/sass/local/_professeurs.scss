@@ -25,46 +25,38 @@
     margin-left: 15%;
     margin-bottom: 10em;
 
+    .profs{
+        display: flex;
+    }
+
     img{
-        width: 300px;
-        height: 300px;
+        width: 95%;
+        height: 95%;
     }
 
     img:hover{
         cursor: pointer;
         //overflow: hidden;
-    }
-
-
-
-        //ANIMATION COULEUR DE FOND POUR LE CONTENU INFORMATIONS
-        /*@keyframes texte {
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }*/     
+    }    
 }
 
 .Informations{
     position: absolute;
-    //display: flex;
     justify-content: center;
     background-color: #1b206e;
-    height: 22em;
-    width: 22em;
+    height: 44%;
+    width: 22%;
     border-radius: 8px;
     color: white;
     flex-wrap: wrap;
     opacity: 0;
     z-index: -1;
-    //animation: texte 5s both;
+    animation: texte 5s;
 
     h2{
         font-size: 1.2em;
         font-family: 'IBM Plex Sans';
+        text-align: center;
     }
 
     p{
@@ -73,7 +65,17 @@
         padding-left: 1em;
         padding-right: 1em;
         margin-bottom: 0px;
-        margin-top: 2px;
+        margin-top: 1em;
+    }
+
+    //ANIMATION COULEUR DE FOND POUR LE CONTENU INFORMATIONS
+    @keyframes texte {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
     }
 }
 
@@ -85,8 +87,12 @@
 .professeurs:nth-child(1) .profs img{
     grid-area: denis;
     animation: couleurDenis 5s linear infinite;
-    
 }
+
+/*.professeurs:nth-child(1) .profs .Informations{
+    margin-left: 12%;
+    margin-top: 12%;
+}*/
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
 @keyframes couleurDenis {
@@ -130,7 +136,6 @@
 .professeurs:nth-child(3) .profs img{
     grid-area: camille;
     animation: couleurCamille 5s linear infinite;
-    transform: scale(1.2);
 }
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
@@ -350,8 +355,13 @@
 //ANIMATION COULEUR DE FOND POUR DAVID
 .professeurs:nth-child(13) .profs img{
     grid-area: david;
+    display: flex;
     animation: couleurDavid 5s linear infinite;
-    margin-left: 35%;
+    //margin-left: 35%;
+}
+
+.professeurs:nth-child(13) .profs .Informations{
+    margin-left: 15%;
 }
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
@@ -372,9 +382,15 @@
 
 //ANIMATION COULEUR DE FOND POUR STÉPHANIE
 .professeurs:nth-child(14) .profs img{
+    display: flex;
     grid-area: johanne;
     animation: couleurJohanne 5s linear infinite;
 }
+
+.professeurs:nth-child(14) .profs .Informations{
+    margin-left: 15%;
+}
+
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
 @keyframes couleurJohanne {
@@ -398,17 +414,61 @@
         font-size: 30px;
     }
 
-    .professeurs{
+    .Informations{
+        height: 30%;
+        width: 22%;
+
+        h2{
+            font-size: 0.9em;
+        }
     
-        img{
-            width: 200px;
-            height: 200px;
+        p{
+            font-size: 0.8em;
+            margin-top: 0.8em;
         }
     }
     
 }
 
 @include petit_ecran{
+    .gabaritProfesseurs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "denis greg "
+            "camille vincent"
+            "dominc eddy"
+            "martin vhaik "
+            "manon ahmed"
+            "mathieu caroline"
+            "david johanne";
+        width: 80%;
+        margin-left: 8%;
+    }
+
+    .titreProfesseurs{
+        font-size: 30px;
+    }
+    
+    .Informations{
+        height: 27%;
+        width: 34%;
+
+        h2{
+            font-size: 0.8em;
+        }
+    
+        p{
+            font-size: 0.7em;
+            margin-top: 0.2em;
+        }
+    }
+    .professeurs:nth-child(13) .profs .Informations{
+        margin-left: 0%;
+    }
+    .professeurs:nth-child(14) .profs .Informations{
+        margin-left:0%;
+    }
 
 }
 
