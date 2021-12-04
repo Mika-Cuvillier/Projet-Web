@@ -1,16 +1,18 @@
 #primary-menu {
+    position: relative;
+    top: -4px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #1b206e;
     text-transform: uppercase;
     font-family: 'Antonio', sans-serif;
     height: 120px;
     width: 100%;
     align-items: center;
-    position: relative;
     @include petit-ecran{
         height: 1px; 
+        top: 0;
     }
     li ul{
         display: flex;
@@ -23,9 +25,14 @@
     {
         color: #ffe5b6;
         font-weight: bold;
-        font-size: 20px;
+        @include TresGrandEcran{
+            font-size: clamp(0.7rem, 1.3vw, 2rem);
+        }
+        @include grand_ecran{
+            font-size: clamp(0.7rem, 1.3vw, 2rem);
+        }
         @include tablet{
-            font-size: 15px;
+            font-size: clamp(0.7rem, 1.3vw, 2rem);
         }
         @include petit-ecran{
             display: none; 
@@ -44,4 +51,3 @@
     height: 100px;
     background-color: white;
 }
-
