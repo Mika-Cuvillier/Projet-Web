@@ -6,6 +6,7 @@
     justify-content: center;
     text-transform: uppercase;
 }
+
 //Scroll bar
 ::-webkit-scrollbar{
 width: 12px;
@@ -47,11 +48,13 @@ grid-template-areas:
         opacity: 0;
         transform: scale(0.8);
     }
+
     100%{
         transform:translateY(0px);
         opacity: 1;
         transform: scale(1);
     }
+
 }
 /*Fin animation*/
     .apropos:nth-child(1) {
@@ -93,6 +96,7 @@ grid-template-areas:
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 img{
                     transition: 0.5s;
                     border-radius: 8px;
@@ -178,7 +182,10 @@ grid-template-areas:
         .titreApropos{
             font-size: 50px;
         }
+
         .apropos{
+            
+
             h2{
                 a{
                     font-size: 35px;
@@ -214,6 +221,7 @@ grid-template-areas:
                 }
             }
         }
+
         .apropos:nth-child(3) {
             grid-area: etudiant;
         }
@@ -235,12 +243,15 @@ grid-template-areas:
         "coordonnateurs admission "
         "ecole admission "
         "carte coordonnees";
+
         margin-left: 1em;
         margin-right: 1em;
+
         .titreApropos{
             font-size: 40px;
         }
         .apropos{
+
             h2{
                 a{
                     font-size: 30px;
@@ -271,14 +282,17 @@ grid-template-areas:
                 }
                 figure{
                     margin:0;
+
                     img{
                         height: 180px;
                     }
                 }
             }
         }
+
         .apropos:nth-child(4){
             grid-area: coordonnateurs;
         }
     }
+
 }
