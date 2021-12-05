@@ -9,16 +9,17 @@
     display: none;
 }
 .contenu-vieEtudiante{
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
     align-items: center; 
-    flex-basis: auto;
-    gap: 10px; 
+    gap: 5%; 
     @include petit_ecran{
         flex-direction: column;
     }
@@ -26,6 +27,12 @@
 .vieEtudiante{
    width: 400px;
    height: auto;
+   @include grand_ecran{
+       width: 350px;
+   }
+   @include tablet{
+       width: 230px;
+   }
    figure{
     border-radius: 8px;
     animation: animArticle 1s;

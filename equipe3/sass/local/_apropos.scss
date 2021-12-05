@@ -54,7 +54,7 @@ grid-template-areas:
         opacity: 1;
         transform: scale(1);
     }
-    
+
 }
 /*Fin animation*/
     .apropos:nth-child(1) {
@@ -185,6 +185,7 @@ grid-template-areas:
 
         .apropos{
             
+
             h2{
                 a{
                     font-size: 35px;
@@ -220,7 +221,7 @@ grid-template-areas:
                 }
             }
         }
-        
+
         .apropos:nth-child(3) {
             grid-area: etudiant;
         }
@@ -250,7 +251,7 @@ grid-template-areas:
             font-size: 40px;
         }
         .apropos{
-            
+
             h2{
                 a{
                     font-size: 30px;
@@ -281,7 +282,7 @@ grid-template-areas:
                 }
                 figure{
                     margin:0;
-    
+
                     img{
                         height: 180px;
                     }
@@ -292,10 +293,6 @@ grid-template-areas:
         .apropos:nth-child(4){
             grid-area: coordonnateurs;
         }
-
-
     }
-
-
 
 }

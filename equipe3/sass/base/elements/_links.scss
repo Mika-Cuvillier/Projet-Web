@@ -20,3 +20,20 @@ a {
 		outline: 0;
 	}
 }
+
+/**** AJOUT VARIABLE COULEUR DANS MAIN *****/
+.site-main{
+    a{
+        color: $color__linksite-main;
+        &:visited {
+            color: $color__linksite-main-visited;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover,
+        &:active {
+            outline: 0;
+        }
+    }
+}

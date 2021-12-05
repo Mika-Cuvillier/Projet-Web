@@ -88,9 +88,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 - Alignments
 
 --------------------------------------------------------------*/
+
+/************** couleur site main ********************/
 /*--------------------------------------------------------------
 
 # Generic
+
 
 --------------------------------------------------------------*/
 /* Normalize
@@ -589,7 +592,26 @@ a:hover, a:active {
   outline: 0;
 }
 
+
+/**** AJOUT VARIABLE COULEUR DANS MAIN *****/
+.site-main a {
+  color: white;
+}
+
+.site-main a:visited {
+  color: white;
+}
+
+.site-main a:focus {
+  outline: none;
+}
+
+.site-main a:hover, .site-main a:active {
+  outline: 0;
+}
+
 /* Forms
+
 --------------------------------------------- */
 button,
 input[type="button"],
@@ -830,18 +852,73 @@ Bouton burger
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
+
+}
+
+@media (min-width: 1600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2),
+  .main-navigation li:nth-of-type(5) a:nth-child(2),
+  .main-navigation li:nth-of-type(6) a:nth-child(2) {
+    position: relative;
+    left: 75px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2),
+  .main-navigation li:nth-of-type(5) a:nth-child(2),
+  .main-navigation li:nth-of-type(6) a:nth-child(2) {
+    position: relative;
+    left: 55px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2),
+  .main-navigation li:nth-of-type(5) a:nth-child(2),
+  .main-navigation li:nth-of-type(6) a:nth-child(2) {
+    left: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2),
+  .main-navigation li:nth-of-type(5) a:nth-child(2),
+  .main-navigation li:nth-of-type(6) a:nth-child(2) {
+    left: 20px;
+  }
+
 }
 
 .main-navigation li:nth-of-type(4) a:nth-child(2) {
   position: relative;
-  left: -7px;
-  top: -61px;
+  left: 55px;
+  top: -67px;
   height: 28px;
+}
+
+@media (min-width: 1600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2) {
+    left: 80px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2) {
+    top: -58px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .main-navigation li:nth-of-type(4) a:nth-child(2) {
+    top: -50px;
+    left: 10px;
+  }
 }
 
 @media (max-width: 600px) {
   .main-navigation li:nth-of-type(4) a:nth-child(2) {
-    top: 69px;
+    top: 75px;
     left: -50px;
   }
 }
@@ -895,6 +972,7 @@ Bouton burger
   position: relative;
   height: 10px;
   top: -98px;
+  left: 40px;
 }
 
 @media (max-width: 600px) {
@@ -903,7 +981,7 @@ Bouton burger
     position: relative;
     top: 0;
     right: 0;
-    left: 0;
+    left: -13px;
     bottom: 0;
   }
 }
@@ -1297,6 +1375,10 @@ Bouton burger
 
 --------------------------------------------- */
 #primary-menu {
+
+  position: relative;
+  top: -4px;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1304,8 +1386,11 @@ Bouton burger
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+
   background-color: #1b206e;
   text-transform: uppercase;
   font-family: 'Antonio', sans-serif;
@@ -1314,12 +1399,13 @@ Bouton burger
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+
 }
 
 @media (max-width: 600px) {
   #primary-menu {
     height: 1px;
+    top: 0;
   }
 }
 
@@ -1340,12 +1426,23 @@ Bouton burger
 #primary-menu a:link, #primary-menu a:visited {
   color: #ffe5b6;
   font-weight: bold;
-  font-size: 20px;
+}
+
+@media (min-width: 1600px) {
+  #primary-menu a:link, #primary-menu a:visited {
+    font-size: clamp(0.7rem, 1.3vw, 2rem);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  #primary-menu a:link, #primary-menu a:visited {
+    font-size: clamp(0.7rem, 1.3vw, 2rem);
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
   #primary-menu a:link, #primary-menu a:visited {
-    font-size: 15px;
+    font-size: clamp(0.7rem, 1.3vw, 2rem);
   }
 }
 
@@ -1817,6 +1914,7 @@ La barre du millieu
   0% {
     -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+
   }
   100% {
     -webkit-clip-path: polygon(42% 20%, 58% 20%, 58% 80%, 42% 80%);
@@ -1830,6 +1928,7 @@ La barre du millieu
             clip-path: polygon(42% 20%, 58% 20%, 58% 80%, 42% 80%);
   }
   100% {
+
     -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
   }
@@ -1892,12 +1991,14 @@ section.gabaritApropos {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+
       grid-template-areas: "etudiant"
  "ecole"
  "coordonnateurs"
  "admission"
  "coordonnees"
  "carte";
+
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 50px;
@@ -2108,10 +2209,12 @@ section.gabaritApropos .apropos:hover {
         grid-template-columns: auto;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+
         grid-template-areas: "etudiant etudiant etudiant"
  "coordonnateurs admission admission"
  "ecole admission admission"
  "carte carte coordonnees";
+
     gap: 30px;
     margin-left: 5em;
     margin-right: 5em;
@@ -2179,10 +2282,12 @@ section.gabaritApropos .apropos:hover {
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   section.gabaritApropos {
+
         grid-template-areas: "etudiant etudiant"
  "coordonnateurs admission "
  "ecole admission "
  "carte coordonnees";
+
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -2230,7 +2335,9 @@ section.gabaritApropos .apropos:hover {
   }
 }
 
+
 /* page projets
+
 
 --------------------------------------------- */
 /* page projets
@@ -2407,38 +2514,72 @@ article.projets a {
 /* page projets
 
 --------------------------------------------- */
-.enleveCours {
-  display: none;
-  visibility: hidden;
+/************* ANIMATION COURS TRIAGES *****************************/
+.triageCours {
+  -webkit-animation: animationCours ease-in 2s;
+          animation: animationCours ease-in 2s;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
 }
 
-.AfficheCours {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
+
+@-webkit-keyframes animationCours {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 2;
+  }
 }
 
-.AfficheToutCours {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  -webkit-box-shadow: 5px 5px 5px #ffe5b6c5;
-          box-shadow: 5px 5px 5px #ffe5b6c5;
-  width: 35vw;
-  height: 25vh;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+@keyframes animationCours {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+
+/************* ANIMATION COURS BOUTONS *****************************/
+.animationBoutonsSelect {
+  -webkit-animation: animationBoutonsSelect ease-in-out 2s;
+          animation: animationBoutonsSelect ease-in-out 2s;
+  background: #28e093 !important;
+}
+
+@-webkit-keyframes animationBoutonsSelect {
+  0% {
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+    background: #28e093;
+  }
+  100% {
+    opacity: 1;
+    background-color: linear-gradient(#28e093, #234083);
+  }
+}
+
+@keyframes animationBoutonsSelect {
+  0% {
+    -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+    background: #28e093;
+  }
+  100% {
+    opacity: 1;
+    background-color: linear-gradient(#28e093, #234083);
+  }
+
 }
 
 /* page cours
 
 --------------------------------------------- */
+body {
+  padding-bottom: 50px;
+}
+
 .enteteCours {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2451,7 +2592,38 @@ article.projets a {
   gap: 50px;
 }
 
+.enteteCours h1 {
+  font-family: 'Antonio';
+  text-transform: uppercase;
+}
+
+.enteteCours div {
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  .enteteCours {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0px;
+  }
+}
+
 .enteteSession {
+
+  font-family: 'Antonio';
+  font-size: 50px;
+
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2467,8 +2639,14 @@ article.projets a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #b6b8d6;
+
+  background-color: #28e093;
+
   color: #1b206e;
+  /***padding quand c'est seulement le no de SESSION ***/
+  padding: 30px;
+  /*********/
+  margin-top: 30px;
 }
 
 .session {
@@ -2481,12 +2659,49 @@ article.projets a {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  gap: 5%;
+
+  gap: 2%;
+
   margin-left: 5%;
   margin-right: 5%;
 }
 
+@media (max-width: 600px) {
+  .session {
+    margin-left: 0%;
+    margin-right: 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .session {
+    margin-left: 0%;
+    margin-right: 0%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+  }
+}
+
 .session article {
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: medium 500;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2494,8 +2709,11 @@ article.projets a {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  -webkit-box-shadow: 5px 5px 5px #ffe5b6c5;
-          box-shadow: 5px 5px 5px #ffe5b6c5;
+
+  border-radius: 8px;
+  background-color: #1b206e;
+  margin: 2%;
+
   width: 35vw;
   height: 25vh;
   -ms-flex-item-align: center;
@@ -2503,7 +2721,21 @@ article.projets a {
       align-self: center;
 }
 
+
+@media (max-width: 600px) {
+  .session article {
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .session article {
+    height: auto;
+  }
+}
+
 .session article p {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2513,13 +2745,46 @@ article.projets a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
+  opacity: 2;
+  color: white;
+  padding: 15px;
+  font-size: clamp(0.8rem, -0.875rem + 2.333vw, 0.5rem);
+}
+
+@media (max-width: 600px) {
+  .session article p {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    height: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .session article p {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    font-size: 15px;
+  }
 }
 
 .session article a {
+  font-family: 'Antonio';
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2527,10 +2792,25 @@ article.projets a {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  opacity: 2;
+  font-size: clamp(0.6rem, -0.875rem + 2.333vw, 0.95rem);
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .session article a {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.session article:hover {
+  background-color: #2C7594;
+
 }
 
 .nomSession {
   padding: 5px;
+  font-size: 30px;
 }
 
 /*************************** boutons triage **********************************/
@@ -2571,19 +2851,60 @@ article.projets a {
   height: 50px;
 }
 
-#btnProgrammation {
+.btnTrieCours div {
   background-color: #2C7594;
   color: white;
 }
 
-#btnCreation {
-  background-color: #234083;
-  color: white;
+.btnTrieCours div:hover {
+  -webkit-animation: couleuranimBoutons 5s ease-in-out;
+          animation: couleuranimBoutons 5s ease-in-out;
+  -webkit-transition: linear;
+  transition: linear;
 }
 
-#btnTout {
-  background-color: #2C7594;
-  color: white;
+@-webkit-keyframes couleuranimBoutons {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0.85rem #8d14d9);
+            filter: drop-shadow(0 0 0.85rem #8d14d9);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 0.95rem #B0FFB2);
+            filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    opacity: 1;
+  }
+  80% {
+    -webkit-filter: drop-shadow(0 0 0.95rem #28e093);
+            filter: drop-shadow(0 0 0.95rem #28e093);
+    opacity: 1;
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0.75rem #8d14d9);
+            filter: drop-shadow(0 0 0.75rem #8d14d9);
+    opacity: 5;
+  }
+}
+
+@keyframes couleuranimBoutons {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0.85rem #8d14d9);
+            filter: drop-shadow(0 0 0.85rem #8d14d9);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 0.95rem #B0FFB2);
+            filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    opacity: 1;
+  }
+  80% {
+    -webkit-filter: drop-shadow(0 0 0.95rem #28e093);
+            filter: drop-shadow(0 0 0.95rem #28e093);
+    opacity: 1;
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0.75rem #8d14d9);
+            filter: drop-shadow(0 0 0.75rem #8d14d9);
+    opacity: 5;
+  }
 }
 
 /* page professeurs
@@ -2609,11 +2930,13 @@ article.projets a {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+
       grid-template-areas: "denis greg camille"
  "vincent dominc eddy"
  "martin vhaik manon"
  "ahmed mathieu caroline"
  "david johanne";
+
   width: 80%;
   margin-left: 9%;
 }
@@ -2639,6 +2962,7 @@ article.projets a {
 
 .professeurs img:hover {
   cursor: pointer;
+
 }
 
 .Informations {
@@ -2992,12 +3316,14 @@ article.projets a {
   0% {
     -webkit-filter: drop-shadow(0 0 0.85rem #1b206e);
             filter: drop-shadow(0 0 0.85rem #1b206e);
+
   }
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #b0ffd5);
             filter: drop-shadow(0 0 0.95rem #b0ffd5);
   }
   80% {
+
     -webkit-filter: drop-shadow(0 0 0.95rem #ffe7ba);
             filter: drop-shadow(0 0 0.95rem #ffe7ba);
   }
@@ -3011,12 +3337,14 @@ article.projets a {
   0% {
     -webkit-filter: drop-shadow(0 0 0.85rem #1b206e);
             filter: drop-shadow(0 0 0.85rem #1b206e);
+
   }
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #b0ffd5);
             filter: drop-shadow(0 0 0.95rem #b0ffd5);
   }
   80% {
+
     -webkit-filter: drop-shadow(0 0 0.95rem #ffe7ba);
             filter: drop-shadow(0 0 0.95rem #ffe7ba);
   }
@@ -3180,12 +3508,14 @@ article.projets a {
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #b0ffd5);
             filter: drop-shadow(0 0 0.95rem #b0ffd5);
+
   }
   80% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fdbaff);
             filter: drop-shadow(0 0 0.95rem #fdbaff);
   }
   100% {
+
     -webkit-filter: drop-shadow(0 0 0.75rem #92b4f7);
             filter: drop-shadow(0 0 0.75rem #92b4f7);
   }
@@ -3199,12 +3529,14 @@ article.projets a {
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #b0ffd5);
             filter: drop-shadow(0 0 0.95rem #b0ffd5);
+
   }
   80% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fdbaff);
             filter: drop-shadow(0 0 0.95rem #fdbaff);
   }
   100% {
+
     -webkit-filter: drop-shadow(0 0 0.75rem #92b4f7);
             filter: drop-shadow(0 0 0.75rem #92b4f7);
   }
@@ -3226,12 +3558,14 @@ article.projets a {
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fffccd);
             filter: drop-shadow(0 0 0.95rem #fffccd);
+
   }
   80% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fdbaff);
             filter: drop-shadow(0 0 0.95rem #fdbaff);
   }
   100% {
+
     -webkit-filter: drop-shadow(0 0 0.75rem #27f593);
             filter: drop-shadow(0 0 0.75rem #27f593);
   }
@@ -3245,12 +3579,14 @@ article.projets a {
   50% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fffccd);
             filter: drop-shadow(0 0 0.95rem #fffccd);
+
   }
   80% {
     -webkit-filter: drop-shadow(0 0 0.95rem #fdbaff);
             filter: drop-shadow(0 0 0.95rem #fdbaff);
   }
   100% {
+
     -webkit-filter: drop-shadow(0 0 0.75rem #27f593);
             filter: drop-shadow(0 0 0.75rem #27f593);
   }
@@ -3320,6 +3656,7 @@ article.projets a {
           animation: couleurJohanne 5s linear infinite;
 }
 
+
 .professeurs:nth-child(14) .profs .Informations {
   margin-left: 15%;
 }
@@ -3385,6 +3722,7 @@ article.projets a {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+
         grid-template-areas: "denis greg "
  "camille vincent"
  "dominc eddy"
@@ -3392,6 +3730,7 @@ article.projets a {
  "manon ahmed"
  "mathieu caroline"
  "david johanne";
+
     width: 80%;
     margin-left: 8%;
   }
@@ -3644,23 +3983,28 @@ article.projets a {
   margin-left: 2%;
   margin-top: 1%;
   margin-bottom: 4%;
+
       grid-template-areas: "stage creprog emplois"
  "stage universite emplois"
  "udem uqat uqam";
+
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .contenu-avenir {
+
         grid-template-areas: "stage creprog"
  "stage universite"
  "emplois uqam"
  "emplois udem"
  "uqat .";
+
   }
 }
 
 @media (max-width: 600px) {
   .contenu-avenir {
+
         grid-template-areas: "creprog"
  "stage"
  "universite"
@@ -3668,6 +4012,7 @@ article.projets a {
  "uqam"
  "udem"
  "uqat";
+
   }
 }
 
@@ -3708,6 +4053,10 @@ article.projets a {
 }
 
 .contenu-vieEtudiante {
+
+  width: auto;
+  height: auto;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3717,18 +4066,19 @@ article.projets a {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  gap: 10px;
+
+  gap: 5%;
+
 }
 
 @media (max-width: 600px) {
@@ -3743,6 +4093,18 @@ article.projets a {
 .vieEtudiante {
   width: 400px;
   height: auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .vieEtudiante {
+    width: 350px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .vieEtudiante {
+    width: 230px;
+  }
 }
 
 .vieEtudiante figure {

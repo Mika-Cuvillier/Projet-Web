@@ -1,26 +1,55 @@
 
-.enleveCours{
 
-    display: none;
-    visibility: hidden;
+/************* ANIMATION COURS TRIAGES *****************************/
+
+.triageCours{
+    animation: animationCours ease-in 2s;
+    transition: all 1.3s ;
+}
+@keyframes animationCours{
+0%{
+    
+    opacity: 0;
+}
+100%{
+  
+    opacity: 2;
+  
+}
 
 }
 
-.AfficheCours{
+/************* ANIMATION COURS BOUTONS *****************************/
 
-    display: flex;
-    visibility: visible;
+.animationBoutonsSelect{
+    animation: animationBoutonsSelect ease-in-out 2s;
+    //color: greenyellow;
+    //background-color: rgb(84, 108, 128) !important;
+    background: #28e093 !important;
+  
 }
 
-.AfficheToutCours{
+@keyframes animationBoutonsSelect{
+    0%{
+        box-shadow: 0 0 10px #fff; 
+        background: #28e093;
+       
+    }
 
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 5px 5px 5px #ffe5b6c5;
-    width: 35vw;
-    height: 25vh;
-    align-self: center;
+   
+    100%{
+        //background-color: #234083;
+        opacity: 1;
+        //background-color:linear-gradient(to right, #28e093,#234083);
+        //transform: rotate(-20deg)translate(140px,70px);
+       // background-color: #234083;
+       background-color:linear-gradient( #28e093,#234083);
+    }
 }
+
+
+
+
+
 
 
