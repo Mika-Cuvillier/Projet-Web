@@ -15,7 +15,7 @@
                     <?php echo the_post_thumbnail(); ?>
                     <div class="Informations">
                         <div class="bouton-fermeture">
-                            <button type="button">X</button>
+                            <button id="btnProf" type="button">X</button>
                         </div>
                         <h2 id="titreInfos"><?php echo get_the_content() ?></h2>
                     </div>
