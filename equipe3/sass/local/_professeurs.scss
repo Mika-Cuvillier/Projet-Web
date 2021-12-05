@@ -1,631 +1,482 @@
-.professeurs h1{
+.titreProfesseurs{
     display: flex;
     justify-content: center;
     color: #1B206E;
     text-transform: uppercase;
-    font-family: 'IBM Plex Sans';
+    font-family: 'Antonio';
     font-size: 50px;
 }
-
+.gabaritProfesseurs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "denis greg camille"
+        "vincent dominc eddy"
+        "martin vhaik manon"
+        "ahmed mathieu caroline"
+        "david johanne";
+    width: 80%;
+    margin-left: 9%;
+}
 .professeurs{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
     margin-left: 15%;
     margin-bottom: 10em;
-    width: 70vw;
+
+    .profs{
+        display: flex;
+    }
 
     img{
-        width: 300px;
-        height: 300px;
+        width: 95%;
+        height: 95%;
     }
 
     img:hover{
         cursor: pointer;
-        overflow: hidden;
-        //scale: 1;
-        animation: images 5s both;
+        //overflow: hidden;
+    }    
+}
+
+.Informations{
+    position: absolute;
+    justify-content: center;
+    background-color: #1b206e;
+    height: 44%;
+    width: 22%;
+    border-radius: 8px;
+    color: white;
+    flex-wrap: wrap;
+    opacity: 0;
+    z-index: -1;
+    animation: texte 5s;
+
+    h2{
+        font-size: 1.2em;
+        font-family: 'IBM Plex Sans';
+        text-align: center;
     }
-    
+
+    p{
+        font-size: 1em;
+        font-family: 'IBM Plex Sans';
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 0px;
+        margin-top: 1em;
+    }
+
+    #btnProf{
+        background-color: #28e093;
+        color: #1b206e;
+        border-color: #28e093;
+    }
 
     //ANIMATION COULEUR DE FOND POUR LE CONTENU INFORMATIONS
-    @keyframes images {
+    @keyframes texte {
         0%{
-            transform: scale(1);
-        }
-        50%{
-            transform: scale(1.5);
+            transform: scale(0);
         }
         100%{
             transform: scale(1);
         }
     }
+}
+
+.Informations:hover{
+    background-color: #307e71;
+}
+
+//ANIMATION COULEUR DE FOND POUR DENIS
+.professeurs:nth-child(1) .profs img{
+    grid-area: denis;
+    animation: couleurDenis 5s linear infinite;
+}
+
+/*.professeurs:nth-child(1) .profs .Informations{
+    margin-left: 12%;
+    margin-top: 12%;
+}*/
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurDenis {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #8d14d9);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #8d14d9);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR GREGORY
+.professeurs:nth-child(2) .profs img{
+    grid-area: greg;
+    animation: couleurGreg 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurGreg {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #27f593);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #329e7a);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #27f593);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR CAMILLE
+.professeurs:nth-child(3) .profs img{
+    grid-area: camille;
+    animation: couleurCamille 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurCamille {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #d095f9);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #fff78d);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #d095f9);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR VINCENT
+.professeurs:nth-child(4) .profs img{
+    grid-area: vincent;
+    animation: couleurVincent 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurVincent {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #fff78d);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #2f8389);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #fff78d);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR DOMINIC
+.professeurs:nth-child(5) .profs img{
+    grid-area: dominic;
+    animation: couleurDominic 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurDominic {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #92b4f7);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #fff78d);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #1b206e);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #92b4f7);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR EDDY
+.professeurs:nth-child(6) .profs img{
+    grid-area: eddy;
+    animation: couleurEddy 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurEddy {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #329e7a);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #92b4f7);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #329e7a);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR MARTIN
+.professeurs:nth-child(7) .profs img{
+    //grid-area: martin;
+    animation: couleurMartin 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurMartin {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #1b206e);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #ffe7ba);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #1b206e);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR VHAIK
+.professeurs:nth-child(8) .profs img{
+    grid-area: vhaik;
+    animation: couleurVhaik 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurVhaik {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #2f8389);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fdbaff);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #2f8389);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR MANON
+.professeurs:nth-child(9) .profs img{
+    grid-area: manon;
+    animation: couleurManon 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurManon {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #8d14d9);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #92b4f7);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fdbaff);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #8d14d9);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR AHMED
+.professeurs:nth-child(10) .profs img{
+    grid-area: ahmed;
+    animation: couleurAhmed 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurAhmed {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #fff78d);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #92b4f7);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fffccd);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #fff78d);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR MATHIEU
+.professeurs:nth-child(11) .profs img{
+    grid-area: mathieu;
+    animation: couleurMathieu 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurMathieu {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #92b4f7);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fdbaff);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #92b4f7);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR CAROLINE
+.professeurs:nth-child(12) .profs img{
+    grid-area: caroline;
+    animation: couleurCaroline 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurCaroline {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #27f593);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #fffccd);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fdbaff);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #27f593);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR DAVID
+.professeurs:nth-child(13) .profs img{
+    grid-area: david;
+    display: flex;
+    animation: couleurDavid 5s linear infinite;
+    //margin-left: 35%;
+}
+
+.professeurs:nth-child(13) .profs .Informations{
+    margin-left: 15%;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurDavid {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #329e7a);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #fdbaff);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #329e7a);
+    }
+}
+
+//ANIMATION COULEUR DE FOND POUR STÉPHANIE
+.professeurs:nth-child(14) .profs img{
+    display: flex;
+    grid-area: johanne;
+    animation: couleurJohanne 5s linear infinite;
+}
+
+.professeurs:nth-child(14) .profs .Informations{
+    margin-left: 15%;
+}
+
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurJohanne {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #2f8389);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #92b4f7);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #1b206e);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #2f8389);
+    }
+}
+
+
+@include tablet{
+    .titreProfesseurs{
+        font-size: 30px;
+    }
 
     .Informations{
-        display: flex;
-        font-family: 'IBM Plex Sans';
-        font-size: 1.2em;
-        display: flex;
-        justify-content: center;
-        background-color: #1b206e;
-        height: 8em;
-        border-radius: 2%;
-        color: white;
-        padding-top: 0.2em;
-        opacity: 0;
-        animation: texte 5s both;
+        height: 30%;
+        width: 22%;
 
-        .infos{
-            font-size: 1em;
+        h2{
+            font-size: 0.9em;
         }
-    }
-
-
-        //ANIMATION COULEUR DE FOND POUR LE CONTENU INFORMATIONS
-        @keyframes texte {
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-
     
-        //ANIMATION COULEUR DE FOND POUR LES COULEURS
-        @keyframes couleur {
-            0%{
-                filter: blur(50px) hue-rotate(0deg);
-            }
-            100%{
-                filter: blur(50px) hue-rotate(360deg);
-            }
-        }
-
-        //ANIMATION COULEUR DE FOND POUR DENIS
-        .Denis{
-            padding-bottom: 5em;
-            //display: flex;
-        }
-
-        .Denis::before{
-            content: '';
-            position: absolute;
-            //display: flex;
-            top: 27em;
-            left: 20%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #8D14D9;
-            box-shadow: -40px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Denis::after{
-            content: '';
-            position: absolute;
-            //display: flex;
-            bottom: 22em;
-            left: 24.5%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR GREGORY
-        /*.Greg{
-            display: flex;
-        }*/
-
-        .Greg::before{
-            content: '';
-            position: absolute;
-            top: 27em;
-            left: 45%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #27f593;
-            box-shadow: -40px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Greg::after{
-            content: '';
-            position: absolute;
-            bottom: 23em;
-            left: 50.5%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #329e7a;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR CAMILLE
-        .Camille::before{
-            content: '';
-            position: absolute;
-            top: 30em;
-            left: 72%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #d095f9;
-            box-shadow: -40px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Camille::after{
-            content: '';
-            position: absolute;
-            bottom: 26em;
-            left: 77.5%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fff78d;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR VINCENT
-        .Vincent{
-            padding-bottom: 5em;
-            //display: flex;
-        }
-
-        .Vincent::before{
-            content: '';
-            position: absolute;
-            top: 63em;
-            left: 21%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #fff78d;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Vincent::after{
-            content: '';
-            position: absolute;
-            bottom: -7.5em;
-            left: 25.5%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #b0ffd5;
-            box-shadow: -20px -42px 0 #2f8389;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR DOMINIC
-        /*.Dominic{
-            display: flex;
-        }*/
-
-        .Dominic::before{
-            content: '';
-            position: absolute;
-            top: 61em;
-            left: 45%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #92b4f7;
-            box-shadow: -40px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Dominic::after{
-            content: '';
-            position: absolute;
-            bottom: -10.5em;
-            left: 51%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #fff78d;
-            box-shadow: -40px -42px 0 #1b206e;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR EDDY
-        /*.Eddy{
-            display: flex;
-        }*/
-
-        .Eddy::before{
-            content: '';
-            position: absolute;
-            top: 61em;
-            left: 69%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #329e7a;
-            box-shadow: -40px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Eddy::after{
-            content: '';
-            position: absolute;
-            bottom: -12em;
-            left: 73%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #92b4f7;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR MARTIN
-        .Martin{
-            padding-bottom: 5em;
-            //display: flex;
-        }
-
-        .Martin::before{
-            content: '';
-            position: absolute;
-            top: 94em;
-            left: 18%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #1b206e;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Martin::after{
-            content: '';
-            position: absolute;
-            bottom: -45em;
-            left: 25%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #ffe7ba;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR VHAIK
-        /*.Vhaik{
-            display: flex;
-        }*/
-        .Vhaik::before{
-            content: '';
-            position: absolute;
-            top: 95em;
-            left: 46%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #2f8389;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Vhaik::after{
-            content: '';
-            position: absolute;
-            bottom: -47em;
-            left: 48%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR MANON
-        /*.Manon{
-            display: flex;
-        }*/
-
-        .Manon::before{
-            content: '';
-            position: absolute;
-            top: 94em;
-            left: 70%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #8D14D9;
-            box-shadow: -30px -45px 0 #fff78d;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Manon::after{
-            content: '';
-            position: absolute;
-            bottom: -44em;
-            left: 76%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #92b4f7;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR AHMED
-        .Ahmed{
-            padding-bottom: 5em;
-            //display: flex;
-        }
-
-        .Ahmed::before{
-            content: '';
-            position: absolute;
-            top: 128.4em;
-            left: 16.6%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #fff78d;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Ahmed::after{
-            content: '';
-            position: absolute;
-            bottom: -80.5em;
-            left: 19.5%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fffccd;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR MATHIEU
-        /*.Mathieu{
-            display: flex;
-        }*/
-
-        .Mathieu::before{
-            content: '';
-            position: absolute;
-            top: 130.4em;
-            left: 46.4%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #92b4f7;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Mathieu::after{
-            content: '';
-            position: absolute;
-            bottom: -74.5em;
-            left: 51%;
-            width: 5vw;
-            height: 10vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR CAROLINE
-        /*.Caroline{
-            display: flex;
-        }*/
-
-        .Caroline::before{
-            content: '';
-            position: absolute;
-            top: 127.4em;
-            left: 72%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #27f593;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Caroline::after{
-            content: '';
-            position: absolute;
-            bottom: -80.5em;
-            left: 75%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #27f593;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR DAVID
-        .David{
-            padding-left: 12em;
-            //display: flex;
-        }
-
-        .David::before{
-            content: '';
-            position: absolute;
-            top: 161.4em;
-            left: 31%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #329e7a;
-            box-shadow: -30px -45px 0 #B0FFB2;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .David::after{
-            content: '';
-            position: absolute;
-            bottom: -111.7em;
-            left: 37%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #b0ffd5;
-            box-shadow: -40px -42px 0 #fdbaff;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //ANIMATION COULEUR DE FOND POUR STÉPHANIE
-        .Stephanie{
-            padding-right: 12em;
-            //display: flex;
-        }
-
-        .Stephanie::before{
-            content: '';
-            position: absolute;
-            top: 160.4em;
-            left: 57.3%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #2f8389;
-            box-shadow: -30px -45px 0 #fff78d;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        .Stephanie::after{
-            content: '';
-            position: absolute;
-            bottom: -111em;
-            left: 61%;
-            width: 10vw;
-            height: 20vh;
-            background-color: #1b206e;
-            box-shadow: -40px -42px 0 #fdbaff;
-            border-radius: 50%;
-            z-index: -1;
-            animation: couleur 5s linear infinite;
-        }
-
-        //SCSS POUR LES NOMS DES PROFESSEURS    
-
-        /*#text-circulaire{
-            color: black;
-            font-family: 'IBM Plex Sans';
-            position: relative;
-            
-        }
-
-        #text-circulaire span{
-            position: absolute;
-            //top: 80px;
-            //left: -10em;
-            top: -11.5em;
-            left: 8em;
-        }*/
-
-        
-    //}
-
-    @include tablet{
-        .professeurs{
-            display: flex;
-            width: 47%;
-            margin-left: 1%;
-            //justify-content: center;
+        p{
+            font-size: 0.8em;
+            margin-top: 0.8em;
         }
     }
+    
+}
 
-    @include petit_ecran{
-        .professeurs h1{
-            font-size: 20px;
+@include petit_ecran{
+    .gabaritProfesseurs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "denis greg "
+            "camille vincent"
+            "dominc eddy"
+            "martin vhaik "
+            "manon ahmed"
+            "mathieu caroline"
+            "david johanne";
+        width: 80%;
+        margin-left: 8%;
+    }
+
+    .titreProfesseurs{
+        font-size: 30px;
+    }
+    
+    .Informations{
+        height: 27%;
+        width: 34%;
+
+        h2{
+            font-size: 0.8em;
         }
-
-        .professeurs{
-            width: 10%;
-            margin-left: 1%;
-            height: 10%;
-
-            img{
-                width: 100px;
-                height: 100px;
-            }
-        
-            img:hover{
-                cursor: pointer;
-                overflow: hidden;
-                //scale: 1;
-                animation: images 5s both;
-            }
-            
-        
-            //ANIMATION COULEUR DE FOND POUR LE CONTENU INFORMATIONS
-            @keyframes images {
-                0%{
-                    transform: scale(0.5);
-                }
-                50%{
-                    transform: scale(1);
-                }
-                100%{
-                    transform: scale(0.5);
-                }
-            }
-
-            .Informations{
-                font-size: 1em;
-                height: 5em;
-                border-radius: 2%;
-                padding-top: 0.5em;
-                opacity: 0;
-                animation: texte 5s both;
-            }
+    
+        p{
+            font-size: 0.7em;
+            margin-top: 0.2em;
         }
-
+    }
+    .professeurs:nth-child(13) .profs .Informations{
+        margin-left: 0%;
+    }
+    .professeurs:nth-child(14) .profs .Informations{
+        margin-left:0%;
     }
 
 }
+
 
 
 
