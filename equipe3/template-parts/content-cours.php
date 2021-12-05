@@ -9,16 +9,13 @@
 global $tPropriété;
 ?>
 
-<!-- permet de mettre le numero de la session, il c'est jamais placer il comme il faut :( -->
-<!-- <divNoSession> 
-    <h4><?php //echo $tPropriété['session'] ?> <h4>
-</divNoSession> -->
-
+<!-- 
+<p> php echo $tPropriété['sigle'] .  ' <i class="far fa-edit"></i>'. $tPropriété['nbHeure'] ; ?></p> -->
   
 <article>
 	
-	<p><?php echo $tPropriété['sigle'] .  ' <i class="far fa-edit"></i>'. $tPropriété['nbHeure'] ; ?></p>
-	<a class="<?php echo $tPropriété['typeCours']; ?>" href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>
+	<p><?php echo $tPropriété['sigle'] . $tPropriété['nbHeure'] ; ?></p>
+	<a class="<?php echo $tPropriété['typeCours'] ; ?>" href="<?php echo get_permalink() ?>"><?php echo $tPropriété['titrePartiel']; ?></a>
 	<p>Session : <?php echo $tPropriété['session']; ?></p>
 </article>
  

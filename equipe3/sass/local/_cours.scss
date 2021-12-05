@@ -1,22 +1,49 @@
+body {
+    padding-bottom: 50px;
+}
+
 .enteteCours{
+  h1{
+    font-family: 'Antonio';
+    text-transform: uppercase;
+  }
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     gap: 50px;
+    div{
+        padding: 15px;
+    }
+    @include petit_ecran{
+       display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+        
+     }
 }
 
+
 .enteteSession{
-    //border: 2px solid red;
+
+    font-family: 'Antonio';
+    font-size: 50px;
     display: inline-flex;
     align-items: center;
     flex-direction:column;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #b6b8d6;
+    background-color: #28e093;
     color: #1b206e;
-   // margin-left: 5%;
-    //margin-right: 5%;
-   // margin-top: 5%;
+    /***padding quand c'est seulement le no de SESSION ***/
+    padding: 30px;
+    /*********/
+    margin-top: 30px;
+
+    @include petit_ecran{
+      // display: none;
+    }
 
 
 }
@@ -24,41 +51,101 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 5%;
-    //border: 3px solid greenyellow ;
+    gap: 2%;
     margin-left: 5%;
     margin-right: 5%;
+    
+    @include petit_ecran{
+
+        margin-left: 0%;
+        margin-right: 0%;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    @include tablet {
+        margin-left: 0%;
+        margin-right: 0%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
     article{
+       font-family: 'IBM Plex Sans', sans-serif;
+       font-weight: medium 500;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        //border: 3px solid blue;
-        //box-shadow: 20px 20px 20px #ffe5b6;;
-       // box-shadow:  15px 0px 15px #ffe5b6;
-        //border: 5px solid #ffe5b6c5;
-        box-shadow: 5px 5px 5px #ffe5b6c5 ;
+        border-radius: 8px;
+        background-color:#1b206e;
+        margin: 2%;
         width: 35vw;
         height: 25vh;
         align-self: center;
+        @include petit_ecran{
+            height: auto;
+        }
+        @include tablet {
+            height: auto;
+        }
+
+       
         p{
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 2;
+            color: white;
+            padding: 15px;
+            font-size : clamp(.8rem, #{"-0.875rem + 2.333vw"},0.5rem);
+            @include petit_ecran{
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                height: auto;
+            }
+
+           @include tablet {
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            font-size: 15px;
+           }
+          
         
         }
 
         a {
+            font-family: 'Antonio';
             font-size: 14px;
             display: flex;
+            text-align: center;
             justify-content: center;
             align-items: center;
             text-decoration: none;
+            opacity: 2;
+            font-size : clamp(.6rem, #{"-0.875rem + 2.333vw"},0.95rem);
+            @include tablet {
+                font-size: 30px;
+                text-align: center;
+                
+            }
         }
+    }
+}
+
+.session{
+    article:hover{
+    background-color: #2C7594
     }
 }
 
 .nomSession{
     padding: 5px;
+    font-size: 30px;
+    
    
 }
 
@@ -68,20 +155,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //flex-direction:colum;
     flex-direction: row;
    flex-wrap: nowrap;
     gap: 20px;
-   // border: 2px solid salmon;
     width: 350px;
-    //height: 450px;
     height: 100px;
-   // background-color:#1b206e;
-    //margin-left: 70%;
     border-radius: 10px;
 
     div {
-            //border: 2px solid pink;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,25 +174,50 @@
     }
 }
 
-#btnProgrammation{
-
+.btnTrieCours div{
     background-color: #2C7594;
     color: white;
+}
+
+.btnTrieCours div:hover{
+    animation: couleuranimBoutons 5s ease-in-out;
+    transition: linear;
+}
+
+@keyframes couleuranimBoutons {
+
+    0%{
+
+        filter: drop-shadow(0 0 0.85rem #8d14d9);
+    
+
+    }
+
+    50%{
+
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+        opacity: 1;
+
+    }
+
+    80%{
+
+        filter: drop-shadow(0 0 0.95rem #28e093);
+        opacity: 1;
+        
+
+    }
+
+    100%{
+
+        filter: drop-shadow(0 0 0.75rem #8d14d9);
+        opacity: 5;
+
+    }
 
 }
 
-#btnCreation{
 
-    background-color:#234083;
-    color: white;
 
-}
-
-#btnTout{
-    //background-color: rgb(12, 207, 87);
-    background-color: #2C7594;
-    color: white;
-
-}
 
 

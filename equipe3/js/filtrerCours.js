@@ -31,6 +31,7 @@ btnP.addEventListener('mousedown', function(){
 
        if(elem.classList.contains("programmation") == true){
         elem.parentElement.style.display= "block";
+        elem.parentElement.classList.add('triageCours');
        }else{
            elem.parentElement.style.display= "none";
        }
@@ -56,6 +57,7 @@ btnC.addEventListener('mousedown', function(){
 
        if(elem.classList.contains("creation") == true){
         elem.parentElement.style.display= "block";
+        elem.parentElement.classList.add('triageCours');
        }else{
            elem.parentElement.style.display= "none";
        }
@@ -77,8 +79,7 @@ btnC.addEventListener('mousedown', function(){
       // console.log(elem.classList.contains("programmation"));
       console.log(elem.parentElement.tagName);
         elem.parentElement.style.display= "block";
-     
-     
+        elem.parentElement.classList.add('triageCours');
      }
 
     console.log('click');
