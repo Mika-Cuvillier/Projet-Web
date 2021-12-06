@@ -24,15 +24,17 @@
 	
 		</div>
 	</div>
- 
-	<div class="carouselAccueil"> carrousel
-	<div class="boutonsCarouAccueil"> 
-		<div class="boutonCarre"></div>
-		<div class="boutonCarre"></div>
-		<div class="boutonCarre"></div>
-		
-</div>
-</div>
 
+	<section class="carouselAccueil"> 
+		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/12/P1010672.jpg" ?>"/></div>
+		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/vehicule.jpeg" ?>"/></div>
+		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/college.jpg" ?>"/></div>
+	</section>
+	<section class="boutonsCarouAccueil">
+		<button id="boutonCarre1"></button>
+		<button id="boutonCarre2"></button>
+		<button id="boutonCarre3"></button>
+	</section>
+	
 </section>
 

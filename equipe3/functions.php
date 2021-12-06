@@ -164,6 +164,7 @@ function equipe3_scripts() {
 
 	/*wp_enqueue_script( 'equipe3-nomProfesseurs', get_template_directory_uri() . '/js/nomProfesseurs.js', array(), _S_VERSION, true );*/
 	wp_enqueue_script( 'equipe3-informationSupplementaires', get_template_directory_uri() . '/js/informationSupplementaires.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'equipe3-carrousel', get_template_directory_uri() . '/js/carrousel.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'equipe3-burger', get_template_directory_uri() . '/js/burger.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-animMenu', get_template_directory_uri() . '/js/animMenu.js', array(), _S_VERSION, true );
