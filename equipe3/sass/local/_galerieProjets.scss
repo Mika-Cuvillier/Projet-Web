@@ -66,12 +66,12 @@
 
  .galerieProjets{
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    //gap: 5px;
+    gap: 5px;
     //align-items: center;
-   // margin:150px;
+   margin:150px;
     margin-top: 0px;
     border: 2px solid red;
 
@@ -79,13 +79,13 @@
  .projets{
   
     display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10%;
-   border: 3PX solid red;
+   flex-wrap: wrap;
+    justify-content: space-between;
+    //gap: 10%;
+  border: 3PX solid green;
   } 
 
-/*
+
   .content-title {
     display: flex;
     justify-content: center;
@@ -93,7 +93,7 @@
     
 }
 
-*/
+
 .projets .title{ /***************/
     display: flex;
     justify-content: center;
@@ -121,12 +121,9 @@
     }
   
   }
-
-
-  
   .content .content-overlay { /***************/
-   
-  /*  
+  
+   border: 3px solid yellowgreen;
     background-color: rgb(22, 194, 142);
     position: absolute;
     height: 100%;
@@ -138,19 +135,10 @@
     opacity: 0;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s; */
+    transition: all 0.4s ease-in-out 0s;
   }
-
-  .content:hover .content-overlay{ /***************/
- /*    opacity: 1;
-    animation: animProjet .50s both; */
-  
-    
-  }
-  
-
   .content-details {
-  /*   position: absolute;
+    position: absolute;
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
@@ -163,15 +151,16 @@
     transform: translate(-50%, -50%);
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s; */
-    
+    transition: all 0.3s ease-in-out 0s;
+    border: 2px solid red;
   }
-
-
   
-  .content-imageHover{
+  
+  
+.content-imageHover{
     width: 100%;
- 
+  
+    border: 4px solid yellow;
    
 }
 .content:hover .content-details{ /***************/
@@ -180,6 +169,13 @@
   opacity: 1;
 
 }
+
+.content:hover .content-overlay{ /***************/
+    opacity: 1;
+    animation: animProjet .50s both;
+ 
+  }
+  
 
 .fadeIn-bottom{/***************/
   top: 80%;
