@@ -225,7 +225,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------- */
 
-@import "local/projets";
+/* @import "local/projets"; */
 
 
 
@@ -233,7 +233,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------- */
 
-@import "local/projet-essai";
+/* @import "local/projet-essai"; */
 
 
 
@@ -268,3 +268,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 
 @import "local/vieEtudiante";
+
+
+/* page projets
+
+--------------------------------------------- */
+
+@import "local/galerieProjets";
