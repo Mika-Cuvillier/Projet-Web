@@ -121,6 +121,22 @@ Bouton burger
         flex: 1 0 50%;
     }
 }
+.main-navigation li:nth-of-type(1) a:nth-child(2),
+.main-navigation li:nth-of-type(2) a:nth-child(2),
+.main-navigation li:nth-of-type(3) a:nth-child(2){
+    @include TresGrandEcran{
+        position: relative;
+        left: -75px;
+    }
+    @include grand_ecran{
+        position: relative;
+        left: -25px;
+    }
+    @include tablet{
+        left: -40px;
+    }
+}
+
 .main-navigation li:nth-of-type(4) a:nth-child(2),
 .main-navigation li:nth-of-type(5) a:nth-child(2),
 .main-navigation li:nth-of-type(6) a:nth-child(2){
@@ -130,7 +146,7 @@ Bouton burger
     }
     @include grand_ecran{
         position: relative;
-        left: 55px;
+        left: 25px;
     }
     @include tablet{
         left: 40px;
@@ -149,6 +165,7 @@ Bouton burger
     }
     @include grand_ecran{
         top: -58px;
+        left: 25px;
     }
     @include tablet{
         top: -50px;
@@ -181,6 +198,15 @@ position: relative;
 }
 
 #primary-menu .icon{
+    @include TresGrandEcran{
+        left: -60px;
+    }
+    @include grand_ecran{
+        left: -50px;
+    }
+    @include tablet{
+        left: -30px;
+    }
     @include petit-ecran{
         position: relative;
         left: 91px;
