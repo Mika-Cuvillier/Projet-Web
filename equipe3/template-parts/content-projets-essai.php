@@ -16,14 +16,14 @@ global $tPropriété;
 
 <a class="<?php echo $tPropriété['typeProjets']; ?>" href="<?php echo get_permalink() ?>">  <?php echo $tPropriété['titre']; ?><?php the_title(); ?></a>
 
-    <div class="containerPrincipal">
-    <div class="containerProjet">
-    <?php the_post_thumbnail('category-thumb'); ?>
+   <!--  <div class="containerPrincipal">
+    <div class="containerProjet"> -->
+    <?php the_post_thumbnail('thumbnail'); ?>
         
-    </div>
+   <!--  </div> -->
 
 
 
-</div>
+<!-- </div> -->
 </article>
 
