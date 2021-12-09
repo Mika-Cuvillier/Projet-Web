@@ -26,9 +26,11 @@
 	</div>
 
 	<section class="carouselAccueil"> 
-		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/12/P1010672.jpg" ?>"/></div>
-		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/vehicule.jpeg" ?>"/></div>
-		<div><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/college.jpg" ?>"/></div>
+		<div class="imagesCarrousel">
+			<div><img class="imageUne" src="<?php echo get_site_url() . "/wp-content/uploads/2021/12/P1010672.jpg"?>"/></div>
+			<div><img class="imageDeux" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/vehicule.jpeg" ?>"/></div>
+			<div><img class="imageTrois" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/college.jpg" ?>"/></div>
+		</div>
 	</section>
 	<section class="boutonsCarouAccueil">
 		<button id="boutonCarre1"></button>

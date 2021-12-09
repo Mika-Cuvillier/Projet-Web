@@ -1,9 +1,19 @@
+.carrousel{
+    height: 100px;
+}
+
+.sous-titre{
+    font-size: 1.5em;
+    color: #1b206e;
+}
+
 .sectionAccueil{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100vw;
     height: 50vh;
+    margin-right: 60em;
 }
 
 .titreEntete{
@@ -11,32 +21,74 @@
 }
 
 .carouselAccueil{
+    //position: sticky;
     flex-direction: row;
-    width: 800px;
-    height: 400px;
+    //width: 600px;
+    height: 1230px;
     margin-top: 80px;
-    transition: transform .5s;
+    //overflow: hidden;
+    //transition: transform .5s;
+    border: 2px solid red;
+    //z-index: 999;
 
-    div{
-        width: 41.4vw;
-        height: 42vh;
-        display: flex;
-        margin-top: 0px;
-        padding-bottom: -100px;
+    .imagesCarrousel{
+        position: absolute;
+        flex-direction: row;
+        //transition: transform .5s;
+        z-index: -1;
+        width: 600px;
+        height: 600px;
+        overflow: hidden;
+        border: 2px solid blue;
+        
+        div{
+            display: flex;
+            margin-top: 0px;
+            padding-bottom: -100px;
+            
 
-        &:nth-of-type(1){
-            background-color: cadetblue;
-        }
-        &:nth-of-type(2){
-            background-color: chocolate;
-            margin-top: 20px;
-            //opacity: 0;
-            //height: 15vh;
-        }
-        &:nth-of-type(3){
-            background-color: darkcyan;
-            margin-top: 20px;
-            //opacity: 0;
+            /*&:nth-of-type(1){
+                //background-color: #1b206e;
+            }*/
+            &:nth-of-type(2){
+                //background-color: #1b206e;
+                margin-top: 20px;
+            }
+            &:nth-of-type(3){
+                //background-color: #1b206e;
+                margin-top: 20px;
+            }
+
+            .imageUne{
+                display: flex;
+                //margin-left: 0em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                z-index: -1;
+            }
+
+            .imageDeux{
+                display: flex;
+                //margin-left: 3.2em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+
+            .imageTrois{
+                display: flex;
+                //margin-left: 7.4em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
         }
     }
 
@@ -48,10 +100,13 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100px;
-    margin-top: 85px;
+    margin-top: 7em;
+    margin-left: -16%;
+    z-index: 1;
 }
 
 #boutonCarre1{
+    display: flex;
     flex-wrap: nowrap;
     //flex-direction: row;
     width: 100px;
@@ -59,9 +114,28 @@
     background-color: #265987;
     border-color: #265987;
     border-radius: 8px;
+    cursor: pointer;
+    animation: couleurBoutonUn 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurBoutonUn {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #8d14d9);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #8d14d9);
+    }
 }
 
 #boutonCarre2{
+    display: flex;
     flex-wrap: nowrap;
     //flex-direction: row;
     width: 100px;
@@ -70,9 +144,28 @@
     background-color: #2b8a94;
     border-color: #2b8a94;
     border-radius: 8px ;
+    cursor: pointer;
+    animation: couleurBoutonDeux 5s linear infinite;
+}
+
+//ANIMATION COULEUR DE FOND POUR LES COULEURS
+@keyframes couleurBoutonDeux {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #27f593);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #B0FFB2);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #329e7a);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #27f593);
+    }
 }
 
 #boutonCarre3{
+    display: flex;
     flex-wrap: nowrap;
     //flex-direction: row;
     width: 100px;
@@ -81,4 +174,112 @@
     background-color: #2ab593;
     border-color: #2ab593;
     border-radius: 8px ;
+    cursor: pointer;
+    animation: couleurBoutonTrois 5s linear infinite;
+}
+
+@keyframes couleurBoutonTrois {
+    0%{
+        filter: drop-shadow(0 0 0.85rem #d095f9);
+    }
+    50%{
+        filter: drop-shadow(0 0 0.95rem #fff78d);
+    }
+    80%{
+        filter: drop-shadow(0 0 0.95rem #b0ffd5);
+    }
+    100%{
+        filter: drop-shadow(0 0 0.75rem #d095f9);
+    }
+}
+
+@include tablet{
+
+    .sous-titre{
+        font-size: 1.1em;
+    }
+
+    .titreEntete h2{
+        font-size: 2em;
+    }
+
+    .carouselAccueil{
+
+        .imagesCarrousel{
+            div{
+                width: 50vw;
+                height: 42vh;
+            }
+        }
+    }
+
+    .boutonsCarouAccueil{
+        width: 100px;
+        margin-top: 10em;
+        margin-left: -11%;
+    }
+
+    #boutonCarre1{
+        width: 80px;
+        height: 45px;
+    }
+    
+    #boutonCarre2{
+        width: 80px;
+        height: 45px;
+        margin-top: 35px;
+    }
+    
+    #boutonCarre3{
+        width: 80px;
+        height: 45px;
+        margin-top: 35px;
+    }
+    
+}
+
+@include petit_ecran{
+    .sectionAccueil{
+        flex-direction: row;
+    }
+
+    .sous-titre{
+        font-size: 1em;
+    }
+
+    .carouselAccueil{
+        flex-direction: row;
+        margin-top: 80px;
+    
+        .imagesCarrousel{
+            
+            div{
+                width: 70vw;
+                margin-left: 5em;
+            }
+        }
+    }
+
+    .boutonsCarouAccueil{
+        height: 200px;
+        margin-top: 10em;
+        margin-left: -7%;
+    }
+
+    #boutonCarre1{
+        width: 80px;
+        height: 45px;
+    }
+    
+    #boutonCarre2{
+        width: 80px;
+        height: 45px;
+        //margin-top: 15px;
+    }
+    
+    #boutonCarre3{
+        width: 80px;
+        height: 45px;
+        //margin-top: 35px;
+    }
 }
