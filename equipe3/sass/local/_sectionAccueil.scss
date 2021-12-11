@@ -1,10 +1,11 @@
 .carrousel{
-    height: 100px;
+    overflow-y: hidden;
 }
 
 .sous-titre{
     font-size: 1.5em;
     color: #1b206e;
+    margin-top: 6em;
 }
 
 .sectionAccueil{
@@ -18,80 +19,68 @@
 
 .titreEntete{
     flex-direction: column;
+    border: white;
+    background-color: white;
+    width: 40vw;
+    height: 100vh;
+    z-index: 1000;
+    margin-top: 5em;
 }
 
 .carouselAccueil{
-    //position: sticky;
-    flex-direction: row;
-    //width: 600px;
-    height: 1230px;
-    margin-top: 80px;
-    //overflow: hidden;
-    //transition: transform .5s;
-    border: 2px solid red;
-    //z-index: 999;
-
-    .imagesCarrousel{
-        position: absolute;
-        flex-direction: row;
-        //transition: transform .5s;
-        z-index: -1;
-        width: 600px;
-        height: 600px;
-        overflow: hidden;
-        border: 2px solid blue;
+    display: flex;    
+    flex-direction: column;
+    width: 700px;
+    height: 30px;
+    margin-top: 5em;
+    margin-left: 20em;
+    transition: transform .5s;
+    z-index: 1;
         
-        div{
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+
+        &:nth-of-type(1){
             display: flex;
-            margin-top: 0px;
-            padding-bottom: -100px;
-            
+            margin-top: 6em;
+        }
+        &:nth-of-type(2){
+            display: flex;
+            margin-top: 14em;
+        }
+        &:nth-of-type(3){
+            display: flex;
+            margin-top: 14em;
+        }
 
-            /*&:nth-of-type(1){
-                //background-color: #1b206e;
-            }*/
-            &:nth-of-type(2){
-                //background-color: #1b206e;
-                margin-top: 20px;
-            }
-            &:nth-of-type(3){
-                //background-color: #1b206e;
-                margin-top: 20px;
-            }
+        .imageUne{
+            display: flex;
+            width: 170%;
+            height: 150%;
+            border-radius: 8px;
+            z-index: -1;
+            box-shadow: 5px 5px 8px #1b206e;
+        }
 
-            .imageUne{
-                display: flex;
-                //margin-left: 0em;
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-                z-index: -1;
-            }
+        .imageDeux{
+            display: flex;
+            width: 170%;
+            height: 150%;
+            border-radius: 8px;
+            box-shadow: 5px 5px 8px #1b206e;
+        }
 
-            .imageDeux{
-                display: flex;
-                //margin-left: 3.2em;
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-            }
-
-            .imageTrois{
-                display: flex;
-                //margin-left: 7.4em;
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-            }
+        .imageTrois{
+            display: flex;
+            width: 170%;
+            height: 150%;
+            border-radius: 8px;
+            box-shadow: 5px 5px 8px #1b206e;
         }
     }
-
 }
 
 .boutonsCarouAccueil{
@@ -100,9 +89,9 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100px;
-    margin-top: 7em;
-    margin-left: -16%;
-    z-index: 1;
+    margin-top: 12.1em;
+    margin-left: -3.5%;
+    z-index: 1200;
 }
 
 #boutonCarre1{
@@ -116,6 +105,10 @@
     border-radius: 8px;
     cursor: pointer;
     animation: couleurBoutonUn 5s linear infinite;
+}
+
+#boutonCarre1:active{
+    animation: animationBoutonUn 2s linear;
 }
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
@@ -134,6 +127,19 @@
     }
 }
 
+//ANIMATION SCALE DU BOUTON
+@keyframes animationBoutonUn {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);    
+    }
+    100%{
+        transform: scale(1);    
+    }
+}
+
 #boutonCarre2{
     display: flex;
     flex-wrap: nowrap;
@@ -146,6 +152,10 @@
     border-radius: 8px ;
     cursor: pointer;
     animation: couleurBoutonDeux 5s linear infinite;
+}
+
+#boutonCarre2:active{
+    animation: animationBoutonDeux 2s linear;
 }
 
 //ANIMATION COULEUR DE FOND POUR LES COULEURS
@@ -164,10 +174,22 @@
     }
 }
 
+//ANIMATION SCALE DU BOUTON
+@keyframes animationBoutonDeux {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);    
+    }
+    100%{
+        transform: scale(1);    
+    }
+}
+
 #boutonCarre3{
     display: flex;
     flex-wrap: nowrap;
-    //flex-direction: row;
     width: 100px;
     height: 65px;
     margin-top: 35px;
@@ -176,6 +198,10 @@
     border-radius: 8px ;
     cursor: pointer;
     animation: couleurBoutonTrois 5s linear infinite;
+}
+
+#boutonCarre3:active{
+    animation: animationBoutonTrois 2s linear;
 }
 
 @keyframes couleurBoutonTrois {
@@ -193,30 +219,118 @@
     }
 }
 
+//ANIMATION SCALE DU BOUTON
+@keyframes animationBoutonTrois {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);    
+    }
+    100%{
+        transform: scale(1);    
+    }
+}
+
+//////////PATICULES DE FOND ANIMÉES
+.particle-container{
+     margin-right: 400em;
+     margin-bottom: 100em;
+}
+
+.particle {
+ 	border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 80s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+}
+
 @include tablet{
 
     .sous-titre{
         font-size: 1.1em;
+        width: 400px;
+        margin-top: 0em;
+        padding-left: 30px;
+    }
+
+    .titrePrincipal animation{
+        padding-left: 5%;
+    }
+
+    .titreEntete{
+        height: 500px;  
+        width: 38vw;
+    }
+
+    .titrePrincipal{
+        padding-left: 3%;
+        font-size: 2em;
     }
 
     .titreEntete h2{
         font-size: 2em;
     }
 
-    .carouselAccueil{
+    .sectionAccueil{
+        height: 70vh;
+    }
 
-        .imagesCarrousel{
-            div{
-                width: 50vw;
-                height: 42vh;
+    .carouselAccueil{
+        width: 700px;
+        height: 30px;
+        margin-top: -30em;
+        margin-left: 21em;
+        margin-bottom: -20em;
+            
+        div{
+            /*&:nth-of-type(1){
+                margin-top: 6em;
+            }*/
+            &:nth-of-type(2){
+                margin-top: 14em;
+            }
+            &:nth-of-type(3){
+                margin-top: 14em;
+            }
+    
+            .imageUne{
+                width: 80%;
+                height: 130%;
+            }
+    
+            .imageDeux{
+                width: 80%;
+                height: 130%;
+            }
+    
+            .imageTrois{
+                width: 80%;
+                height: 130%;
             }
         }
     }
 
     .boutonsCarouAccueil{
         width: 100px;
-        margin-top: 10em;
-        margin-left: -11%;
+        margin-top: 27em;
+        margin-left: 90.5%;
     }
 
     #boutonCarre1{
@@ -239,31 +353,76 @@
 }
 
 @include petit_ecran{
-    .sectionAccueil{
-        flex-direction: row;
-    }
-
     .sous-titre{
         font-size: 1em;
+        width: 400px;
+        margin-top: 0em;
+        padding-left: 30px;
+    }
+
+    .titrePrincipal animation{
+        padding-left: 5%;
+    }
+
+    .titreEntete{
+        height: 300px;  
+        width: 90vw;
+        margin-bottom: 20em;
+    }
+
+    .titrePrincipal{
+        padding-left: 3%;
+        font-size: 2em;
+    }
+
+    .titreEntete h2{
+        font-size: 2em;
+    }
+
+    .sectionAccueil{
+        height: 70vh;
     }
 
     .carouselAccueil{
-        flex-direction: row;
-        margin-top: 80px;
-    
-        .imagesCarrousel{
+        width: 700px;
+        height: 30px;
+        margin-top: -55%;
+        margin-left: -5em;
+        //margin-bottom: 5em;
             
-            div{
-                width: 70vw;
-                margin-left: 5em;
+        div{
+            /*&:nth-of-type(1){
+                margin-top: 6em;
+            }*/
+            &:nth-of-type(2){
+                margin-top: 14em;
+            }
+            &:nth-of-type(3){
+                margin-top: 14em;
+            }
+    
+            .imageUne{
+                width: 70%;
+                height: 110%;
+            }
+    
+            .imageDeux{
+                width: 70%;
+                height: 110%;
+            }
+    
+            .imageTrois{
+                width: 70%;
+                height: 110%;
             }
         }
     }
 
     .boutonsCarouAccueil{
-        height: 200px;
-        margin-top: 10em;
-        margin-left: -7%;
+        width: 100px;
+        margin-top: 27em;
+        //margin-left: -20%;
+        margin-left: -24%;
     }
 
     #boutonCarre1{
@@ -274,12 +433,12 @@
     #boutonCarre2{
         width: 80px;
         height: 45px;
-        //margin-top: 15px;
+        margin-top: 35px;
     }
     
     #boutonCarre3{
         width: 80px;
         height: 45px;
-        //margin-top: 35px;
+        margin-top: 35px;
     }
 }
