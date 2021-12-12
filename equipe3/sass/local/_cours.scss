@@ -6,6 +6,7 @@ body {
   h1{
     font-family: 'Antonio';
     text-transform: uppercase;
+    color: #1B206E;
   }
     display: flex;
     flex-wrap: nowrap;
@@ -80,18 +81,30 @@ body {
         padding: 10px;
         border-radius: 8px;
         background-color:#1b206e;
-        margin: 2%;
+        margin: 0.5%;
         width: 35vw;
-        height: 25vh;
+        height: 35vh;
+        text-align: center;
         align-self: center;
+      
         @include petit_ecran{
             height: auto;
+            width: 70vw;
         }
         @include tablet {
             height: auto;
         }
 
-       
+        p:nth-of-type(1){
+            padding-top: 50px;
+            @include petit_ecran{
+                padding-top: 0;
+            }
+
+            @include tablet {
+                padding-top: 0;
+            }
+        }
         p{
             display: flex;
             justify-content: center;
@@ -118,12 +131,14 @@ body {
         }
 
         a {
-            font-family: 'Antonio';
+            font-family: 'IBM Plex Sans medium;', sans-serif;
+         
             font-size: 14px;
             display: flex;
             text-align: center;
             justify-content: center;
-            align-items: center;
+            align-items: center; 
+            //padding-top: 20px;
             text-decoration: none;
             opacity: 2;
             font-size : clamp(.6rem, #{"-0.875rem + 2.333vw"},0.95rem);
@@ -131,6 +146,10 @@ body {
                 font-size: 30px;
                 text-align: center;
                 
+            }
+
+            @include petit_ecran{
+                font-size: 20px;
             }
         }
     }
