@@ -168,12 +168,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "utilities/alignments";
 
-/* Local
+/* Local entete
 
 --------------------------------------------- */
 
 @import "local/entete";
 
+/* Local footer
 /*--------------------------------------------- */
 
 @import "local/footer";
@@ -202,42 +203,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "local/gabaritCours";
 
-/* Local section page accueil global
+/* Local accueil 
 
 --------------------------------------------- */
 
 @import "local/sectionAccueil";
 
-/* burger
+/* local burger
 
 --------------------------------------------- */
 
 @import "local/burger";
 
-/* apropos
+/* local apropos
 
 --------------------------------------------- */
 
 @import "local/apropos";
 
 
-/* page projets
 
---------------------------------------------- */
-
-@import "local/projets";
-
-
-
-/* page projets
-
---------------------------------------------- */
-
-@import "local/projet-essai";
-
-
-
-/* page projets
+/* local cours
 
 --------------------------------------------- */
 
@@ -245,26 +231,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
-/* page cours
+/* local cours
 
 --------------------------------------------- */
 
 @import "local/cours";
 
-/* page professeurs
+/* local professeurs
 
 --------------------------------------------- */
 
 @import "local/professeurs";
 
-/* page avenir
+/* local avenir
 
 --------------------------------------------- */
 
 @import "local/avenir";
 
-/* page vieEtudiante
+/* local vieEtudiante
 
 --------------------------------------------- */
 
 @import "local/vieEtudiante";
+
+/* local single
+
+--------------------------------------------- */
+
+@import "local/single";
+
+/* local projets
+
+--------------------------------------------- */
+
+@import "local/galerieProjets";
+

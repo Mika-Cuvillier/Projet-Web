@@ -16,6 +16,24 @@
 
   <!-- //content-->
 <section class="sectionAccueil">
+	<div id="particle-container">
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+	</div>
+
 	<div class="titreEntete"> 
 		<div class="titrePrincipal">L'harmonie entre la <br><span class="boldTitre">logique </span>et le <span class="boldTitre">créatif </span></div>
 		<div class="sous-titre">
@@ -24,15 +42,22 @@
 	
 		</div>
 	</div>
- 
-	<div class="carouselAccueil"> carrousel
-	<div class="boutonsCarouAccueil"> 
-		<div class="boutonCarre"></div>
-		<div class="boutonCarre"></div>
-		<div class="boutonCarre"></div>
-		
-</div>
-</div>
 
+	<section class="carouselAccueil"> 
+			<div class="slide">	
+				<img class="imageUne" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/vehicule.jpeg" ?>"/>
+			</div>
+			<div class="slide">	
+				<img class="imageDeux" src="<?php echo get_site_url() . "/wp-content/uploads/2021/11/college.jpg" ?>"/>
+			</div>	
+			<div class="slide">	
+				<img class="imageTrois" src="<?php echo get_site_url() . "/wp-content/uploads/2021/12/P1010672.jpg"?>"/>
+			</div>
+	</section>
+	<section class="boutonsCarouAccueil">
+		<button id="boutonCarre1"></button>
+		<button id="boutonCarre2"></button>
+		<button id="boutonCarre3"></button>
+	</section>
 </section>
 

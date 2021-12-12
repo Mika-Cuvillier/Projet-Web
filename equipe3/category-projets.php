@@ -50,7 +50,7 @@ get_header();
 				?>
 				
 				
-			<?php	get_template_part( 'template-parts/content', 'projets-essai'); ?>
+			<?php	get_template_part( 'template-parts/content', 'projets'); ?>
 
 		<?php endwhile;?>
 			</section>

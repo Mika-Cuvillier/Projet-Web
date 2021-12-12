@@ -1,12 +1,12 @@
 /*Titre de la page*/
 .titreApropos{
-    font-size: 35px;
+    font-size: 50px;
     font-family: 'Antonio';
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    color: #1B206E;
 }
-
 //Scroll bar
 ::-webkit-scrollbar{
 width: 12px;
@@ -25,16 +25,16 @@ section.gabaritApropos{
 display: grid;
 grid-template-columns: auto;
 grid-template-areas:
-    "etudiant"
-    "ecole"
     "coordonnateurs"
+    "ecole"
      "admission"
+     "etudiant"
     "coordonnees"
         "carte";
         margin-left: 1em;
         margin-right: 1em;
         margin-bottom: 50px;
-    //Les articles
+    //Tous les articles
     .apropos{
         animation:animArticle 1s ;
         padding-left: 50px;
@@ -48,15 +48,14 @@ grid-template-areas:
         opacity: 0;
         transform: scale(0.8);
     }
-
     100%{
         transform:translateY(0px);
         opacity: 1;
         transform: scale(1);
     }
-
 }
 /*Fin animation*/
+/*Chaque articles un part un*/
     .apropos:nth-child(1) {
         grid-area: carte;
         height: 30em;
@@ -96,7 +95,6 @@ grid-template-areas:
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 img{
                     transition: 0.5s;
                     border-radius: 8px;
@@ -132,6 +130,7 @@ grid-template-areas:
     margin-bottom: 1em;
     margin-left: 0;
 }
+/*Tous les articles*/
 .apropos{
         background-color: #1b206e;
         border-radius: 8px;
@@ -157,6 +156,7 @@ grid-template-areas:
             }
         }
         ul{
+            padding: 0;
             li{
                 color: white;
                 font-size: 12px;
@@ -167,14 +167,15 @@ grid-template-areas:
         background-color: #2e7694;
     }
 //Version ordinateur
-@media only screen and (min-width: 600px)
+@include grand_ecran
     {
+    /*Gabarit apropos*/
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-        "etudiant etudiant etudiant"
         "coordonnateurs admission admission"
         "ecole admission admission"
+        "etudiant etudiant etudiant"
         "carte carte coordonnees";
         gap: 30px;
         margin-left: 5em;
@@ -182,10 +183,7 @@ grid-template-areas:
         .titreApropos{
             font-size: 50px;
         }
-
         .apropos{
-            
-
             h2{
                 a{
                     font-size: 35px;
@@ -221,7 +219,6 @@ grid-template-areas:
                 }
             }
         }
-
         .apropos:nth-child(3) {
             grid-area: etudiant;
         }
@@ -237,21 +234,19 @@ grid-template-areas:
         }
     }
     /*Version tablette*/
-    @media only screen and (min-width : 600px) and (max-width:1024px){
+    @include tablet{
         grid-template-areas:
-        "etudiant etudiant"
         "coordonnateurs admission "
         "ecole admission "
+        "etudiant etudiant"
         "carte coordonnees";
-
+        gap: 30px;
         margin-left: 1em;
         margin-right: 1em;
-
         .titreApropos{
             font-size: 40px;
         }
         .apropos{
-
             h2{
                 a{
                     font-size: 30px;
@@ -282,17 +277,20 @@ grid-template-areas:
                 }
                 figure{
                     margin:0;
-
                     img{
                         height: 180px;
                     }
                 }
             }
         }
-
         .apropos:nth-child(4){
             grid-area: coordonnateurs;
         }
+        .apropos:nth-child(6){
+            grid-area: coordonnees;
+            margin-top: 6em;
+            margin-bottom: 6em;
+            margin-left: -3em;
+        }
     }
-
 }

@@ -170,6 +170,7 @@ function equipe3_scripts() {
 	wp_enqueue_script( 'equipe3-informationSupplementaires', get_template_directory_uri() . '/js/informationSupplementaires.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-boutonTriageCours', get_template_directory_uri() . '/js/boutonTriageCours.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'equipe3-boutonTriageProjets', get_template_directory_uri() . '/js/boutonTriageProjets.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'equipe3-carrousel', get_template_directory_uri() . '/js/carrousel.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'equipe3-fontawesome', 'https://kit.fontawesome.com/91319fa15f.js', array(), _S_VERSION, true );
 	//<script src="https://kit.fontawesome.com/91319fa15f.js" crossorigin="anonymous"></script>
 	wp_enqueue_style( 'equipe3-google-fonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap', true );  
