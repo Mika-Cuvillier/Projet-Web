@@ -30,3 +30,8 @@
         @content;
     }
 }
+@mixin grand_ecran2{
+    @media (min-width : 1024px){
+        @content;
+    }
+}

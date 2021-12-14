@@ -10,6 +10,7 @@
   width: 350px;
   height: 100px;
   border-radius: 10px;
+  cursor: pointer;
   @include petit_ecran{
     flex-wrap: wrap;
     width: auto;
