@@ -24,6 +24,11 @@
         @content;
     }
 }
+@mixin desktop {
+    @media (min-width : 1024px){
+        @content;
+    }
+}
 
 @mixin TresGrandEcran {
     @media (min-width : 1600px){

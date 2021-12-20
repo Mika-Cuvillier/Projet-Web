@@ -9,7 +9,7 @@
     let btnJeu = document.querySelector("#btnJeu");
 
     let btnToutProjet = document.querySelector("#btnToutProjet");
-    let projets = document.querySelectorAll(".projets a");
+    let projets = document.querySelectorAll(".projets > a");
    // console.log(cours.length);
   
 

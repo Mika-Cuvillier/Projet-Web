@@ -6,14 +6,13 @@ for(let i = 0; i < boutonFermer.length; i++){
     boutonFermer[i].addEventListener("click", function(){
         InformationsSupplementaires[i].style.opacity = 0;
         InformationsSupplementaires[i].style.zIndex = -1;
-        console.log('wow');
     });
 }
-
 for(let i = 0; i < imageOuverture.length; i++){
     imageOuverture[i].addEventListener("click", function(){
         InformationsSupplementaires[i].style.opacity = 1;
-        InformationsSupplementaires[i].style.zIndex = 1001;
-        console.log('wow');
+        InformationsSupplementaires[i].style.zIndex = 90;
     })
 }
+
+

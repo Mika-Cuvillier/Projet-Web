@@ -3,16 +3,13 @@
     font-family: 'Antonio';
     display: flex;
     justify-content: center;
-  
+    margin: 0;
 }
-
 section.gabaritCours{
     display : flex;
-  flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
- 
-
     article {
         display : flex;
         flex-direction: column;
@@ -23,16 +20,15 @@ section.gabaritCours{
         margin : 2%;
         padding  : 1rem;
         text-align : center;
-        //background-color: rgb(139, 221, 236);
-        //box-shadow: 5px 10px 15px rgb(238, 222, 75);
     } 
-    
-   
-
     a {
         font-size: 1.5rem;
         font-weight: bold;
         text-decoration: none;
     }
 }
-
+.fa, .fas {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
