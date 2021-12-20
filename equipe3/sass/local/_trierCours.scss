@@ -23,8 +23,6 @@
 
 .animationBoutonsSelect{
     animation: animationBoutonsSelect ease-in-out 2s;
-    //color: greenyellow;
-    //background-color: rgb(84, 108, 128) !important;
     background: #28e093 !important;
   
 }
@@ -38,12 +36,8 @@
 
    
     100%{
-        //background-color: #234083;
         opacity: 1;
-        //background-color:linear-gradient(to right, #28e093,#234083);
-        //transform: rotate(-20deg)translate(140px,70px);
-       // background-color: #234083;
-       background-color:linear-gradient( #28e093,#234083);
+        background-color:linear-gradient( #28e093,#234083);
     }
 }
 

@@ -40,6 +40,22 @@ grid-template-areas:
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 10px;
+        width: 91vw;
+        @include tablet{
+            width: auto;
+        }
+        @include desktop{
+            width: auto;
+        }
+        
+        .contenu{
+            h2{
+                padding: 0%;
+            }
+            p{
+                padding: 0;
+            }
+        }
     }
     /*Animation*/
 @keyframes animArticle{
@@ -120,7 +136,6 @@ grid-template-areas:
     h1{
         font-family: 'Antonio';
         color: #ffe5b6;
-        padding-left: 1em;
         display: block;
     }
 }
@@ -167,7 +182,7 @@ grid-template-areas:
         background-color: #2e7694;
     }
 //Version ordinateur
-@include grand_ecran
+@include desktop
     {
     /*Gabarit apropos*/
     grid-template-columns: auto;

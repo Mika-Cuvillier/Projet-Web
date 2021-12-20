@@ -1,18 +1,28 @@
 #primary-menu {
     position: relative;
-    top: -4px;
+    height: 1px; 
+    top: 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     background-color: #1b206e;
     text-transform: uppercase;
-    font-family: 'Antonio', sans-serif;
-    height: 120px;
-    width: 100%;
+    font-family: 'Antonio', sans-serif;  
+    width: 100vw;
     align-items: center;
-    @include petit-ecran{
-        height: 1px; 
-        top: 0;
+    @include tablet{
+        top: -4px;
+        height: 120px;
+        flex-direction: row;
+    }
+    @include grand_ecran{
+        top: -4px;
+        height: 120px;
+        flex-direction: row;
+    }
+    @include TresGrandEcran{
+        top: -4px;
+        height: 120px;
+        flex-direction: row;
     }
     li ul{
         display: flex;
@@ -23,27 +33,32 @@
    
     a:link, a:visited
     {
+        display: none; 
         color: #ffe5b6;
-        font-weight: bold;
-        @include TresGrandEcran{
+        @include tablet{
+            display: flex;
             font-size: clamp(0.7rem, 1.3vw, 2rem);
+            font-weight: bold;
         }
         @include grand_ecran{
+            display: flex;
             font-size: clamp(0.7rem, 1.3vw, 2rem);
+            font-weight: bold;
         }
-        @include tablet{
+        @include TresGrandEcran{
+            display: flex;
             font-size: clamp(0.7rem, 1.3vw, 2rem);
-        }
-        @include petit-ecran{
-            display: none; 
+            font-weight: bold;
         }
     }
 }
 .sub-menu {
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 #site-navigation{
+    width: 100vw;
     position: fixed; 
     transition: 1s;
 }

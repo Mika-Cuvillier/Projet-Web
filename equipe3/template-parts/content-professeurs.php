@@ -9,7 +9,6 @@
  */
 
 ?>
-        <!-- <div class="site-prof">-->
             <article class="professeurs">
                 <div class="profs">
                     <?php echo the_post_thumbnail(); ?>

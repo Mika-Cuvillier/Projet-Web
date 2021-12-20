@@ -1,12 +1,12 @@
 #colophon.site-footer{ // permet au footer de rester en bas de la page
     position: fixed;//mettre en sticky
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     z-index: 99;
 }
 #colophon.site-footer .site-info{
     display: flex;
-    background-color: #1B206E;
+    background-color: #2e5293;
     height:70px;
     flex-direction: row;
     flex-wrap: wrap;

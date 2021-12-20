@@ -13,7 +13,7 @@
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-left: 5%;
@@ -21,18 +21,27 @@
     margin-bottom: 5%;
     align-items: center; 
     gap: 5%; 
-    @include petit_ecran{
-        flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+    }
+    @include grand_ecran{
+        flex-direction: row;
+    }
+    @include TresGrandEcran{
+        flex-direction: row;
     }
 }
 .vieEtudiante{
-   width: 400px;
+   width: 250px;
    height: auto;
+   @include tablet{
+    width: 230px;
+   }
    @include grand_ecran{
        width: 350px;
    }
-   @include tablet{
-       width: 230px;
+   @include TresGrandEcran{
+       width: 400px;
    }
    figure{
     border-radius: 8px;
